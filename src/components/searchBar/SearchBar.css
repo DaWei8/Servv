@@ -1,0 +1,107 @@
+.search__bar {
+    border: 1px var(--main-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 720px;
+    gap: 10px;
+
+}
+
+.search__bar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    position: relative;
+    overflow-y: hidden;
+    border-radius: 5px;
+
+}
+
+
+.search__bar input {
+
+    border-radius: 5px;
+    background: var(--pale-blue-grey, #F2F6FF);
+    display: flex;
+    width: 550px;
+    height: 50px;
+    padding-left: 15px;
+    align-items: center;
+    color: var(--primary-text-color);
+
+    font-size: 16px;
+}
+
+.search-button{
+    position: absolute;
+    right: 0;
+
+    background-color: var(--primary-button-color);
+    display: flex;
+    height: 50px;
+    padding: 10px 10px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+
+
+@media screen and (max-width: 430px) {
+    .search__bar {
+        border: 1px var(--main-color);
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        padding-inline: 16px;
+        gap: 6px;
+    
+    }
+    
+    .search__bar-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        position: relative;
+        overflow-y: hidden;
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+    
+    .search__bar input {
+    
+        border-radius: 5px;
+        background: var(--pale-blue-grey, #F2F6FF);
+        display: flex;
+        width: 100%;
+        height: 50px;
+        padding-left: 15px;
+        align-items: center;
+    
+        font-size: 14px;
+    }
+    
+    .search-button{
+        position: absolute;
+        right: 0;
+    
+        background-color: var(--primary-button-color);
+        display: flex;
+        height: 50px;
+        width: 50px;
+        padding: 10px 10px;
+        align-items: center;
+        gap: 10px;
+    }
+    
+}
