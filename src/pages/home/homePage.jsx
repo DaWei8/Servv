@@ -6,10 +6,10 @@ import SearchBar from "../../components/searchBar/SearchBar";
 import TestimonialSection from "./Testimonial";
 import PopularServicesSection from "./PopularServicesSection";
 import DiscoverSection from "./DiscoverSection";
-import GetStartedSection from "./GetStartedSection";
 import FAQSection from "./FAQSection";
 import WhatForSection from "./WhatForSection";
 import GetInTouchSection from "./GetInTouch";
+import GetStartedSection from "../../components/getStarted/GetStartedSection";
 
 
 const HomePage = () => (

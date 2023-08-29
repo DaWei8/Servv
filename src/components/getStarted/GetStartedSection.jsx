@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CustomerAvatar from "../../assets/images/customer-avatar.png";
 import WorkerAvatar from "../../assets/images/worker-avatar.png";
+import './GetStartedSection.css'
 
 const GetStartedSection = () => (
   <section className="get_started-section">

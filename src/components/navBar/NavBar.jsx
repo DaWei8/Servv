@@ -2,6 +2,7 @@ import logo from "../../assets/icons/servv-logo-dk.jpg";
 import logoMb from "../../assets/icons/servv-logo-mb.jpg";
 import hamburger from "../../assets/icons/hamburger-menu.svg";
 import "./NavBar.css";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => (
   <div className="navbar">
@@ -13,10 +14,10 @@ const NavBar = () => (
         <img src={logoMb} alt="Servv Logo" />
       </div>
       <ul className="navbar__menu">
-        <li>Home</li>
-        <li>About</li>
-        <li>For you</li>
-        <li>Support</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/for">For you</Link></li>
+        <li><Link to="/support">Support</Link></li>
       </ul>
       <div className="profile__button">
         <button>D
