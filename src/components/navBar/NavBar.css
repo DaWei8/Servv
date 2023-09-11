@@ -60,9 +60,10 @@
 }
 
 .profile__button button {
-    flex-direction: row;
+    display: flex;
+    padding-bottom: 10px;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     color: var(--primary-text-color-white);
     width: 40px;
     height: 40px;
