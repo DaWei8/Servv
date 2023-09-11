@@ -1,6 +1,8 @@
 .navbar {
-    background-color: var(--transparent-bg-blur);
-
+    position: fixed;
+    z-index: 100;
+    background-color: #ffffff99;
+    backdrop-filter: blur(28px);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
