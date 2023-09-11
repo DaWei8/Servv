@@ -1,57 +1,60 @@
 /* eslint-disable react/prop-types */
 import GetStartedSection from "../../components/getStarted/GetStartedSection";
-import "./About.css";
+import "./About.scss";
 import AboutImage from "../../assets/images/about-image.png";
+import WhyChooseImage from "../../assets/images/online-meeting-between-the-team.png";
+import CardIcon from "../../assets/icons/fav-icon.svg";
 
 const AboutRoadmapCards = [
   {
     title: "Inception",
-    image: "",
+    image: CardIcon,
   },
   {
     title: "Establishment",
-    image: "",
+    image: CardIcon,
   },
   {
     title: "Growth",
-    image: "",
+    image: CardIcon,
   },
   {
     title: "Scaling",
-    image: "",
+    image: CardIcon,
   },
 ];
+
 const AboutCommitmentCards = [
   {
     title: "Inception",
-    image: "",
+    image: CardIcon,
   },
   {
     title: "Establishment",
-    image: "",
+    image: CardIcon,
   },
   {
     title: "Growth",
-    image: "",
+    image: CardIcon,
   },
   {
     title: "Scaling",
-    image: "",
+    image: CardIcon,
   },
 ];
 
 const AboutVisionCards = [
   {
     title: "Empowering Local Artisans",
-    image: "",
+    image: CardIcon,
   },
   {
     title: "Bridging Communities",
-    image: "",
+    image: CardIcon,
   },
   {
     title: "Transforming Lives",
-    image: "",
+    image: CardIcon,
   },
 ];
 
@@ -60,37 +63,39 @@ const AboutWhyChooseCards = [
     title: "Connecting Communities",
     description:
       "We believe in the strength of local communities and aim to foster connections between clients and artisans in the same neighborhood or city. By choosing Serv, you are supporting local businesses and contributing to the growth of your community.",
-    image: "",
+    image: WhyChooseImage,
   },
   {
     title: "Reliable Artisans",
     description:
       "Every artisan on Serv undergoes a rigorous vetting process to ensure that they possess the necessary skills and qualifications. You can trust that the services you receive are from experienced professionals dedicated to delivering high-quality work.",
-    image: "",
+    image: WhyChooseImage,
   },
   {
     title: "User-Friendly Platform",
     description:
       "Our user-centric design makes it effortless to navigate and use our platform. With a few simple clicks, you can find the perfect artisan for your specific needs.",
-    image: "",
+    image: WhyChooseImage,
   },
   {
     title: "Secure Transactions",
     description:
       "We prioritize the security of our users' transactions. Our payment system is reliable and ensures a seamless and safe exchange of funds between clients and artisans.",
-    image: "",
+    image: WhyChooseImage,
   },
   {
     title: "Diverse Services",
     description:
       "From home repairs and renovations to creative services and tutoring, Serv offers a wide range of service categories to cater to diverse needs and preferences.",
-    image: "",
+    image: WhyChooseImage,
   },
 ];
 
+
+
 const AboutPage = () => {
   return (
-    <div>
+    <div className="about-section">
       <AboutHeroSection />
       <AboutOurJourney />
       <AboutOurVision />
@@ -103,10 +108,20 @@ const AboutPage = () => {
 
 export default AboutPage;
 
+const AboutWhyChooseCard = (props) => (
+  <div className="about-why-choose-card">
+    <img src={props.image} alt="" />
+    <div className="about-why-choose-text">
+      <h3 className="about-why-choose-card-title">{props.title} </h3>
+      <p>{props.description}</p>
+    </div>
+  </div>  
+);
+
 const AboutOurJourneyRoadmapCard = (props) => (
   <div className="about-our-journey-roadmap-card">
     <img src={props.image} alt="" />
-    <p className="about-our-journey-raodmap-card-title">{props.title} </p>
+    <p className="about-our-journey-roadmap-card-title">{props.title} </p>
   </div>
 );
 
@@ -197,12 +212,15 @@ const AboutWhyChoose = () => (
       <p className="about-why-choose-support-text">For all you need to know</p>
     </div>
     <div className="about-why-choose-cards">
+      
+
       {AboutWhyChooseCards.map((card, index) => (
-        <AboutOurCommitmentCard
+        <AboutWhyChooseCard
           key={index}
           title={card.title}
           description={card.description}
           image={card.image}
+          data={card}
         />
       ))}
     </div>
@@ -215,7 +233,6 @@ const AboutOurCommitment = () => (
       <h1 className="about-our-commitment-header">
         Our Commitment to Excellence
       </h1>
-      <p className="about-our-commitment-support">Supporting Text</p>
     </div>
     <div className="about-our-commitment-roadmap">
       {AboutCommitmentCards.map((card, index) => (

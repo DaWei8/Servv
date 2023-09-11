@@ -15,7 +15,7 @@ import tstm2 from "../assets/images/testimonial_2.png";
 var popularServicesCards = [
   {
     title: "Plumbing and electrical repairs",
-    icon:psc1,
+    icon: psc1,
     description: "Homeowners looking to renovate or repair their homes.",
     color: "#FEE9E9",
   },
