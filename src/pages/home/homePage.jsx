@@ -10,10 +10,13 @@ import FAQSection from "./FAQSection";
 import WhatForSection from "./WhatForSection";
 import GetInTouchSection from "./GetInTouch";
 import GetStartedSection from "../../components/getStarted/GetStartedSection";
+import Footer from "../../components/footer/Footer";
+import NavBar from "../../components/navBar/NavBar";
 
 
 const HomePage = () => (
   <div className="home-page">
+    <NavBar />
 
     <HeroSection />
 
@@ -30,6 +33,8 @@ const HomePage = () => (
     <FAQSection />
 
    <GetInTouchSection />
+
+   <Footer />
 
   </div>
 );

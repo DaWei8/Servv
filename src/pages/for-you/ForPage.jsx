@@ -3,6 +3,8 @@ import "./ForPage.scss";
 import ArtisanAgencyImage from "../../assets/images/for-artisan-agency.png";
 import CardIcon from "../../assets/icons/fav-icon.svg";
 import GetStartedSection from "../../components/getStarted/GetStartedSection";
+import Footer from "../../components/footer/Footer";
+import NavBar from "../../components/navBar/NavBar";
 
 const ForSubjectCards = [
   {
@@ -26,11 +28,13 @@ const ForSubjectCards = [
 const ForPage = () => {
   return (
     <div className="for-page">
+      <NavBar />
       <ForHeroSection />
       <ForCustomerSection />
       <ForArtisanSection />
       <ForAgencySection />
       <GetStartedSection />
+      <Footer />
     </div>
   );
 };

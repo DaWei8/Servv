@@ -1,17 +1,15 @@
 :root {
-  
-  --main-color: #0080FF;
-  --primary-button-color: #0080FF;
+  --main-color: #0080ff;
+  --primary-button-color: #0080ff;
   --primary-bg-color: #ffffff;
-  --primary-text-color-black: #26334D;
+  --primary-text-color-black: #26334d;
   --primary-text-color-white: #ffffff;
-  --default-green: #1DBF73;
+  --default-green: #1dbf73;
   --transparent-bg-blur: #ffffff15;
-  --pale-blue-grey: #F2F6FF;
+  --tab-select-color: #BAD0FB;
+  --pale-blue-grey: #f2f6ff;
   --dark-bg: #000035;
-  --grey-400: #98A2B3;
-
-
+  --grey-400: #98a2b3;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,7 +24,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
 }
 
 * {
@@ -42,17 +39,11 @@ body {
   margin: 0;
   max-width: 100vw;
   margin-inline: auto;
-  /* overflow-x: hidden; */
-  /* place-items: center; */
-  /* text-align: center; */
-  
 }
 
 code {
-  font-family: Arial, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: Arial, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-
 
 a {
   font-weight: 500;
@@ -89,7 +80,6 @@ button {
   font-family: inherit;
   background-color: var(--primary-bg-color);
   cursor: pointer;
-  /* transition: border-color 0.25s; */
 }
 button:hover {
   border-color: var(--main-color);

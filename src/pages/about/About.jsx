@@ -4,6 +4,8 @@ import "./About.scss";
 import AboutImage from "../../assets/images/about-image.png";
 import WhyChooseImage from "../../assets/images/online-meeting-between-the-team.png";
 import CardIcon from "../../assets/icons/fav-icon.svg";
+import Footer from "../../components/footer/Footer";
+import NavBar from "../../components/navBar/NavBar";
 
 const AboutRoadmapCards = [
   {
@@ -96,12 +98,15 @@ const AboutWhyChooseCards = [
 const AboutPage = () => {
   return (
     <div className="about-section">
+
+      <NavBar />
       <AboutHeroSection />
       <AboutOurJourney />
       <AboutOurVision />
       <AboutWhyChoose />
       <AboutOurCommitment />
       <GetStartedSection />
+      <Footer />
     </div>
   );
 };

@@ -1,12 +1,16 @@
 import "./SupportPage.scss";
 import AboutImage from "../../assets/images/about-image.png";
 import FAQSection from "../home/FAQSection";
+import Footer from "../../components/footer/Footer";
+import NavBar from "../../components/navBar/NavBar";
 
 const SupportPage = () => {
   return (
     <div className="support-page">
+      <NavBar />
       <SupportHeroSection />
       <FAQSection />
+      <Footer />
     </div>
   );
 };
