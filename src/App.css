@@ -4,5 +4,13 @@
   justify-content: stretch;
   text-align: center;
   width: auto;
+  margin-inline: auto;
 }
 
+.auth-container {
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

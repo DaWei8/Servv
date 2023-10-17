@@ -5,10 +5,12 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 const NavBar = () => (
-  <div className="navbar w-full bg-cyan-500">
+  <div className="navbar">
     <div className="navbar__container">
       <div className="logo__container">
-        <img src={logo} alt="Servv Logo" />
+        <Link to="/">
+          <img src={logo} alt="Servv Logo" />
+        </Link>
       </div>
       <div className="logo__container-mb">
         <img src={logoMb} alt="Servv Logo" />

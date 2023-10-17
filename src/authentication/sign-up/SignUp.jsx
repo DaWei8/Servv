@@ -60,89 +60,91 @@ function SignUp() {
   };
 
   return (
-    <div className="auth-signup ">
-      <div className="signup-left">
-        <div className="signupcompany-logo">
-          <img className="company-logo" src={logo} alt="company logo" />
-          <p className="company-text">
-            At Servv, we believe in the power of connecting people with skilled
-            artisans right in their local communities.
-          </p>
+    <div className="auth-container">
+      <div className="auth-signup ">
+        <div className="signup-left">
+          <div className="signup-company-logo">
+          <Link to="../" ><img className="company-logo" src={logo} alt="company logo" /></Link>
+            <p className="company-text">
+              At Servv, we believe in the power of connecting people with
+              skilled artisans right in their local communities.
+            </p>
+          </div>
+          <img
+            className="background-pattern-mark"
+            src={backgroundImg}
+            alt="background image"
+          />
+          <div className="testimonial-cards">
+            <SignUpTestimonialCard />
+          </div>
         </div>
-        <img
-          className="background-pattern-mark"
-          src={backgroundImg}
-          alt="background image"
-        />
-        <div className="testimonial-cards">
-          <SignUpTestimonialCard />
-        </div>
+        <form
+          className="signup-form"
+          onSubmit={handleSubmit}
+          action=""
+          method="get"
+        >
+          <h1>
+            <span>Create </span>Account
+          </h1>
+          <div className="already-have-account">
+            Already have an account?
+            <button onClick={handleLoginSelect}>
+              <Link to="/login">Login</Link>
+            </button>
+          </div>
+          <label htmlFor="">
+            First name
+            <input
+              type="text"
+              name="firstname"
+              value={formData.firstname}
+              onChange={handleChange}
+            />
+          </label>
+          <label htmlFor="">
+            Last name
+            <input
+              type="text"
+              name="lastname"
+              value={formData.lastname}
+              onChange={handleChange}
+            />
+          </label>
+          <label htmlFor="">
+            Email{" "}
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            ></input>
+            {errors.email && <span>{errors.email}</span>}
+          </label>
+          <label htmlFor="">
+            Mobile number
+            <input
+              type="text"
+              name="mobilenumber"
+              value={formData.mobilenumber}
+              onChange={handleChange}
+            ></input>
+          </label>
+          <label htmlFor="">
+            Password
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+            ></input>
+          </label>
+          <button onClick={handleSubmit} className="submit-btn" type="submit">
+            Create Account
+          </button>
+        </form>
       </div>
-
-      <form
-        className="signup-form"
-        onSubmit={handleSubmit}
-        action=""
-        method="get"
-      >
-        <h1>Create Account</h1>
-        <div className="already-have-account">
-          Already have an account?
-          <Link to="/login">
-            <button onClick={handleLoginSelect}>Login</button>
-          </Link>
-        </div>
-
-        <label htmlFor="">
-          First name
-          <input
-            type="text"
-            name="firstname"
-            value={formData.firstname}
-            onChange={handleChange}
-          />
-        </label>
-        <label htmlFor="">
-          Last name
-          <input
-            type="text"
-            name="lastname"
-            value={formData.lastname}
-            onChange={handleChange}
-          />
-        </label>
-        <label htmlFor="">
-          Email{" "}
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          ></input>
-          {errors.email && <span>{errors.email}</span>}
-        </label>
-        <label htmlFor="">
-          Mobile number
-          <input
-            type="text"
-            name="mobilenumber"
-            value={formData.mobilenumber}
-            onChange={handleChange}
-          ></input>
-        </label>
-        <label htmlFor="">
-          Password
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          ></input>
-        </label>
-        <button onClick={handleSubmit} className="submit-btn" type="submit">
-          Create Account
-        </button>
-      </form>
     </div>
   );
 }

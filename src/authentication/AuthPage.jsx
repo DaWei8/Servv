@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import Login from './log-in/Login';
 import SignUp from './sign-up/SignUp';
 
@@ -22,8 +22,9 @@ const AuthPage = () => {
     <div className='auth-page'>
 
       <Routes>
-        <Route path="/" Component={Login} />
-        <Route path="/signup" Component={SignUp} />
+        <Route path={"/" || "../login"} Component={Login} />
+        <Route path="../login" Component={Login} />
+        <Route path="../signup" Component={SignUp} />
       </Routes>
       {/* {
         userValidationStatus.isLoggedIn !== true ?
