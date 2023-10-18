@@ -80,7 +80,9 @@ function Login() {
       <div className="auth-login ">
         <div className="login-left">
           <div className="login-company-logo">
-            <Link to="../" ><img className="company-logo" src={logo} alt="company logo" /></Link>
+            <Link to="../">
+              <img className="company-logo" src={logo} alt="company logo" />
+            </Link>
             <p className="company-text">
               At Servv, we believe in the power of connecting people with
               skilled artisans right in their local communities.
@@ -95,7 +97,6 @@ function Login() {
             <LoginTestimonialCard />
           </div>
         </div>
-
 
         {/* form for login  */}
         <form
@@ -206,8 +207,16 @@ function Login() {
             </div>
           )}
 
-          <button onClick={handleSubmit} className="submit-btn" type="submit">
-            Login
+          <button onClick={handleSubmit} className="submit-btn" type="submit" >
+            <Link
+              style={{
+                display: "flex",
+                color: "#fff",
+              }}
+              to="/client-profile"
+            >
+              Login
+            </Link>
           </button>
         </form>
       </div>

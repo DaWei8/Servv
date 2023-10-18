@@ -1,0 +1,42 @@
+div.artisan-sidebar {
+  div.artisan-sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    div.artisan-sidebar-container-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      div.artisan-sidebar-button {
+        padding: 16px 10px;
+        width: 150px;
+        img.artisan-sidebar-icon {
+          width: 21.5px;
+          height: 21.5px;
+          color: var(--main-color);
+        }
+
+        p.artisan-sidebar-paragraph {
+          display: none;
+          font-size: 14px;
+        }
+      }
+    }
+
+    div.artisan-sidebar-container-bottom {
+      div.artisan-sidebar-button {
+        padding: 16px 10px;
+        width: 150px;
+        img.artisan-sidebar-icon {
+          width: 21.5px;
+          height: 21.5px;
+          color: var(--main-color);
+        }
+        p.artisan-sidebar-paragraph {
+          display: none;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
