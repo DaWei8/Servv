@@ -12,6 +12,15 @@ import psc9 from "../assets/icons/hair-icon.svg";
 import tstm1 from "../assets/images/testimonial_1.png";
 import tstm2 from "../assets/images/testimonial_2.png";
 
+import dashboardIcon from "../../assets/icons/dashboard-icon.svg";
+import profileIcon from "../../assets/icons/user-tick.svg";
+import projectsIcon from "../../assets/icons/folder-open.svg";
+import paymentsIcon from "../../assets/icons/moneys.svg";
+import historyIcon from "../../assets/icons/clock.svg";
+import supportIcon from "../../assets/icons/message-question.svg";
+import settingsIcon from "../../assets/icons/setting-2.svg";
+import logoutIcon from "../../assets/icons/logout.svg";
+
 var popularServicesCards = [
   {
     title: "Plumbing and electrical repairs",
@@ -182,7 +191,71 @@ const faqQuestionsAndAnswers = [
 
 ]
 
+const sidebarContent = [
+  {
+    "dashboard" : {
+    "icon" : dashboardIcon,
+    "title" : "Dashboard",
+    "link" : "/Dashboard"
+    }
+  },
+  {
+    "profile" : {
+    "icon" : profileIcon,
+    "title" : "Profile",
+    "link" : "/Dashboard"
+  }
+  },
+  {
+    "projects" : {
+    "icon" : projectsIcon,
+    "title" : "Projects",
+    "link" : "/Dashboard"
+  }
+  },
+  {
+    "payments" : {
+    "icon" : paymentsIcon,
+    "title" : "Payments",
+    "link" : "/Dashboard"
+  }
+  },
+  {
+    "history" : {
+    "icon" : historyIcon,
+    "title" : "History",
+    "link" : "/Dashboard"
+  }
+  },
+  {
+    "support" : {
+    "icon" : supportIcon,
+    "title" : "Support",
+    "link" : "/Dashboard"
+  }
+  },
+  ]
+
+  const sidebarContentBottom = [
+    {
+      "settings" : {
+      "icon" : settingsIcon,
+      "title" : "Settings",
+      "link" : "/Dashboard"
+    }
+    },
+    {
+      "logout" : {
+      "icon" : logoutIcon,
+      "title" : "Dashboard",
+      "link" : "/Dashboard"
+    }
+    },
+  ]
+
 export {
+  sidebarContentTop,
+  sidebarContentBottom,
   popularServicesCards,
   whatForServiceCard,
   testimonialsCard,

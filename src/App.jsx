@@ -12,6 +12,7 @@ import MarketPage from "./marketplace/MarketPage";
 import Login from "./authentication/log-in/Login";
 import SignUp from "./authentication/sign-up/SignUp";
 import AuthPage from "./authentication/AuthPage";
+import { ArtisanPage } from "./artisan-dashboard/ArtisanPage";
 
 const App = () => {
 
@@ -36,7 +37,7 @@ const App = () => {
           <Route path="/login" Component={Login} />
           <Route path="/signup" Component={SignUp} />
           <Route path="/authPage/*" Component={AuthPage} />
-          <Route path="/create-profile/*" Component={AuthPage} />
+          <Route path="/create-profile/*" Component={ArtisanPage} />
         </Routes>
       </BrowserRouter>
     </div>
