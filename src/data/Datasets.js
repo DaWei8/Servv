@@ -22,6 +22,7 @@ import settingsIcon from "../assets/icons/setting-2.svg";
 import logoutIcon from "../assets/icons/logout.svg";
 
 import projectPicture from "../assets/images/project-picture-frame.png";
+import profilePicture from "../assets/images/testimonial_1.png";
 
 var popularServicesCards = [
   {
@@ -284,41 +285,53 @@ const projectContent = [
   },
 ];
 
-
 const transactionData = [
   {
-    "date" : "DF-13072022-025",
-    "activity" : "Payment for project",
-    "description" : "Cloth Design project",
-    "status" : "Success"
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
   },
   {
-    "date" : "DF-13072022-025",
-    "activity" : "Payment for project",
-    "description" : "Cloth Design project",
-    "status" : "Success"
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
   },
   {
-    "date" : "DF-13072022-025",
-    "activity" : "Payment for project",
-    "description" : "Cloth Design project",
-    "status" : "Success"
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
   },
   {
-    "date" : "DF-13072022-025",
-    "activity" : "Payment for project",
-    "description" : "Cloth Design project",
-    "status" : "Success"
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
   },
   {
-    "date" : "DF-13072022-025",
-    "activity" : "Payment for project",
-    "description" : "Cloth Design project",
-    "status" : "Success"
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
   },
-]
+];
+
+const artisanProfileInfo = [
+  {
+    picture: profilePicture,
+    name: "Abike Furnishing Ltd",
+    workField: "Interior Decoration",
+    location: ["Akure", "Ondo"],
+    skills: ["Capentry", "Roofing", "Interior Decoration"],
+    description:
+      "I will do several things this that this that this lorem ipsum dolor sit imet. I will do several things this that this that this lorem ipsum dolor sit imet.",
+  },
+];
 
 export {
+  artisanProfileInfo,
   transactionData,
   projectContent,
   sidebarContentTop,
