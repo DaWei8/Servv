@@ -392,7 +392,27 @@ const artisanProfileInfo = [
   },
 ];
 
+const liveChatOptions = [
+  {
+    title : "Complaint",
+    description: "Lodge any complaints and suggestion you have"
+  },
+  {
+    title : "Suggestion",
+    description: "Give us the suggestions you have"
+  },
+  {
+    title : "Need Assistance",
+    description: "Having a problem and need assitance"
+  },
+  {
+    title : "Report an Issue",
+    description: "Report any issues you are having"
+  },
+]
+
 export {
+  liveChatOptions,
   artisanProfileInfo,
   transactionData,
   transactionData2,

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./ArtisanHistory.scss"
 import { transactionData2 } from "../../data/Datasets";
 
