@@ -317,6 +317,68 @@ const transactionData = [
     status: "Success",
   },
 ];
+const transactionData2 = [
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+  {
+    date: "DF-13072022-025",
+    activity: "Payment for project",
+    description: "Cloth Design project",
+    status: "Success",
+  },
+];
 
 const artisanProfileInfo = [
   {
@@ -333,6 +395,7 @@ const artisanProfileInfo = [
 export {
   artisanProfileInfo,
   transactionData,
+  transactionData2,
   projectContent,
   sidebarContentTop,
   sidebarContentBottom,

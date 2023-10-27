@@ -7,7 +7,7 @@ import { projectContent, artisanProfileInfo } from "../../data/Datasets";
 import RightArrow from "../../assets/icons/arrow-right-alt-rounded.svg";
 import StarIcon from "../../assets/icons/star.svg";
 import addIcon from "../../assets/icons/add.svg";
-import GetStartedSection from "../../components/getStarted/GetStartedSection";
+// import GetStartedSection from "../../components/getStarted/GetStartedSection";
 
 const ArtisanProfile = () => {
   return (

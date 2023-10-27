@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./ArtisanProjects.scss";
 import { projectContent } from "../../data/Datasets";
 import RightArrow from "../../assets/icons/arrow-right-alt-rounded.svg";
@@ -8,11 +9,11 @@ const ArtisanProjects = () => {
   return (
     <div className="artisan-projects">
       <div className="artisan-projects-container">
-        <h1 className="artisan-projeccts-heading">Projects</h1>
-
+        <h1 className="artisan-projects-heading">Projects</h1>
+        <PorjectNav />
         <div className="artisan-projects-content">
-          <Projects title='My Work' />
-          <Projects title='Avaialable Jobs' />
+          <Projects title="My Work" />
+          <Projects title="Avaialable Jobs" />
         </div>
       </div>
     </div>
@@ -20,6 +21,10 @@ const ArtisanProjects = () => {
 };
 
 export default ArtisanProjects;
+
+const PorjectNav = () => {
+  return <div className="project-nav"></div>;
+};
 
 const Projects = (props) => (
   <div className="_projects">
