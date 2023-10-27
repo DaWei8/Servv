@@ -1,32 +1,33 @@
 import "./ArtisanTopbar.scss";
+import searchIcon from "../../assets/icons/search-icon.svg";
 import { Link } from "react-router-dom";
 import servvLogo from "../../assets/icons/servv-logo-dk.svg";
-import servvIcon from "../../assets/icons/servv.svg";
+
 import chatIcon from "../../assets/icons/messages-3.svg";
-import SearchBar from "../../components/searchBar/SearchBar";
 
 const ArtisanTopbar = () => {
   return (
     <div className="artisan-topbar">
       <div className="artisan-topbar-container">
+        <Link to="/artisanDashboard">
         <div className="company-logo">
           <img src={servvLogo} alt="servv logo" className="servv-logo" />
         </div>
+        </Link>
         <div className="artisan-topbar-right">
-          <SearchBar />
-          <div className="profile-button">
-            <Link to="/authPage">
-              <button>
-                <div className="profile-button-state inactive"></div>D
-              </button>
-            </Link>
-          </div>
+          <ArtisanSearchBar />
           <div className="artisan-notifications">
             <button>
               <img src={chatIcon} className="artisan-notification" />
             </button>
           </div>
-          <MessagesOverlay />
+          <div className="profile-button">
+            <Link to="/artisanProfile">
+              <button>
+                <div className="profile-button-state inactive"></div>D
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -35,44 +36,13 @@ const ArtisanTopbar = () => {
 
 export default ArtisanTopbar;
 
-const MessagesOverlay = () => {
-  return (
-    <div className="message-overlay hidden">
-      <div className="message-overlay-container">
-        <MessageCard
-          icon={servvIcon}
-          content="Allison dabiels just sent you a message"
-          time="10m ago"
-          stateIcon={chatIcon}
-        />
-        <MessageCard
-          icon={servvIcon}
-          content="Allison dabiels just sent you a message"
-          time="10m ago"
-          stateIcon={chatIcon}
-        />
-        <MessageCard
-          icon={servvIcon}
-          content="Allison dabiels just sent you a message"
-          time="10m ago"
-          stateIcon={chatIcon}
-        />
+const ArtisanSearchBar = () => (
+  <div className="search__bar">
+    <div className="search__bar-container">
+      <input type="text" placeholder="Search..." />
+      <div className="search-button">
+        <img src={searchIcon} alt="Search Icon" />
       </div>
     </div>
-  );
-};
-
-const MessageCard = (icon, content, time, stateIcon) => {
-  return (
-    <div className="message-card">
-      <div className="mesage">
-        <img src={icon} alt="message icon" />
-        <div className="message-and-time">
-          <h5>{content}</h5>
-          <p>{time}</p>
-        </div>
-        <img src={stateIcon} alt="state icon" />
-      </div>
-    </div>
-  );
-};
+  </div>
+);

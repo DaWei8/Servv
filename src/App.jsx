@@ -9,13 +9,12 @@ import AboutPage from "./pages/about/About";
 import ForPage from "./pages/for-you/ForPage";
 import SupportPage from "./pages/support/SupportPage";
 import MarketPage from "./marketplace/MarketPage";
-import Login from "./authentication/log-in/Login";
-import SignUp from "./authentication/sign-up/SignUp";
 import AuthPage from "./authentication/AuthPage";
+
+// import ArtisanDashboard from "./artisan-dashboard/ArtisanPage";
 import { ArtisanPage } from "./artisan-dashboard/ArtisanPage";
 
 const App = () => {
-
   // const [message, setMessage] = useState("");
 
   // useEffect(() => {
@@ -34,10 +33,9 @@ const App = () => {
           <Route path="/marketplace" Component={MarketPage} />
           <Route path="/for" Component={ForPage} />
           <Route path="/support" Component={SupportPage} />
-          <Route path="/login" Component={Login} />
-          <Route path="/signup" Component={SignUp} />
-          <Route path="/authPage/*" Component={AuthPage} />
-          <Route path="/create-profile/*" Component={ArtisanPage} />
+
+          <Route path="/authPage/*" Component={AuthPage}/>
+          <Route path="/artisanPage/*" Component={ArtisanPage}/>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,42 +1,74 @@
 div.artisan-sidebar {
+  div.artisan-sidebar-container:hover {
+    min-width: 150px;
+    padding-inline: 10px;
+    background: var(--primary-button-color-white, #fff);
+    
+  }
+
   div.artisan-sidebar-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 85vh;
+    margin-right: 20px;
+
     div.artisan-sidebar-container-top {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      div.artisan-sidebar-button {
-        padding: 16px 10px;
-        width: 150px;
-        img.artisan-sidebar-icon {
-          width: 21.5px;
-          height: 21.5px;
-          color: var(--main-color);
-        }
-
-        p.artisan-sidebar-paragraph {
-          display: none;
-          font-size: 14px;
-        }
-      }
+      gap: 10px;
     }
 
     div.artisan-sidebar-container-bottom {
-      div.artisan-sidebar-button {
-        padding: 16px 10px;
-        width: 150px;
-        img.artisan-sidebar-icon {
-          width: 21.5px;
-          height: 21.5px;
-          color: var(--main-color);
-        }
-        p.artisan-sidebar-paragraph {
-          display: none;
-          font-size: 14px;
-        }
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
     }
+  }
+}
+
+div.artisan-sidebar-button {
+  display: flex;
+  padding: 10px 10px 10px 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: stretch;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+
+  border-radius: 5px;
+
+  img.artisan-sidebar-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--main-color);
+    // align-self: flex-start;
+  }
+
+  p.artisan-sidebar-paragraph {
+    display: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color: var(--primary-text-color-black, #26334D);
+    
+  }
+}
+
+div.artisan-sidebar-button:hover {
+  min-width: 100%;
+  background: var(--primary-button-color);
+  color: var(--primary-text-color-black, #26334D);
+  
+
+  p.artisan-sidebar-paragraph {
+    display: block;
+    font-size: 14px;
+    color: var(--primary-text-color-black, #ffffff);
   }
 }

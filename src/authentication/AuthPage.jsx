@@ -22,9 +22,10 @@ const AuthPage = () => {
     <div className='auth-page'>
 
       <Routes>
-        <Route path={"/" || "../login"} Component={Login} />
-        <Route path="../login" Component={Login} />
-        <Route path="../signup" Component={SignUp} />
+        <Route path={"/"} exact Component={Login} />
+        <Route path={"/login"} exact Component={Login} />
+        {/* <Route path="../login" Component={Login} /> */}
+        <Route path="/signup" exact Component={SignUp} />
       </Routes>
       {/* {
         userValidationStatus.isLoggedIn !== true ?

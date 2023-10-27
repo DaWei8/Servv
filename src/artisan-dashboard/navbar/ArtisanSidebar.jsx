@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
 import "./ArtisanSidebar.scss";
@@ -9,22 +10,24 @@ const ArtisanSidebar = () => {
       <div className="artisan-sidebar-container">
         <div className="artisan-sidebar-container-top">
           {sidebarContentTop.map((content, index) => (
+
             <ArtisanSidebarButton
               key={index}
-              icon={content[index].icon}
-              title={content[index].title}
-              link={content[index].link}
+              icon={content.icon}
+              title={content.title}
+              link={content.link}
             />
           ))}
         </div>
 
         <div className="artisan-sidebar-container-bottom">
-        {sidebarContentBottom.map((content, index) => (
+          {sidebarContentBottom.map((content, index) => (
+
             <ArtisanSidebarButton
               key={index}
-              icon={content[index].icon}
-              title={content[index].title}
-              link={content[index].link}
+              icon={content.icon}
+              title={content.title}
+              link={content.link}
             />
           ))}
         </div>
@@ -35,12 +38,16 @@ const ArtisanSidebar = () => {
 
 export default ArtisanSidebar;
 
-const ArtisanSidebarButton = (icon, title, link) => {
+const ArtisanSidebarButton = (props) => {
   return (
-    <Link to={link}>
+    <Link to={props.link}>
       <div className="artisan-sidebar-button">
-        <img src={icon} alt="sidebar icon" className="artisan-sidebar-icon" />
-        <p className="artisan-sidebar-paragraph">{title}</p>
+        <img
+          src={props.icon}
+          alt="sidebar icon"
+          className="artisan-sidebar-icon"
+        />
+        <p className="artisan-sidebar-paragraph">{props.title}</p>
       </div>
     </Link>
   );

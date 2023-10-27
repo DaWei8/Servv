@@ -80,7 +80,7 @@ function Login() {
       <div className="auth-login ">
         <div className="login-left">
           <div className="login-company-logo">
-            <Link to="../">
+            <Link to="../login">
               <img className="company-logo" src={logo} alt="company logo" />
             </Link>
             <p className="company-text">
@@ -114,7 +114,7 @@ function Login() {
           <div className="dont-have-account">
             Dont have an account?
             <button onClick={handleSignupSelect}>
-              <Link to="/signup">Create Account</Link>
+              <Link to="../signup">Create Account</Link>
             </button>
           </div>
 
@@ -213,7 +213,7 @@ function Login() {
                 display: "flex",
                 color: "#fff",
               }}
-              to="/client-profile"
+              to="/artisanPage"
             >
               Login
             </Link>

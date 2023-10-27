@@ -4,15 +4,18 @@
   --primary-bg-color: #ffffff;
   --primary-text-color-black: #26334d;
   --primary-text-color-white: #ffffff;
+  --secondary-text-color: #AFB0B1;
   --default-green: #1dbf73;
   --transparent-bg-blur: #ffffff15;
+  --card-color-transparent: rgba(180, 204, 252, 0.30);
   --button-shadow: #00000025;
   --tab-select-color: #bad0fb;
   --pale-blue-grey: #f2f6ff;
   --dark-bg: #000035;
   --grey-400: #98a2b3;
+  --transparent-10: rgba(180, 204, 252, 0.1);
 
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -28,8 +31,8 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   text-decoration: none;
   list-style: none;
   border: none;

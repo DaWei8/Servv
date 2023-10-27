@@ -12,14 +12,16 @@ import psc9 from "../assets/icons/hair-icon.svg";
 import tstm1 from "../assets/images/testimonial_1.png";
 import tstm2 from "../assets/images/testimonial_2.png";
 
-import dashboardIcon from "../../assets/icons/dashboard-icon.svg";
-import profileIcon from "../../assets/icons/user-tick.svg";
-import projectsIcon from "../../assets/icons/folder-open.svg";
-import paymentsIcon from "../../assets/icons/moneys.svg";
-import historyIcon from "../../assets/icons/clock.svg";
-import supportIcon from "../../assets/icons/message-question.svg";
-import settingsIcon from "../../assets/icons/setting-2.svg";
-import logoutIcon from "../../assets/icons/logout.svg";
+import dashboardIcon from "../assets/icons/dashboard-icon.svg";
+import profileIcon from "../assets/icons/user-tick.svg";
+import projectsIcon from "../assets/icons/folder-open.svg";
+import paymentsIcon from "../assets/icons/moneys.svg";
+import historyIcon from "../assets/icons/clock.svg";
+import supportIcon from "../assets/icons/message-question.svg";
+import settingsIcon from "../assets/icons/setting-2.svg";
+import logoutIcon from "../assets/icons/logout.svg";
+
+import projectPicture from "../assets/images/project-picture-frame.png";
 
 var popularServicesCards = [
   {
@@ -30,43 +32,43 @@ var popularServicesCards = [
   },
   {
     title: "House cleaning and maid services",
-    icon:psc2,
+    icon: psc2,
     description: "Homeowners looking to renovate or repair their homes.",
     color: "#F7E9FE",
   },
   {
     title: "Lawn care and landscaping",
-    icon:psc3,
+    icon: psc3,
     description: "Homeowners looking to renovate or repair their homes.",
     color: "#E9FEEB",
   },
   {
     title: "Painting and home improvement",
-    icon:psc4,
+    icon: psc4,
     description: "Homeowners looking to renovate or repair their homes.",
     color: "#FEF9E9",
   },
   {
     title: "Personal training and fitness classes",
-    icon:psc5,
+    icon: psc5,
     description: "Homeowners looking to renovate or repair their homes.",
     color: "#E9FAFE",
   },
   {
     title: "Mobile car detailing and repairs",
-    icon:psc6,
+    icon: psc6,
     description: "Homeowners looking to renovate or repair their homes.",
     color: "#E9F0FE",
   },
   {
     title: "Delivery and courier services",
-    icon:psc7,
+    icon: psc7,
     description: "Homeowners looking to renovate or repair their homes.",
     color: "#FEE9E9",
   },
   {
     title: "Catering and event planning",
-    icon:psc8,
+    icon: psc8,
     description: "Homeowners looking to renovate or repair their homes.",
     color: "#F7E9FE",
   },
@@ -125,7 +127,7 @@ const testimonialsCard = [
     description:
       "Serv has been the best thing to happen to me this year. I have gone from loan to loan. Now  i have cleared all debts and I can now take care of my family.",
   },
-  
+
   {
     picture: tstm2,
     name: "Idowu Taiwo",
@@ -149,8 +151,6 @@ const testimonialsCard = [
     description:
       "Serv has been the best thing to happen to me this year. I have gone from loan to loan. Now  i have cleared all debts and I can now take care of my family.",
   },
-
-
 ];
 
 var discoverCards = [
@@ -162,98 +162,165 @@ var discoverCards = [
 
 const faqQuestionsAndAnswers = [
   {
-    question: 'Do I have to pay to use Servv?',
-    answer: 'Lorem Ipsum',
+    question: "Do I have to pay to use Servv?",
+    answer: "Lorem Ipsum",
     isExpanded: false,
   },
 
   {
-    question: 'How do i get started?',
-    answer: 'Lorem Ipsum',
+    question: "How do i get started?",
+    answer: "Lorem Ipsum",
     isExpanded: false,
   },
   {
-    question: 'When do i get paid?',
-    answer: 'Lorem Ipsum',
+    question: "When do i get paid?",
+    answer: "Lorem Ipsum",
     isExpanded: false,
   },
 
   {
-    question: 'Can I cancel an appointment?',
-    answer: 'Lorem Ipsum',
+    question: "Can I cancel an appointment?",
+    answer: "Lorem Ipsum",
     isExpanded: false,
   },
   {
-    question: 'How does billing work?',
-    answer: 'Lorem Ipsum',
+    question: "How does billing work?",
+    answer: "Lorem Ipsum",
     isExpanded: false,
   },
+];
 
+const sidebarContentTop = [
+  {
+    icon: dashboardIcon,
+    title: "Dashboard",
+    link: "./artisanDashboard",
+  },
+  {
+    icon: profileIcon,
+    title: "Profile",
+    link: "./artisanProfile",
+  },
+  {
+    icon: projectsIcon,
+    title: "Projects",
+    link: "./artisanProjects",
+  },
+  {
+    icon: paymentsIcon,
+    title: "Payments",
+    link: "./artisanPayments",
+  },
+  {
+    icon: historyIcon,
+    title: "History",
+    link: "./artisanHistory",
+  },
+  {
+    icon: supportIcon,
+    title: "Support",
+    link: "./artisanSupport",
+  },
+];
+
+const sidebarContentBottom = [
+  {
+    icon: settingsIcon,
+    title: "Settings",
+    link: "./artisanSettings",
+  },
+  {
+    icon: logoutIcon,
+    title: "Logout",
+    link: "./artisanLogout",
+  },
+];
+
+const projectContent = [
+  {
+    title: "Cloth Remodeling",
+    date: "28 Jan - 10 Feb",
+    description: "Short project description",
+    rating: 4.5,
+    status: "accepted",
+    displayImage: projectPicture,
+    images: {},
+  },
+  {
+    title: "Cloth Remodeling",
+    date: "28 Jan - 10 Feb",
+    description: "Short project description",
+    rating: 4.5,
+    status: "pending",
+    displayImage: projectPicture,
+    images: {},
+  },
+  {
+    title: "Cloth Remodeling",
+    date: "28 Jan - 10 Feb",
+    description: "Short project description",
+    rating: 3.5,
+    status: "completed",
+    displayImage: projectPicture,
+    images: {},
+  },
+  {
+    title: "Cloth Remodeling",
+    date: "28 Jan - 10 Feb",
+    description: "Short project description",
+    rating: 2.5,
+    status: "accepted",
+    displayImage: projectPicture,
+    images: {},
+  },
+  {
+    title: "Cloth Remodeling",
+    date: "28 Jan - 10 Feb",
+    description: "Short project description",
+    rating: 4,
+    status: "complete",
+    displayImage: projectPicture,
+    images: {},
+  },
+];
+
+
+const transactionData = [
+  {
+    "date" : "DF-13072022-025",
+    "activity" : "Payment for project",
+    "description" : "Cloth Design project",
+    "status" : "Success"
+  },
+  {
+    "date" : "DF-13072022-025",
+    "activity" : "Payment for project",
+    "description" : "Cloth Design project",
+    "status" : "Success"
+  },
+  {
+    "date" : "DF-13072022-025",
+    "activity" : "Payment for project",
+    "description" : "Cloth Design project",
+    "status" : "Success"
+  },
+  {
+    "date" : "DF-13072022-025",
+    "activity" : "Payment for project",
+    "description" : "Cloth Design project",
+    "status" : "Success"
+  },
+  {
+    "date" : "DF-13072022-025",
+    "activity" : "Payment for project",
+    "description" : "Cloth Design project",
+    "status" : "Success"
+  },
 ]
 
-const sidebarContent = [
-  {
-    "dashboard" : {
-    "icon" : dashboardIcon,
-    "title" : "Dashboard",
-    "link" : "/Dashboard"
-    }
-  },
-  {
-    "profile" : {
-    "icon" : profileIcon,
-    "title" : "Profile",
-    "link" : "/Dashboard"
-  }
-  },
-  {
-    "projects" : {
-    "icon" : projectsIcon,
-    "title" : "Projects",
-    "link" : "/Dashboard"
-  }
-  },
-  {
-    "payments" : {
-    "icon" : paymentsIcon,
-    "title" : "Payments",
-    "link" : "/Dashboard"
-  }
-  },
-  {
-    "history" : {
-    "icon" : historyIcon,
-    "title" : "History",
-    "link" : "/Dashboard"
-  }
-  },
-  {
-    "support" : {
-    "icon" : supportIcon,
-    "title" : "Support",
-    "link" : "/Dashboard"
-  }
-  },
-  ]
-
-  const sidebarContentBottom = [
-    {
-      "settings" : {
-      "icon" : settingsIcon,
-      "title" : "Settings",
-      "link" : "/Dashboard"
-    }
-    },
-    {
-      "logout" : {
-      "icon" : logoutIcon,
-      "title" : "Dashboard",
-      "link" : "/Dashboard"
-    }
-    },
-  ]
-
 export {
+  transactionData,
+  projectContent,
   sidebarContentTop,
   sidebarContentBottom,
   popularServicesCards,
@@ -270,5 +337,4 @@ export {
   psc7,
   psc8,
   psc9,
-
 };

@@ -1,0 +1,19 @@
+div.artisan-page {
+        min-height: 100vh;
+        width: 100vw;
+      //   background: cornflowerblue;
+        
+  div.artisan-page-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 20px;
+
+        div.artisan-page-content {
+          display: flex;
+          flex-direction: row;
+          padding-inline: 32px;
+        }
+  }
+}
