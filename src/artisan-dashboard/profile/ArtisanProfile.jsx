@@ -135,11 +135,13 @@ const ProjectCard = (props) => (
 
 const ProfileButtonType = (props) => {
   return (
-    <Link to={props.buttonLink}>
-      <div className="profile-button-type">
-        <img src={addIcon} alt="add icon" />
+    <Link className="profile-button-type" to={props.buttonLink}>
+      {/* <div className=""> */}
+        <div className="add-button-icon">
+          <img src={addIcon} alt="add icon" />
+        </div>
         <p className="profile-button-text">{props.buttonContent}</p>
-      </div>
+      {/* </div> */}
     </Link>
   );
 };

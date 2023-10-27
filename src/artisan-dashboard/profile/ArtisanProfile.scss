@@ -170,24 +170,33 @@ div.project-card {
   max-width: 280px;
 }
 
-div.profile-button-type {
+
+
+a.profile-button-type {
+  border-radius: 10px;
+  box-shadow: -3px 4px 15px 0px rgba(0, 0, 102, 0.1);
+  backdrop-filter: blur(21.29551887512207px);
   min-height: 260px;
   min-width: 240px;
-  padding: 10px;
+  max-width: 280px;
+  margin-block: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: stretch;
   gap: 10px;
-  img {
-    background: var(--primary-text-color-blue);
-    display: flex;
+
+  div.add-button-icon {
     width: 45px;
     height: 45px;
-    padding: 12px;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
+    background: var(--primary-text-color-blue);
+    img {
+      display: flex;
+      padding: 5px;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+    }
   }
 
   p.profile-button-text {
@@ -195,5 +204,6 @@ div.profile-button-type {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    text-align: center;
   }
 }

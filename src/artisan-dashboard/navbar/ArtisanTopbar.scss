@@ -28,7 +28,7 @@ div.artisan-topbar {
 
         button {
           display: flex;
-          // padding-bottom: 10px;
+          text-align: center;
           justify-content: center;
           align-items: center;
           color: var(--primary-text-color-white);
@@ -37,6 +37,7 @@ div.artisan-topbar {
           border-radius: 50%;
           background-color: var(--main-color);
           div.profile-button-state {
+            text-align: center;
             font-size: small;
             width: 12px;
             height: 12px;
@@ -55,6 +56,7 @@ div.artisan-topbar {
         align-self: stretch;
 
         button {
+          text-align: center;
           align-items: center;
           padding: 0px;
           width: 50px;
@@ -79,7 +81,7 @@ div.search__bar {
   min-width: 400px;
   max-width: 550px;
   height: 50px;
-  align-self: stretch;
+  // align-self: stretch;
 
   gap: 10px;
   div.search__bar-container {
@@ -116,8 +118,7 @@ div.search__bar {
       align-items: center;
       justify-content: center;
       gap: 10px;
-      img {
-      }
+
     }
   }
 }
