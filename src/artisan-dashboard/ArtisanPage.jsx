@@ -31,7 +31,7 @@ export const ArtisanPage = () => {
             <Route path="/artisanPayments" exact Component={ArtisanPayments} />
             <Route path="/artisanHistory" exact Component={ArtisanHistory} />
             <Route path="/artisanSupport" exact Component={ArtisanSupport} />
-            <Route path="/artisanSettings" exact Component={ArtisanSettings} />
+            <Route path="/artisanSettings/*" exact Component={ArtisanSettings} />
           </Routes>
         </div>
         <FooterDashboard />

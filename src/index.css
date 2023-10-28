@@ -37,6 +37,8 @@
   list-style: none;
   border: none;
   box-sizing: border-box;
+  max-width: 100vw;
+  /* transition-duration: 1000ms; */
 }
 a,
 a:hover,

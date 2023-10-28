@@ -10,7 +10,6 @@ const ArtisanSidebar = () => {
       <div className="artisan-sidebar-container">
         <div className="artisan-sidebar-container-top">
           {sidebarContentTop.map((content, index) => (
-
             <ArtisanSidebarButton
               key={index}
               icon={content.icon}
@@ -22,7 +21,6 @@ const ArtisanSidebar = () => {
 
         <div className="artisan-sidebar-container-bottom">
           {sidebarContentBottom.map((content, index) => (
-
             <ArtisanSidebarButton
               key={index}
               icon={content.icon}

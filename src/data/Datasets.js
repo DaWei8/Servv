@@ -233,7 +233,7 @@ const sidebarContentBottom = [
   {
     icon: logoutIcon,
     title: "Logout",
-    link: "./artisanLogout",
+    link: "../",
   },
 ];
 

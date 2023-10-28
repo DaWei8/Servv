@@ -1,0 +1,63 @@
+div.artisan-settings {
+  display: flex;
+  flex-direction: row;
+  div.artisan-settings-container {
+        display: flex;
+        flex-direction: column;
+    h1.artisam-settings-heading {
+      color: var(----primary-text-color-blue, #0080ff);
+      /* --Heading-30 */
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    div.artisan-settings-content {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+  }
+}
+
+
+
+.settings-card {
+  width: 100%;
+  div.settings-card-container {
+    display: flex;
+    width: 200px;
+    height: 150px;
+    padding: 24px 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    border-radius: 10px;
+background: var(--transparent-10);
+    img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 32px;
+      flex-shrink: 0;
+    }
+
+    div.settings-card-title {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      color: var(--primary-text-color-black, #26334d);
+      text-align: center;
+    }
+  }
+}
+
+
+.settings-card:hover {
+  div.settings-card-container {
+    background: var(--card-color-transparent, rgba(180, 204, 252, 0.3));
+  }
+}
