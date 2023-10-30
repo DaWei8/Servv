@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: stretch;
   text-align: center;
-  width: auto;
-  margin-inline: auto;
+  width: 100%;
+  max-width: 100vw;
+
 }
 
 .auth-container {

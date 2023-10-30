@@ -90,7 +90,7 @@ class User {
       const response = await fetch("http://localhost:3000/api/users/logout", {
         method: "POST",
         headers: {
-          "Content-Type": "apllication/json",
+          "Content-Type": "appllication/json",
         },
         body: JSON.stringify({
           userID: this.userID,

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import "./log-in.scss";
 import logo from "../../assets/images/company-logo.png";
-import backgroundImg from "../../assets/images/vector.png";
+import backgroundImg from "../../assets/icons/bg-logo.png";
 import validMark from "../../assets/icons/valid-mark.svg";
 
 import { useState } from "react";

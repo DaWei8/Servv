@@ -3,6 +3,7 @@
 div.footer-dashboard-section {
   background: var(--dark-bg, #000035);
   display: flex;
+  width: 100%;
   max-width: 100vw;
   align-self: stretch;
 
@@ -39,9 +40,6 @@ div.footer-dashboard-section {
     ul {
         display: flex;
         gap: 24px;
-        
-      li {
-      }
     }
   }
 }
