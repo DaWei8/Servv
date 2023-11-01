@@ -1,0 +1,78 @@
+div.artisan-support {
+  width: 100%;
+  div.artisan-support-container {
+    display: flex;
+    flex-direction: column;
+    h1.artisam-support-heading {
+      color: var(----primary-text-color-blue, #0080ff);
+      /* --Heading-30 */
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    div.artisan-support-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+div.start-live-chat {
+  div.start-live-chat-container {
+    h3.heading {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    div.start-live-chat-content {
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+div.text-box-card-selection {
+  width: 400px;
+  display: flex;
+  padding: 8px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6px;
+  align-self: stretch;
+  div.text-box-card-content {
+    h3.text-box-card-multiple-heading {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    p {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  input {
+    align-self: center;
+    display: flex;
+    background: var(--primary-text-color-blue);
+    color: var(--primary-text-color-blue);
+  }
+  border-radius: 8px;
+  background: var(----primary-bg-color, #fff);
+  box-shadow: -3px 4px 15px 0px rgba(0, 0, 102, 0.1);
+  backdrop-filter: blur(21.29551887512207px);
+}

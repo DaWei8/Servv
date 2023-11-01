@@ -24,7 +24,7 @@ const Footer = () => (
           </ul>
         </div>
 
-        {/* <div className="footer-link-section">
+        <div className="footer-link-section">
           <h3 className="footer-link-section-head">For Clients</h3>
           <ul className="footer-link-item">
             <li>Link</li>
@@ -41,7 +41,7 @@ const Footer = () => (
             <li>Link</li>
             <li>Link</li>
           </ul>
-        </div> */}
+        </div>
 
         <div className="footer-link-section">
           <h3 className="footer-link-section-head">Company</h3>

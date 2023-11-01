@@ -1,0 +1,65 @@
+div.artisan-projects {
+  width: 100%;
+  div.artisan-projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h1.artisan-projects-heading {
+      color: var(----primary-text-color-blue, #0080ff);
+      /* --Heading-30 */
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    div.artisan-projects-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+div._projects {
+  width: 100%;
+  padding: 0px;
+  align-self: stretch;
+  div._projects-container {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    width: 100%;
+    h2.heading {
+      color: var(--primary-text-color-black, #26334d);
+      /*--Heading-20*/
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 10px;
+      text-align: left;
+      align-items: center;
+      align-self: stretch;
+      background: var(--card-color-transparent);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    div._projects-collection {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-self: stretch;
+      width: 100%;
+      div._projects-collection-cards {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+      }
+    }
+  }
+}

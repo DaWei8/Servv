@@ -80,9 +80,9 @@ function Login() {
       <div className="auth-login ">
         <div className="login-left">
           <div className="login-company-logo">
-            <Link to="../login">
+            {/* <Link to="../login"> */}
               <img className="company-logo" src={logo} alt="company logo" />
-            </Link>
+            {/* </Link> */}
             <p className="company-text">
               At Servv, we believe in the power of connecting people with
               skilled artisans right in their local communities.

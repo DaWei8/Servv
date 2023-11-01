@@ -64,7 +64,9 @@ function SignUp() {
       <div className="auth-signup ">
         <div className="signup-left">
           <div className="signup-company-logo">
-          <Link to="../signup" ><img className="company-logo" src={logo} alt="company logo" /></Link>
+            {/* <Link to="../signup"> */}
+              <img className="company-logo" src={logo} alt="company logo" />
+            {/* </Link> */}
             <p className="company-text">
               At Servv, we believe in the power of connecting people with
               skilled artisans right in their local communities.
@@ -90,7 +92,7 @@ function SignUp() {
           </h1>
           <div className="already-have-account">
             Already have an account?
-            <button onClick={handleLoginSelect}>
+            <button onClick={handleLoginSelect} className="already-has-account-login">
               <Link to="../login">Login</Link>
             </button>
           </div>

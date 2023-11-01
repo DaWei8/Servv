@@ -382,6 +382,11 @@ const transactionData2 = [
 
 const artisanProfileInfo = [
   {
+    firstName: "Samuel",
+    lastName: "Adesasnya",
+    otherName: "Ajayi",
+    country: "Nigeria",
+
     picture: profilePicture,
     name: "Abike Furnishing Ltd",
     workField: "Interior Decoration",

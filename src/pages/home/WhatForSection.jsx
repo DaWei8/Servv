@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import CheckMark from "../../assets/icons/check-mark.svg";
 import { whatForServiceCard } from "../../data/Datasets";
+import AuthPage from "../../authentication/AuthPage";
 
 const WhatForSection = () => (
   <section className="whatfor-section">
@@ -26,7 +28,7 @@ const WhatForSection = () => (
       </p>
       <p>Sign up today and experience the difference!</p>
     </div>
-    <button className="whatfor-sign-up">Sign Up</button>
+    <Link to="../AuthPage"><button className="whatfor-sign-up">Sign Up</button></Link>
   </section>
 );
 

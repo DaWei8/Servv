@@ -1,10 +1,10 @@
-div.artisan-history {
+div.artisan-payments {
   width: 100%;
-  div.artisan-history-container {
+  div.artisan-payments-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    h1.artisan-history-heading {
+    h1.artisan-payments-heading {
       color: var(----primary-text-color-blue, #0080ff);
       /* --Heading-30 */
       font-size: 30px;
@@ -14,7 +14,7 @@ div.artisan-history {
       margin-bottom: 20px;
     }
 
-    div.artisan-history-content {
+    div.artisan-payments-content {
       width: 100%;
       display: flex;
       flex-direction: column;
