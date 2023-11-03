@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./ArtisanSettings.scss";
+import "./ClientSettings.scss";
 import personIcon from "../../assets/icons/person-1-icon.svg";
 import personAddIcon from "../../assets/icons/person-add-icon.svg";
 import securityIcon from "../../assets/icons/security-icon.svg";
@@ -37,7 +37,7 @@ const settingsContent = [
   },
 ];
 
-const ArtisanSettings = () => {
+const ClientSettings = () => {
   return (
     <div className="artisan-settings">
       <div className="artisan-settings-container">
@@ -61,7 +61,7 @@ const ArtisanSettings = () => {
   );
 };
 
-export default ArtisanSettings;
+export default ClientSettings;
 
 const SettingsCard = (props) => (
   <Link to={props.link} className="settings-card">

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./ArtisanDashboard.scss";
+import "./ClientDashboard.scss";
 import SeeMore from "../../assets/icons/see-more.svg";
 import { Link } from "react-router-dom";
 import RightArrow from "../../assets/icons/arrow-right-alt-rounded.svg";
@@ -9,7 +9,7 @@ import chatIcon from "../../assets/icons/messages-3.svg";
 import { projectContent, transactionData } from "../../data/Datasets";
 // import ArtisanSidebar from "../navbar/ArtisanSidebar";
 
-const ArtisanDashboard = () => {
+const ClientDashboard = () => {
   return (
     <div className="artisan-dashboard">
       <div className="artisan-dashboard-container">
@@ -31,7 +31,7 @@ const ArtisanDashboard = () => {
   );
 };
 
-export default ArtisanDashboard;
+export default ClientDashboard;
 
 const DashboardYourBalance = () => {
   return (

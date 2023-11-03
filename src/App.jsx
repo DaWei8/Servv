@@ -13,6 +13,7 @@ import AuthPage from "./authentication/AuthPage";
 
 // import ArtisanDashboard from "./artisan-dashboard/ArtisanPage";
 import { ArtisanPage } from "./artisan-dashboard/ArtisanPage";
+import { ClientPage } from "./client-dashboard/ClientPage";
 
 const App = () => {
   // const [message, setMessage] = useState("");
@@ -36,6 +37,7 @@ const App = () => {
 
           <Route path="/authPage/*" Component={AuthPage}/>
           <Route path="/artisanPage/*" Component={ArtisanPage}/>
+          <Route path="/clientPage/*" Component={ClientPage}/>
         </Routes>
       </BrowserRouter>
     </div>

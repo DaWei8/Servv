@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import "./ArtisanPayments.scss";
+import "./ClientPayments.scss";
 
 import SeeMore from "../../assets/icons/see-more.svg";
 import { transactionData } from "../../data/Datasets";
 
-const ArtisanPayments = () => {
+const ClientPayments = () => {
   return (
     <div className="artisan-payments">
       <div className="artisan-payments-container">
@@ -19,7 +19,7 @@ const ArtisanPayments = () => {
   );
 };
 
-export default ArtisanPayments;
+export default ClientPayments;
 
 const DashboardYourBalance = () => {
   return (

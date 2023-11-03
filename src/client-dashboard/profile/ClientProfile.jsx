@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import "./ArtisanProfile.scss";
+import "./ClientProfile.scss";
 // import { useState } from "react";
-import "./ArtisanProfile.scss";
+import "./ClientProfile.scss";
 import { projectContent, artisanProfileInfo } from "../../data/Datasets";
 import ProjectsCategory from "../components/ProjectCategory";
 import TextBoxCard from "../components/TextBoxCard";
@@ -9,7 +9,7 @@ import TextBoxCardMultipleItems from "../components/TextBoxCardMultipleItems";
 
 // import GetStartedSection from "../../components/getStarted/GetStartedSection";
 
-const ArtisanProfile = () => {
+const ClientProfile = () => {
   return (
     <div className="artisan-profile">
       <div className="artisan-profile-container">
@@ -22,7 +22,7 @@ const ArtisanProfile = () => {
   );
 };
 
-export default ArtisanProfile;
+export default ClientProfile;
 
 const ArtisanCreateWorkProfile = () => {
   return (
