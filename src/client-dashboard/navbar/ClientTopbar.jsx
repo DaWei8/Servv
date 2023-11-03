@@ -1,11 +1,11 @@
-import "./ArtisanTopbar.scss";
+import "./ClientTopbar.scss";
 import searchIcon from "../../assets/icons/search-icon.svg";
 import { Link } from "react-router-dom";
 import servvLogo from "../../assets/icons/servv-logo-dk.svg";
 
 import chatIcon from "../../assets/icons/messages-3.svg";
 
-const ArtisanTopbar = () => {
+const ClientTopbar = () => {
   return (
     <div className="artisan-topbar">
       <div className="artisan-topbar-container">
@@ -34,7 +34,7 @@ const ArtisanTopbar = () => {
   );
 };
 
-export default ArtisanTopbar;
+export default ClientTopbar;
 
 const ArtisanSearchBar = () => (
   <div className="search__bar">
