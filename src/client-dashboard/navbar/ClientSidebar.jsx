@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-import "./ArtisanSidebar.scss";
+import "./ClientSidebar.scss";
 import { sidebarContentTop, sidebarContentBottom } from "../../data/Datasets";
 
-const ArtisanSidebar = () => {
+const ClientSidebar = () => {
   return (
     <div className="artisan-sidebar">
       <div className="artisan-sidebar-container">
@@ -34,7 +34,7 @@ const ArtisanSidebar = () => {
   );
 };
 
-export default ArtisanSidebar;
+export default ClientSidebar;
 
 const ArtisanSidebarButton = (props) => {
   return (

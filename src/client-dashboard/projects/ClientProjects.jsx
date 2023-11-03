@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import "./ArtisanProjects.scss";
+import "./ClientProjects.scss";
 import { projectContent } from "../../data/Datasets";
 import RightArrow from "../../assets/icons/arrow-right-alt-rounded.svg";
 import StarIcon from "../../assets/icons/star.svg";
 import { Link } from "react-router-dom";
 
-const ArtisanProjects = () => {
+const ClientProjects = () => {
   return (
     <div className="artisan-projects">
       <div className="artisan-projects-container">
@@ -20,7 +20,7 @@ const ArtisanProjects = () => {
   );
 };
 
-export default ArtisanProjects;
+export default ClientProjects;
 
 const PorjectNav = () => {
   return <div className="project-nav"></div>;

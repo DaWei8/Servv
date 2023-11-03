@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-import "./ArtisanSupport.scss";
+import "./ClientSupport.scss";
 import { useState } from "react";
 import { liveChatOptions } from "../../data/Datasets";
 
-const ArtisanSupport = () => {
+const ClientSupport = () => {
   return (
     <div className="artisan-support">
       <div className="artisan-support-container">
@@ -16,7 +16,7 @@ const ArtisanSupport = () => {
   );
 };
 
-export default ArtisanSupport;
+export default ClientSupport;
 
 const StartLiveChat = () => {
   return (

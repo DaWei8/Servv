@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-import "./ArtisanHistory.scss";
+import "./ClientHistory.scss";
 import { transactionData2 } from "../../data/Datasets";
 import TransactionItem from "../components/TransactionItem";
 
-const ArtisanHistory = () => {
+const ClientHistory = () => {
   return (
     <div className="artisan-history">
       <div className="artisan-history-container">
@@ -16,7 +16,7 @@ const ArtisanHistory = () => {
   );
 };
 
-export default ArtisanHistory;
+export default ClientHistory;
 
 const Transactions = () => {
   return (
