@@ -38,5 +38,6 @@ export const ClientPage = () => {
         <FooterDashboard />
       </div>
     </div>
+    // pushing for david
   );
 };
