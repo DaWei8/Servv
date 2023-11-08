@@ -223,3 +223,14 @@ div.message-card {
     }
   }
 }
+@media (max-width: 700px) {
+  .company-logo,.artisan-sb {
+    display: none;
+  }
+  // .notif-and-profile {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  // }
+  
+}

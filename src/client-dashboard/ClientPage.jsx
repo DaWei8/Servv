@@ -12,21 +12,24 @@ import ClientSettings from "./settings/ClientSettings";
 import { FooterDashboard } from "../components/footer/FooterDashboard";
 import ClientSidebar from "./navbar/ClientSidebar";
 
-
 export const ClientPage = () => {
   return (
     <div className="artisan-page">
       <div className="artisan-page-container">
-        <ClientTopbar />
-        <div className="artisan-page-content">
+        <div className="desktop-visible">
+          <ClientTopbar />
+        </div>
+        <div className="artisan-mobile-top">
           <ClientSidebar />
+          <ClientTopbar />
+        </div>
+        <div className="artisan-page-content">
+          <div className="desktop-visible">
+            <ClientSidebar />
+          </div>
           <Routes>
             <Route path="/" exact Component={ClientDashboard} />
-            <Route
-              path="/clientDashboard"
-              exact
-              Component={ClientDashboard}
-            />
+            <Route path="/clientDashboard" exact Component={ClientDashboard} />
             <Route path="/clientProfile" exact Component={ClientProfile} />
             <Route path="/clientProjects" exact Component={ClientProjects} />
             <Route path="/clientPayments" exact Component={ClientPayments} />
