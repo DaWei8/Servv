@@ -488,3 +488,22 @@ div.recent-transactions {
     }
   }
 }
+.mobile-visible {
+  display: none;
+}
+@media (max-width: 700px) {
+  .mobile-visible {
+    display: block;
+  }
+
+  .straighten {
+    display: none;
+  }
+  .two-by-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  
+}

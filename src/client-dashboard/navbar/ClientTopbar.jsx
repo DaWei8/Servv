@@ -1,8 +1,8 @@
 import "./ClientTopbar.scss";
-import searchIcon from "../../assets/icons/search-icon.svg";
+
 import { Link } from "react-router-dom";
 import servvLogo from "../../assets/icons/servv-logo-dk.svg";
-
+import ArtisanSearchBar from "./ClientSearchbar";
 import chatIcon from "../../assets/icons/messages-3.svg";
 
 const ClientTopbar = () => {
@@ -15,7 +15,10 @@ const ClientTopbar = () => {
         </div>
         </Link>
         <div className="artisan-topbar-right">
+          <div className="artisan-sb">
           <ArtisanSearchBar />
+          </div>
+          
           <div className="artisan-notifications">
             <button>
               <img src={chatIcon} className="artisan-notification" />
@@ -35,14 +38,6 @@ const ClientTopbar = () => {
 };
 
 export default ClientTopbar;
+  
 
-const ArtisanSearchBar = () => (
-  <div className="search__bar">
-    <div className="search__bar-container">
-      <input type="text" placeholder="Search..." />
-      <div className="search-button">
-        <img src={searchIcon} alt="Search Icon" />
-      </div>
-    </div>
-  </div>
-);
+
