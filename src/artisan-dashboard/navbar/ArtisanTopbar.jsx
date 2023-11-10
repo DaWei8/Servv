@@ -8,10 +8,8 @@ import ArtisanSearchBar from "./ArtisanSearchBar";
 
 const ArtisanTopbar = () => {
   return (
-    
     <div className="artisan-topbar">
       <div className="artisan-topbar-container">
-
         {/* <div className="artisan-hamburger-menu">
           <img
             src={menuIcon}
@@ -19,14 +17,16 @@ const ArtisanTopbar = () => {
             className="hamburger-menu-icon"
           />
         </div> */}
-        
+
         <div className="artisan-company-logo">
           <Link to="/artisanDashboard">
             <img src={servvLogo} alt="servv logo" className="servv-logo" />
           </Link>
         </div>
         <div className="artisan-topbar-right">
-          <ArtisanSearchBar />
+          <div className="artisan-topbar-search">
+            <ArtisanSearchBar />
+          </div>
           <div className="artisan-notifications">
             <button>
               <img src={chatIcon} className="artisan-notification" />
