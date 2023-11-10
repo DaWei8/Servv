@@ -13,10 +13,8 @@ const ClientSidebar = () => {
     function handleWindowResize() {
       setIsSmallScreen(window.innerWidth <= 700);
     }
-
     // Initial check
     handleWindowResize();
-
     // Add a listener to handle window resizing
     window.addEventListener("resize", handleWindowResize);
 
@@ -27,7 +25,7 @@ const ClientSidebar = () => {
   }, []);
 
   return (
-    <div className="artisan-sidebar">
+    <div className="client-sidebar">
       {isSmallScreen ? (
         <div className="ham-icon"><img
           src={dashboardHamburger}
@@ -35,10 +33,10 @@ const ClientSidebar = () => {
           className="hamburger-icon"
         /> </div>
       ) : (
-        <div className="artisan-sidebar-container">
-          <div className="artisan-sidebar-container-top">
+        <div className="client-sidebar-container">
+          <div className="client-sidebar-container-top">
             {sidebarContentTop.map((content, index) => (
-              <ArtisanSidebarButton
+              <ClientSidebarButton
                 key={index}
                 icon={content.icon}
                 title={content.title}
@@ -47,9 +45,9 @@ const ClientSidebar = () => {
             ))}
           </div>
 
-          <div className="artisan-sidebar-container-bottom">
+          <div className="client-sidebar-container-bottom">
             {sidebarContentBottom.map((content, index) => (
-              <ArtisanSidebarButton
+              <ClientSidebarButton
                 key={index}
                 icon={content.icon}
                 title={content.title}
@@ -65,16 +63,16 @@ const ClientSidebar = () => {
 
 export default ClientSidebar;
 
-const ArtisanSidebarButton = (props) => {
+const ClientSidebarButton = (props) => {
   return (
     <Link to={props.link}>
-      <div className="artisan-sidebar-button">
+      <div className="client-sidebar-button">
         <img
           src={props.icon}
           alt="sidebar icon"
-          className="artisan-sidebar-icon"
+          className="client-sidebar-icon"
         />
-        <p className="artisan-sidebar-paragraph">{props.title}</p>
+        <p className="client-sidebar-paragraph">{props.title}</p>
       </div>
     </Link>
   );

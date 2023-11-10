@@ -5,6 +5,7 @@ import "./ArtisanSidebar.scss";
 import { sidebarContentTop, sidebarContentBottom } from "../../data/Datasets";
 
 const ArtisanSidebar = () => {
+  
   return (
     <div className="artisan-sidebar">
       <div className="artisan-sidebar-container">

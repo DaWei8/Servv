@@ -1,13 +1,18 @@
 div.artisan-topbar {
   width: 100%;
   div.artisan-topbar-container {
-    padding-top: 20px;
-    padding-inline: 32px;
+    // padding-top: 20px;
+    // padding-inline: 32px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    div.company-logo {
+
+    // div.artisan-hamburger-menu {
+    //   display: none;
+    // }
+
+    div.artisan-company-logo {
       img.servv-logo {
         width: 121px;
       }
@@ -19,6 +24,7 @@ div.artisan-topbar {
       justify-content: space-between;
       align-items: center;
       gap: 10px;
+
       div.profile-button {
         position: relative;
         display: flex;
@@ -65,7 +71,7 @@ div.artisan-topbar {
           background: var(--transparent-10, rgba(180, 204, 252, 0.1));
 
           img.artisan-notification {
-                width: 21.5px;
+            width: 21.5px;
           }
         }
       }
@@ -73,152 +79,51 @@ div.artisan-topbar {
   }
 }
 
-div.search__bar {
-  border: 1px var(--main-color);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  min-width: 400px;
-  max-width: 550px;
-  height: 50px;
-  // align-self: stretch;
+// div.message-overlay.hidden {
+//   display: flex;
+//   flex-direction: column;
+//   padding: 10px;
+//   gap: 12px;
+//   align-items: flex-start;
+//   background: var(--primary-bg-color, #fff);
+//   border-radius: 5px;
+//   background: var(----transparent-10, rgba(180, 204, 252, 0.1));
+//   div.message-overlay-heading {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     h1 {
+//       color: var(----primary-text-color-black, #26334d);
+//       /* --Heading-20 */
+//       font-size: 20px;
+//       font-style: normal;
+//       font-weight: 600;
+//       line-height: normal;
+//     }
+//     p {
+//       color: var(----primary-text-color-blue, #0080ff);
+//       /* --paragraph-14 */
+//       font-size: 14px;
+//       font-style: normal;
+//       font-weight: 400;
+//       line-height: normal;
+//     }
+//   }
+// }
 
-  gap: 10px;
-  div.search__bar-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width: 700px) {
+  div.artisan-topbar {
+    div.artisan-topbar-container {
+      justify-content: flex-end;
+      // div.artisan-hamburger-menu {
+      //   display: flex;
+      // }
 
-    position: relative;
-    overflow-y: hidden;
-    border-radius: 5px;
-    input {
-      border-radius: 5px;
-      background: var(--pale-blue-grey, #f2f6ff);
-      display: flex;
-      width: 550px;
-      height: 50px;
-      padding-left: 15px;
-      align-items: center;
-      color: var(--primary-text-color);
-
-      font-size: 16px;
-    }
-
-    div.search-button {
-      position: absolute;
-      right: 0;
-
-      background-color: var(--primary-button-color);
-      display: flex;
-      height: 50px;
-      padding: 10px 10px;
-      width: 50px;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-
-    }
-  }
-}
-
-@media screen and (max-width: 430px) {
-  div.search__bar {
-    border: 1px var(--main-color);
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100%;
-    padding-inline: 16px;
-    gap: 6px;
-    div.search__bar-container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      position: relative;
-      overflow-y: hidden;
-      border-radius: 5px;
-      width: 100%;
-      input {
-        border-radius: 5px;
-        background: var(--pale-blue-grey, #f2f6ff);
-        display: flex;
-        width: 100%;
-        height: 50px;
-        padding-left: 15px;
-        align-items: center;
-
-        font-size: 14px;
-      }
-
-      div.search-button {
-        position: absolute;
-        right: 0;
-
-        background-color: var(--primary-button-color);
-        display: flex;
-        height: 50px;
-        width: 50px;
-        padding: 10px 10px;
-        align-items: center;
-        gap: 10px;
-        img {
+      div.artisan-company-logo {
+        display: none;
+        img.servv-logo {
+          width: 121px;
         }
-      }
-    }
-  }
-}
-
-div.message-overlay.hidden {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  gap: 12px;
-  align-items: flex-start;
-  background: var(--primary-bg-color, #fff);
-  border-radius: 5px;
-  background: var(----transparent-10, rgba(180, 204, 252, 0.1));
-  div.message-overlay-heading {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    h1 {
-      color: var(----primary-text-color-black, #26334d);
-      /* --Heading-20 */
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-    }
-    p {
-      color: var(----primary-text-color-blue, #0080ff);
-      /* --paragraph-14 */
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-  }
-  div.message-overlay-container {
-    
-  }
-}
-
-div.message-card {
-  display: flex;
-  padding: 8px 12px;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-self: stretch;
-  div.message {
-    img {
-    }
-
-    div.message-and-time {
-      p {
       }
     }
   }

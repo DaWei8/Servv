@@ -2,30 +2,30 @@ import "./ClientTopbar.scss";
 
 import { Link } from "react-router-dom";
 import servvLogo from "../../assets/icons/servv-logo-dk.svg";
-import ArtisanSearchBar from "./ClientSearchbar";
+import ClientSearchBar from "./ClientSearchbar";
 import chatIcon from "../../assets/icons/messages-3.svg";
 
 const ClientTopbar = () => {
   return (
-    <div className="artisan-topbar">
-      <div className="artisan-topbar-container">
-        <Link to="/artisanDashboard">
+    <div className="client-topbar">
+      <div className="client-topbar-container">
+        <Link to="/clientDashboard">
         <div className="company-logo">
           <img src={servvLogo} alt="servv logo" className="servv-logo" />
         </div>
         </Link>
-        <div className="artisan-topbar-right">
-          <div className="artisan-sb">
-          <ArtisanSearchBar />
+        <div className="client-topbar-right">
+          <div className="client-sb">
+          <ClientSearchBar />
           </div>
           
-          <div className="artisan-notifications">
+          <div className="client-notifications">
             <button>
-              <img src={chatIcon} className="artisan-notification" />
+              <img src={chatIcon} className="client-notification" />
             </button>
           </div>
           <div className="profile-button">
-            <Link to="/artisanProfile">
+            <Link to="/clientProfile">
               <button>
                 <div className="profile-button-state inactive"></div>D
               </button>

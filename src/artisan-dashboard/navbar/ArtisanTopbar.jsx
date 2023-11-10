@@ -1,19 +1,28 @@
 import "./ArtisanTopbar.scss";
-import searchIcon from "../../assets/icons/search-icon.svg";
+
 import { Link } from "react-router-dom";
 import servvLogo from "../../assets/icons/servv-logo-dk.svg";
-
+import menuIcon from "../../assets/icons/hamburger-menu.svg";
 import chatIcon from "../../assets/icons/messages-3.svg";
+import ArtisanSearchBar from "./ArtisanSearchBar";
 
 const ArtisanTopbar = () => {
   return (
     <div className="artisan-topbar">
       <div className="artisan-topbar-container">
-        <Link to="/artisanDashboard">
-        <div className="company-logo">
-          <img src={servvLogo} alt="servv logo" className="servv-logo" />
+        {/* <div className="artisan-hamburger-menu">
+          <img
+            src={menuIcon}
+            alt="servv logo"
+            className="hamburger-menu-icon"
+          />
+        </div> */}
+        
+        <div className="artisan-company-logo">
+          <Link to="/artisanDashboard">
+            <img src={servvLogo} alt="servv logo" className="servv-logo" />
+          </Link>
         </div>
-        </Link>
         <div className="artisan-topbar-right">
           <ArtisanSearchBar />
           <div className="artisan-notifications">
@@ -35,14 +44,3 @@ const ArtisanTopbar = () => {
 };
 
 export default ArtisanTopbar;
-
-const ArtisanSearchBar = () => (
-  <div className="search__bar">
-    <div className="search__bar-container">
-      <input type="text" placeholder="Search..." />
-      <div className="search-button">
-        <img src={searchIcon} alt="Search Icon" />
-      </div>
-    </div>
-  </div>
-);

@@ -7,6 +7,7 @@ import StarIcon from "../../assets/icons/star.svg";
 import servvIcon from "../../assets/icons/servv.svg";
 import chatIcon from "../../assets/icons/messages-3.svg";
 import { projectContent, transactionData } from "../../data/Datasets";
+import ArtisanSearchBar from "../navbar/ArtisanSearchBar";
 // import ArtisanSidebar from "../navbar/ArtisanSidebar";
 
 const ArtisanDashboard = () => {
@@ -14,6 +15,9 @@ const ArtisanDashboard = () => {
     <div className="artisan-dashboard">
       <div className="artisan-dashboard-container">
         <h1 className="dashboard-heading">Dashboard</h1>
+        <div className="mobile-show search-bar">
+          <ArtisanSearchBar />
+        </div>
         <div className="dashboard-content">
           <div className="artisan-dashboard-leftside">
             <DashboardYourBalance />
@@ -175,7 +179,6 @@ const NotificationCard = (props) => {
   return (
     <div className="message-card">
       <div className="message-card-container">
-
         <img className="message-icon" src={props.icon} alt="message icon" />
         <div className="message-and-time">
           <p className="message">{props.message}</p>

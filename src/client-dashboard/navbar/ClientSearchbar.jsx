@@ -2,7 +2,7 @@ import "./ClientTopbar.scss";
 import searchIcon from "../../assets/icons/search-icon.svg";
 
 
-const ArtisanSearchBar = () => (
+const ClientSearchBar = () => (
     <div className="search__bar">
       <div className="search__bar-container">
         <input type="text" placeholder="Search..." />
@@ -13,4 +13,4 @@ const ArtisanSearchBar = () => (
     </div>
   );
 
-  export default ArtisanSearchBar;
+  export default ClientSearchBar;

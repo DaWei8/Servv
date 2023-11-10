@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
 import "./ArtisanPage.scss";
+import menuIcon from "../assets/icons/hamburger-menu.svg";
+
 import ArtisanTopbar from "./navbar/ArtisanTopbar";
 import ArtisanDashboard from "./overview-dashboard/ArtisanDashboard";
 import ArtisanProfile from "./profile/ArtisanProfile";
@@ -16,7 +18,16 @@ export const ArtisanPage = () => {
   return (
     <div className="artisan-page">
       <div className="artisan-page-container">
+        <div className="artisan-page-top">
+        <div className="artisan-hamburger-menu">
+          <img
+            src={menuIcon}
+            alt="servv logo"
+            className="hamburger-menu-icon"
+          />
+        </div>
         <ArtisanTopbar />
+        </div>
         <div className="artisan-page-content">
           <ArtisanSidebar />
           <Routes>
@@ -34,8 +45,8 @@ export const ArtisanPage = () => {
             <Route path="/artisanSettings/*" exact Component={ArtisanSettings} />
           </Routes>
         </div>
-        <FooterDashboard />
       </div>
+        <FooterDashboard />
     </div>
   );
 };

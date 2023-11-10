@@ -1,24 +1,24 @@
-div.artisan-page {
+div.client-page {
         min-height: 100vh;
         width: 100vw;
         text-align: left;
       //   background: cornflowerblue;
         
-  div.artisan-page-container {
+  div.client-page-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         min-height: 100%;
         gap: 20px;
 
-        div.artisan-page-content {
+        div.client-page-content {
           display: flex;
           flex-direction: row;
           padding-inline: 32px;
         }
   }
 }
-.artisan-mobile-top {
+.client-mobile-top {
   display: none;
 }
 
@@ -27,7 +27,7 @@ div.artisan-page {
     display: none;
     background: pink;
   }
-  div.artisan-mobile-top {
+  div.client-mobile-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

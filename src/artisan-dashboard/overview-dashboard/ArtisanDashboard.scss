@@ -13,8 +13,12 @@ div.artisan-dashboard {
     align-items: flex-start;
     width: 100%;
 
+    div.mobile-show div.search-bar {
+      display: none;
+    }
+
     h1.dashboard-heading {
-      color: var(----primary-text-color-blue, #0080ff);
+      color: var(--primary-text-color-blue, #0080ff);
       /* --Heading-30 */
       font-size: 30px;
       font-style: normal;
@@ -484,6 +488,18 @@ div.recent-transactions {
       align-self: stretch;
       div.recent-transaction-collection-header {
         background: var(--transparent-10);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  div.artisan-dashboard {
+    div.artisan-dashboard-container {
+      div.mobile-show div.search-bar {
+        display: block;
       }
     }
   }

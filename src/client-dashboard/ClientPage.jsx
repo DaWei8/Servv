@@ -14,16 +14,16 @@ import ClientSidebar from "./navbar/ClientSidebar";
 
 export const ClientPage = () => {
   return (
-    <div className="artisan-page">
-      <div className="artisan-page-container">
+    <div className="client-page">
+      <div className="client-page-container">
         <div className="desktop-visible">
           <ClientTopbar />
         </div>
-        <div className="artisan-mobile-top">
+        <div className="client-mobile-top">
           <ClientSidebar />
           <ClientTopbar />
         </div>
-        <div className="artisan-page-content">
+        <div className="client-page-content">
           <div className="desktop-visible">
             <ClientSidebar />
           </div>

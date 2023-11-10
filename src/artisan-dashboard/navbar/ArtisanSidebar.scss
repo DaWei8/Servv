@@ -1,6 +1,6 @@
 div.artisan-sidebar {
   margin-right: 20px;
-  position: relative;
+  position: absolute;
   z-index: 100;
 
   box-shadow: -3px 4px 15px 0px rgba(0, 0, 102, 0.1);
@@ -20,7 +20,7 @@ transition-duration: 1000ms;
   }
 
   div.artisan-sidebar-container {
-    position: static;
+    // position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -1,6 +1,6 @@
-div.artisan-topbar {
+div.client-topbar {
   width: 100%;
-  div.artisan-topbar-container {
+  div.client-topbar-container {
     padding-top: 20px;
     padding-inline: 32px;
     display: flex;
@@ -13,7 +13,7 @@ div.artisan-topbar {
       }
     }
 
-    div.artisan-topbar-right {
+    div.client-topbar-right {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -52,7 +52,7 @@ div.artisan-topbar {
         }
       }
 
-      div.artisan-notifications {
+      div.client-notifications {
         align-self: stretch;
 
         button {
@@ -64,7 +64,7 @@ div.artisan-topbar {
           border-radius: 5px;
           background: var(--transparent-10, rgba(180, 204, 252, 0.1));
 
-          img.artisan-notification {
+          img.client-notification {
                 width: 21.5px;
           }
         }
@@ -123,7 +123,7 @@ div.search__bar {
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 700px) {
   div.search__bar {
     border: 1px var(--main-color);
     display: flex;
@@ -165,8 +165,6 @@ div.search__bar {
         padding: 10px 10px;
         align-items: center;
         gap: 10px;
-        img {
-        }
       }
     }
   }
@@ -223,8 +221,9 @@ div.message-card {
     }
   }
 }
+
 @media (max-width: 700px) {
-  .company-logo,.artisan-sb {
+  .company-logo,.client-sb {
     display: none;
   }
   // .notif-and-profile {
