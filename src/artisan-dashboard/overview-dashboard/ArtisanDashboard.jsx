@@ -1,12 +1,11 @@
 /* eslint-disable react/prop-types */
 import "./ArtisanDashboard.scss";
 import ArtisanSearchBar from "../navbar/ArtisanSearchBar";
-import BalanceCard from "../components/BalanceCard";
-import TotalBalance from "../components/TotalBalance";
 import Notifications from "../components/Notifications";
 import RecentTransactions from "../components/RecentTransactions";
 import RecentProjects from "../components/RecentProjects";
 import Statistics from "../components/Statistics";
+import DashboardBalance from "./DashboardBalance";
 
 // import ArtisanSidebar from "../navbar/ArtisanSidebar";
 
@@ -20,7 +19,7 @@ const ArtisanDashboard = () => {
         </div>
         <div className="dashboard-content">
           <div className="artisan-dashboard-leftside">
-            <DashboardYourBalance />
+            <DashboardBalance />
             <RecentProjects />
             <RecentTransactions />
           </div>
@@ -36,21 +35,6 @@ const ArtisanDashboard = () => {
 };
 
 export default ArtisanDashboard;
-
-const DashboardYourBalance = () => {
-  return (
-    <div className="dashboard-balance">
-      <h2 className="your-balance-heading">Your Balance</h2>
-      <div className="dashboard-balance-collection">
-        <TotalBalance />
-        <BalanceCard title="First Work Profile" balance="$5,000.83" />
-        <BalanceCard title="First Work Profile" balance="$5,000.83" />
-        <BalanceCard title="First Work Profile" balance="$5,000.83" />
-      </div>
-    </div>
-  );
-};
-
 
 
 
