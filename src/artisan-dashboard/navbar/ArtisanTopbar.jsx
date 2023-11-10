@@ -2,14 +2,16 @@ import "./ArtisanTopbar.scss";
 
 import { Link } from "react-router-dom";
 import servvLogo from "../../assets/icons/servv-logo-dk.svg";
-import menuIcon from "../../assets/icons/hamburger-menu.svg";
+// import menuIcon from "../../assets/icons/hamburger-menu.svg";
 import chatIcon from "../../assets/icons/messages-3.svg";
 import ArtisanSearchBar from "./ArtisanSearchBar";
 
 const ArtisanTopbar = () => {
   return (
+    
     <div className="artisan-topbar">
       <div className="artisan-topbar-container">
+
         {/* <div className="artisan-hamburger-menu">
           <img
             src={menuIcon}

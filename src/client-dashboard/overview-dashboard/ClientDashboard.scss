@@ -1,12 +1,12 @@
-// artisan dashboard main css
+// client dashboard main css
 
-div.artisan-dashboard {
+div.client-dashboard {
   display: flex;
   align-self: stretch;
   justify-content: flex-start;
   padding: 0px 30px 0px;
   width: 100%;
-  div.artisan-dashboard-container {
+  div.client-dashboard-container {
     display: flex;
     flex-direction: column;
     align-self: stretch;
@@ -29,14 +29,14 @@ div.artisan-dashboard {
       justify-content: space-between;
       gap: 12px;
       align-self: stretch;
-      div.artisan-dashboard-leftside {
+      div.client-dashboard-leftside {
         display: flex;
         flex-direction: column;
         gap: 20px;
         flex: 3;
       }
 
-      div.artisan-dashboard-rightside {
+      div.client-dashboard-rightside {
         // background: var(--card-color-transparent, rgba(180, 204, 252, 0.3));
 
         display: flex;

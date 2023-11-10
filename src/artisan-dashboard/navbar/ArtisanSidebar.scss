@@ -13,8 +13,8 @@ div.artisan-sidebar {
     width: 160px;
     padding-inline: 10px;
     background: var(--primary-button-color-white, #fff);
-transition-duration: 1000ms;
-    p{
+    transition-duration: 1000ms;
+    p {
       display: block;
     }
   }
@@ -66,8 +66,7 @@ div.artisan-sidebar-button {
   border-radius: 5px;
   max-width: 180px;
   min-width: 100%;
-  color: var(--primary-text-color-black, #26334D);
-  
+  color: var(--primary-text-color-black, #26334d);
 
   img.artisan-sidebar-icon {
     width: 24px;
@@ -95,5 +94,12 @@ div.artisan-sidebar-button:hover {
     display: block;
     font-size: 14px;
     color: var(--primary-text-color-black, #26334d);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  div.artisan-sidebar { 
+    display: none;
   }
 }

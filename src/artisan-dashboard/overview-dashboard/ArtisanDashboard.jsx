@@ -53,7 +53,7 @@ const DashboardYourBalance = () => {
 
 const BalanceCard = (props) => {
   return (
-    <div className="balance-card">
+    <div className="artisan-balance-card">
       <h3 className="title">{props.title}</h3>
       <p>Balance</p>
       <h1 className="balance">{props.balance}</h1>
@@ -68,7 +68,7 @@ const BalanceCard = (props) => {
 
 const TotalBalance = () => {
   return (
-    <div className="total-balance-card">
+    <div className="artisan-total-balance-card">
       <p className="title">Total balance</p>
       <h1 className="balance">$201,000.83</h1>
       <p>
