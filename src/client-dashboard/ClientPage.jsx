@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./ClientPage.scss";
 import ClientTopbar from "./navbar/ClientTopbar";
 import ClientDashboard from "./overview-dashboard/ClientDashboard";
+import dashboardHamburger from "../assets/icons/hamburger-menu.svg";
 // import ClientProfile from "./profile/ClientProfile";
 // import ClientProjects from "./projects/ClientProjects";
 // import ClientPayments from "./payments/ClientPayments";
@@ -20,7 +21,11 @@ export const ClientPage = () => {
           <ClientTopbar />
         </div>
         <div className="client-mobile-top">
-          <ClientSidebar />
+          <img
+            src={dashboardHamburger}
+            alt="dashboard icon"
+            className="hamburger-icon"
+          />
           <ClientTopbar />
         </div>
         <div className="client-page-content">
