@@ -7,18 +7,18 @@ import StarIcon from "../../assets/icons/star.svg";
 import servvIcon from "../../assets/icons/servv.svg";
 import chatIcon from "../../assets/icons/messages-3.svg";
 import { projectContent, transactionData } from "../../data/Datasets";
-import ArtisanSearchBar from "../navbar/ClientSearchbar.jsx";
+import ClientSearchBar from "../navbar/ClientSearchbar.jsx";
 
 const ClientDashboard = () => {
   return (
-    <div className="artisan-dashboard">
-      <div className="artisan-dashboard-container">
+    <div className="client-dashboard">
+      <div className="client-dashboard-container">
         <h1 className="dashboard-heading">Dashboard</h1>
         <div className="mobile-visible">
-          <ArtisanSearchBar />
+          <ClientSearchBar />
         </div>
         <div className="dashboard-content straighten">
-          <div className="artisan-dashboard-leftside">
+          <div className="client-dashboard-leftside">
         
             <DashboardYourBalance />
             
@@ -26,7 +26,7 @@ const ClientDashboard = () => {
             <RecentTransactions />
             
           </div>
-          <div className="artisan-dashboard-rightside">
+          <div className="client-dashboard-rightside">
             <Notifications />
             <Notifications />
             <Statistics />
