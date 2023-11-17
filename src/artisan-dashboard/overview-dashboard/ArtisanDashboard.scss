@@ -1,5 +1,4 @@
 // artisan dashboard main css
-
 div.artisan-dashboard {
   display: flex;
   align-self: stretch;
@@ -12,11 +11,9 @@ div.artisan-dashboard {
     align-self: stretch;
     align-items: flex-start;
     width: 100%;
-
     div.mobile-show div.search-bar {
       display: none;
     }
-
     h1.dashboard-heading {
       color: var(--primary-text-color-blue, #0080ff);
       /* --Heading-30 */
@@ -26,10 +23,10 @@ div.artisan-dashboard {
       line-height: 28px;
       margin-bottom: 20px;
     }
-
     div.dashboard-content {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: 12px;
       align-self: stretch;
@@ -39,10 +36,7 @@ div.artisan-dashboard {
         gap: 20px;
         flex: 3;
       }
-
       div.artisan-dashboard-rightside {
-        // background: var(--card-color-transparent, rgba(180, 204, 252, 0.3));
-
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -51,6 +45,49 @@ div.artisan-dashboard {
     }
   }
 }
+
+@media (max-width: 768px) {
+  div.artisan-dashboard {
+    div.artisan-dashboard-container {
+      flex-direction: column;
+      div.mobile-show div.search-bar {
+        display: block;
+      }
+
+      h1.dashboard-heading {
+        color: var(--primary-text-color-blue, #0080ff);
+        /* --Heading-30 */
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
+      div.dashboard-content {
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        align-self: stretch;
+        div.artisan-dashboard-leftside {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          flex: none;
+        }
+        div.artisan-dashboard-rightside {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 20px;
+          flex: none;
+        }
+      }
+    }
+  }
+}
+
 
 // balance card
 
@@ -137,11 +174,6 @@ div.total-balance-card {
     align-items: center;
     gap: 5px;
     align-self: stretch;
-    link {
-    }
-
-    img {
-    }
   }
 }
 
@@ -170,337 +202,4 @@ div.dashboard-balance {
 
 // project card
 
-div.project-card {
-  display: flex;
-  align-items: flex-start;
-  align-self: stretch;
-  width: 100%;
-  div.project-card-container {
-    width: 100%;
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    align-self: stretch;
 
-    border-radius: 10px;
-    background: var(--primary-button-color-white, #fff);
-    box-shadow: -3px 4px 15px 0px rgba(0, 0, 102, 0.1);
-    backdrop-filter: blur(21.29551887512207px);
-
-    div.project-image-and-rating {
-      position: relative;
-      padding: 0px;
-      width: 100%;
-      div.project-card-rating {
-        padding: 5px;
-        padding-inline: 10px;
-        position: absolute;
-        bottom: 7px;
-        left: 0;
-        border-radius: 0px 8px 0px 0px;
-        background: var(----dark-transparent-75, rgba(24, 71, 163, 0.75));
-        backdrop-filter: blur(2px);
-
-        img.project-star {
-          width: 16px;
-        }
-
-        p.rating {
-          color: var(--primary-text-color-white);
-          font-size: 8px;
-          span {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-          }
-        }
-      }
-    }
-
-    img.project-card-image {
-      height: 150px;
-      width: 100%;
-      background-size: contain;
-      padding: 0px;
-      align-self: stretch;
-      background: var(--card-color-transparent, rgba(180, 204, 252, 0.3));
-      margin-bottom: 0;
-    }
-
-    h2.project-title {
-      margin-top: 5px;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      margin-bottom: 2px;
-    }
-
-    p.project-description {
-      font-size: 10px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%; /* 15px */
-      letter-spacing: 0.2px;
-      margin-bottom: 8px;
-    }
-
-    div.project-date-and-button {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      align-self: stretch;
-      p.project-date {
-        padding: 5px;
-        font-size: 10px;
-        background: var(--card-color-transparent);
-      }
-
-      button {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 0px;
-      }
-    }
-  }
-}
-
-// recent projects
-
-div.recent-projects {
-  width: 100%;
-  align-self: stretch;
-  div.recent-projects-container {
-    display: flex;
-    flex-direction: column;
-    align-self: stretch;
-    align-items: flex-start;
-
-    h2.heading {
-      color: var(--primary-text-color-black, #26334d);
-      /*--Heading-20*/
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      margin-bottom: 20px;
-      text-align: left;
-      align-items: center;
-      align-self: stretch;
-      background: var(--card-color-transparent);
-      padding: 10px;
-      border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
-    }
-    div.recent-projects-collection {
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      align-self: stretch;
-    }
-  }
-}
-
-// notifications
-
-div.message-overlay.hidden {
-  border-radius: 5px;
-  background: var(--transparent-10, rgba(180, 204, 252, 0.1));
-  div.message-overlay-heading {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: stretch;
-    h1 {
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-    }
-
-    p {
-      display: flex;
-      align-self: flex-end;
-    }
-  }
-
-  div.message-overlay-container {
-    display: flex;
-    align-self: stretch;
-    flex-direction: column;
-    gap: 8px;
-  }
-}
-
-// notification card
-
-div.message-card {
-  background: var(--primary-bg-color);
-  display: flex;
-  flex-direction: row;
-  // align-self: str;
-  justify-content: space-between;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: -5px 10px 20px 0px rgba(38, 51, 77, 0.05);
-
-  div.message-card-container {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    justify-content: space-between;
-    min-width: 100%;
-    img.message-icon {
-      background: var(--tab-select-color);
-      padding: 5px;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      flex: 1;
-      margin-right: 10px;
-    }
-    img.state-icon {
-      float: right;
-      width: 21.5px;
-      height: 21.5px;
-      flex: 1;
-    }
-
-    div.message-and-time {
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-
-      align-items: flex-start;
-      flex: 8;
-      p.message {
-        font-size: 13px;
-        align-self: stretch;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
-      }
-
-      p.time {
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%; /* 15px */
-        letter-spacing: 0.2px;
-      }
-    }
-  }
-}
-
-div.message-card:hover {
-  background: var(--card-color-transparent);
-}
-
-// tramsaction item
-
-div.transaction-item {
-  display: flex;
-  padding: 8px;
-  justify-content: space-between;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-
-  div.transaction-date {
-    display: flex;
-    max-width: 200px;
-    min-width: 150px;
-    padding: 10px;
-    align-items: flex-start;
-    gap: 10px;
-    text-align: left;
-  }
-
-  div.transaction-activity {
-    display: flex;
-    max-width: 200px;
-    min-width: 150px;
-    padding: 10px;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  div.transaction-description {
-    display: flex;
-    max-width: 200px;
-    min-width: 150px;
-    padding: 10px;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  div.transaction-status {
-    display: flex;
-    max-width: 200px;
-    min-width: 150px;
-    padding: 10px;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
-
-// recent transaction
-
-div.recent-transactions {
-  width: 100%;
-  align-self: stretch;
-  div.recent-transactions-container {
-    display: flex;
-    flex-direction: column;
-    align-self: stretch;
-    align-items: flex-start;
-
-    h2.heading {
-      color: var(--primary-text-color-black, #26334d);
-      /* --Heading-20 */
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      margin-bottom: 20px;
-      text-align: left;
-      align-items: center;
-      align-self: stretch;
-      background: var(--card-color-transparent);
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    div.recent-transactions-collection {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-self: stretch;
-      div.recent-transaction-collection-header {
-        background: var(--transparent-10);
-      }
-    }
-  }
-}
-
-
-@media (max-width: 700px) {
-
-  div.artisan-dashboard {
-    div.artisan-dashboard-container {
-      div.mobile-show div.search-bar {
-        display: block;
-      }
-    }
-  }
-}

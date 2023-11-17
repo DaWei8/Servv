@@ -111,19 +111,23 @@ div.artisan-topbar {
 //   }
 // }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   div.artisan-topbar {
     div.artisan-topbar-container {
       justify-content: flex-end;
-      // div.artisan-hamburger-menu {
-      //   display: flex;
-      // }
+      div.artisan-hamburger-menu {
+        display: flex;
+      }
 
       div.artisan-company-logo {
         display: none;
         img.servv-logo {
           width: 121px;
         }
+      }
+
+      div.artisan-topbar-search {
+        display: none;
       }
     }
   }
