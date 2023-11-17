@@ -18,13 +18,10 @@ const ClientDashboard = () => {
           <ClientSearchBar />
         </div>
         <div className="dashboard-content straighten">
-          <div className="client-dashboard-leftside">
-        
-            <DashboardYourBalance />
-            
+          <div className="client-dashboard-leftside"> 
+        <DashboardYourBalance />  
             <RecentProjects />
             <RecentTransactions />
-            
           </div>
           <div className="client-dashboard-rightside">
             <Notifications />
