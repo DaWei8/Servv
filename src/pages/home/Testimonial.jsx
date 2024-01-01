@@ -16,7 +16,7 @@ const TestimonialSection = () => (
     </div>
 
     <div className=" flex flex-col gap-[40px] ">
-      <div className="flex flex-row gap-[15px] overflow-hidden scroll-auto ">
+      <div className="flex flex-row gap-[15px] overflow-x-hidden scroll-auto ">
         {testimonialsCard.map((card, index) => (
           <TestimonialCard
             key={index}
@@ -43,13 +43,13 @@ const TestimonialSection = () => (
 export default TestimonialSection;
 
 const TestimonialCard = (props) => (
-  <div className=" flex md:w-[600px] md:min-w-[600px] gap-[20px] bg-primary-bg-color-white min-w-full px-[16px] py-[32px] relative shadow-3xl rounded-[10px] md:ml-[0px] ">
+  <div className=" flex md:w-[600px] md:min-w-[600px] gap-[20px] bg-primary-bg-color-white min-w-full px-[16px] py-[32px] relative shadow-2xl rounded-[10px] md:ml-[0px] ">
     <img
       className=" md:left-0 md:w-[250px] object-cover md:h-[250px] hidden md:flex w-[54px] h-[54px] md:rounded-[10px] rounded-[25px] "
       src={props.picture}
       alt="pixels of the testifier"
     />
-    <div className=" flex ">
+    <div className=" flex p-[20px] ">
       <img className=" md:w-[60px] w-[38px] absolute right-[16px] " src={QuoteMark} alt="quote mark" />
       <div className=" flex flex-col ">
       <img
