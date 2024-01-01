@@ -1,3 +1,8 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --main-color: #0080ff;
   --primary-button-color: #0080ff;
@@ -90,19 +95,70 @@ h1 {
  } */
 
 p {
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 27px;
 }
 
 button {
   border-radius: 8px;
   border: 0px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   font-family: inherit;
   background-color: var(--primary-bg-color);
   cursor: pointer;
 }
+
+.primary-button {
+  border-radius: 8px;
+  border: 0px solid transparent;
+  padding-inline: 60px;
+  width: max-content;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary-bg-color);
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.primary-button-blue {
+  border-radius: 8px;
+  border: 0px solid transparent;
+  padding-inline: 60px;
+  width: max-content;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #0080ff;
+  cursor: pointer;
+}
+
+.border-button {
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding-inline: 60px;
+  width: max-content;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.border-button-blue {
+  border-radius: 8px;
+  border: 1px solid #0080ff;
+  padding-inline: 60px;
+  width: max-content;
+  color: #0080ff;
+  font-weight: 500;
+  font-family: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+
 button:hover {
   border-color: var(--main-color);
 }

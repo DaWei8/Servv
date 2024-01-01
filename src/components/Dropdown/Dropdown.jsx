@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Dropdown.css";
+// import "./Dropdown.css";
 import arrowDown from "../../assets/icons/arrowDown.svg";
 
 const Dropdown = () => {
@@ -23,15 +23,15 @@ const Dropdown = () => {
   };
 
   return (
-    <div className="dropdown">
-      <button className="dropdown-toggle" onClick={toggleDropdown}>
+    <div className="dropdown flex flex-col bg-pale-blue-grey rounded-[5px] gap-[10px]  ">
+      <button className="dropdown-toggle flex-auto justify-between flex p-[10px] items-center gap-[10px] " onClick={toggleDropdown}>
         <div className="dropdown-placeholder">
-          {selectedOption ? selectedOption : "Location"}
+          <p className=" w-[80px] truncate " >{selectedOption ? selectedOption : "Location"}</p>
         </div>
         <img src={arrowDown} alt="dropdown arrow" />
       </button>
       {isOpen && (
-        <ul className="dropdown-menu">
+        <ul className="dropdown-menu p-[10px] flex flex-col gap-[10px]  ">
           {options.map((option) => (
             <li
               key={option}

@@ -26,7 +26,7 @@ const ArtisanDashboard = () => {
           <div className="artisan-dashboard-rightside">
             <Notifications />
             <Notifications />
-            <Statistics />
+            {/* <Statistics /> */}
           </div>
         </div>
       </div>

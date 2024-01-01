@@ -23,20 +23,18 @@ function Login() {
   });
 
   const [selectedOption, setSelectedOption] = useState(false);
-
   // const [selectSignupOption, setSelectSignupOption] = useState(false);
 
   const validateFormData = (formData) => {
-    const errors = {};
 
     if (!formData.mobilenumber) {
-      errors.mobilenumber = "Email is required";
+      errors.mobilenumber = "Number is required";
     }
     if (!formData.email) {
       errors.mobilenumber = "Email is required";
     }
     if (!formData.password) {
-      errors.mobilenumber = "Email is required";
+      errors.mobilenumber = "password is required";
     }
 
     return errors;

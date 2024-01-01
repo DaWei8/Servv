@@ -27,7 +27,7 @@ const ForSubjectCards = [
 
 const ForPage = () => {
   return (
-    <div className="for-page">
+    <div className=" flex flex-col w-screen items-center ">
       <NavBar />
       <ForHeroSection />
       <ForCustomerSection />
@@ -42,9 +42,11 @@ const ForPage = () => {
 export default ForPage;
 
 const ForHeroSection = () => (
-  <div className="for-hero-section">
-    <div className="for-hero-text">
-      <h1>Tailored to your Specific Business Needs</h1>
+  <div className=" md:px-0 px-[16px] container max-w-[1024px] mx-auto flex md:flex-row flex-col gap-[40px] justify-between mt-[50px] py-[96px] ">
+    <div className=" flex flex-col md:w-[55%] gap-[20px] ">
+      <h1 className=" text-[48px] font-semibold ">
+        Tailored to your Specific Business Needs
+      </h1>
       <p>
         At Serv, we believe in the power of connecting people with skilled
         artisans right in their local communities. We are an innovative online
@@ -53,9 +55,14 @@ const ForHeroSection = () => (
         mission is to create a seamless platform that simplifies the process of
         finding the perfect artisan for any task or project.
       </p>
-      <div className="for-hero-cta-buttons">
-        <button className="for-sign-up">Sign up</button>
-        <button className="for-log-up">Log in</button>
+      <div className=" flex flex-row gap-[20px] ">
+        <button className="primary-button-blue h-[50px] ">Sign up</button>
+        <button
+          className=" border-button-blue
+         h-[50px] "
+        >
+          Log in
+        </button>
       </div>
     </div>
     <div className="for-hero-image">
@@ -65,17 +72,21 @@ const ForHeroSection = () => (
 );
 
 const ForCustomerSection = () => (
-  <div className="for-subject-section">
-    <div className="for-subject-header">
-      <h1 className="for-subject-header-head">For Customers</h1>
-      <p className="for-subject-header-support">What you get</p>
+  <div className=" md:px-0 px-[16px] flex max-w-[1024px] flex-col gap-[40px] my-[60px]  ">
+    <div className="flex flex-col items-center">
+      <h1 className="md:text-[40px] text-[32px]  font-semibold">
+        For Customers
+      </h1>
+      <p className="text-[10px] md:text-[14px] uppercase tracking-[6px]">
+        What you get
+      </p>
     </div>
-    <div className="for-subject-cards">
+    <div className="flex flex-wrap justify-center gap-[20px] ">
       {ForSubjectCards.map((card, index) => (
         <ForSubjectCard key={index} image={card.image} title={card.title} />
       ))}
     </div>
-    <p className="for-subject-closing-text">
+    <p className=" leading-[200%] md:text-center ">
       Serv was born out of a passion for empowering both clients and artisans,
       providing them with a user-friendly platform to connect and collaborate.
       Our journey began with a vision to transform the way people access local
@@ -85,17 +96,17 @@ const ForCustomerSection = () => (
   </div>
 );
 const ForArtisanSection = () => (
-  <div className="for-subject-section">
-    <div className="for-subject-header">
-      <h1 className="for-subject-header-head">For Artisan</h1>
-      <p className="for-subject-header-support">What you get</p>
+  <div className=" md:px-0 px-[16px] flex max-w-[1024px] flex-col gap-[40px] my-[60px]  ">
+    <div className="flex flex-col items-center">
+      <h1 className="md:text-[40px] text-[32px]  font-semibold">For Artisan</h1>
+      <p className="text-[10px] md:text-[14px] uppercase tracking-[6px]">What you get</p>
     </div>
-    <div className="for-subject-cards">
+    <div className="flex flex-wrap justify-center gap-[20px] ">
       {ForSubjectCards.map((card, index) => (
         <ForSubjectCard key={index} image={card.image} title={card.title} />
       ))}
     </div>
-    <p className="for-subject-closing-text">
+    <p className="leading-[200%] md:text-center ">
       Serv was born out of a passion for empowering both clients and artisans,
       providing them with a user-friendly platform to connect and collaborate.
       Our journey began with a vision to transform the way people access local
@@ -105,17 +116,17 @@ const ForArtisanSection = () => (
   </div>
 );
 const ForAgencySection = () => (
-  <div className="for-subject-section">
-    <div className="for-subject-header">
-      <h1 className="for-subject-header-head">For Agency</h1>
-      <p className="for-subject-header-support">What you get</p>
+  <div className=" md:px-0 px-[16px] flex max-w-[1024px]  flex-col gap-[40px] my-[60px]  ">
+    <div className="flex flex-col items-center">
+      <h1 className="md:text-[40px] text-[32px]  font-semibold">For Agency</h1>
+      <p className="text-[10px] md:text-[14px] uppercase tracking-[6px]">What you get</p>
     </div>
-    <div className="for-subject-cards">
+    <div className=" flex flex-wrap justify-center gap-[20px] ">
       {ForSubjectCards.map((card, index) => (
         <ForSubjectCard key={index} image={card.image} title={card.title} />
       ))}
     </div>
-    <p className="for-subject-closing-text">
+    <p className="leading-[200%] md:text-center ">
       Serv was born out of a passion for empowering both clients and artisans,
       providing them with a user-friendly platform to connect and collaborate.
       Our journey began with a vision to transform the way people access local
@@ -126,8 +137,8 @@ const ForAgencySection = () => (
 );
 
 const ForSubjectCard = (props) => (
-  <div className="for-subject-card">
-    <img src={props.image} alt="" />
-    <p className="for-subject-card-title">{props.title} </p>
+  <div className=" bg-[#B5BBC81A] w-[150px] gap-[10px] rounded-[20px] flex-col px-[20px] py-[20px] flex items-center justify-center ">
+    <img className="p-[10px] " src={props.image} alt="" />
+    <p className=" font-semibold ">{props.title} </p>
   </div>
 );

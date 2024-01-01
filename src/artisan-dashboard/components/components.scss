@@ -123,12 +123,12 @@ div.text-box-card-multiple {
 
 //       project card
 
-
 div.project-card {
   display: flex;
   align-items: flex-start;
   align-self: stretch;
   width: 100%;
+  max-width: 250px;
   div.project-card-container {
     width: 100%;
     display: flex;
@@ -225,9 +225,15 @@ div.project-card {
   }
 }
 
-
-
-
+@media (max-width: 768px) {
+  div.project-card {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 100%;
+    max-width: 198px;
+  }
+}
 
 // tramsaction item
 
@@ -280,7 +286,6 @@ div.transaction-item {
   }
 }
 
-
 // recent projects
 
 div.recent-projects {
@@ -321,10 +326,7 @@ div.recent-projects {
   }
 }
 
-
 @media screen and (max-width: 768px) {
-
-  
 }
 
 // notifications
@@ -333,6 +335,10 @@ div.message-overlay {
   border-radius: 5px;
   background: var(--transparent-10, rgba(180, 204, 252, 0.1));
   width: 100%;
+  min-width: 300px;
+  max-width: 430px;
+  padding: 10px;
+  // height: max-content;
   div.message-overlay-heading {
     display: flex;
     flex-direction: row;
@@ -344,18 +350,26 @@ div.message-overlay {
       font-weight: 600;
       line-height: normal;
     }
-
     p {
       display: flex;
       align-self: flex-end;
     }
   }
-
   div.message-overlay-container {
     display: flex;
     align-self: stretch;
     flex-direction: column;
     gap: 8px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  div.message-overlay {
+    max-width: 330px;
+    width: 100%;
+    min-width: 320px;
+    // flex: 1;
   }
 }
 
@@ -365,7 +379,7 @@ div.message-card {
   background: var(--primary-bg-color);
   display: flex;
   flex-direction: row;
-  // align-self: str;
+  padding: 6px;
   justify-content: space-between;
   width: 100%;
   border-radius: 10px;
@@ -469,6 +483,16 @@ div.transaction-item {
     padding: 10px;
     align-items: flex-start;
     gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  div.transaction-item {
+    div.transaction-description {
+      overflow: hidden;
+      width: 50px;
+      min-width: none;
+    }
   }
 }
 

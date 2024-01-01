@@ -1,5 +1,4 @@
 import "./App.css";
-// import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/home/homePage";
@@ -16,8 +15,7 @@ import { ArtisanPage } from "./artisan-dashboard/ArtisanPage";
 const App = () => {
 
   return (
-    <div className="App">
-
+    <div className="App relativeflex flex-col content-center items-center ">
       <BrowserRouter>
         <Routes>
           <Route path="/" exact Component={HomePage} />
@@ -25,7 +23,6 @@ const App = () => {
           <Route path="/marketplace" Component={MarketPage} />
           <Route path="/for" Component={ForPage} />
           <Route path="/support" Component={SupportPage} />
-
           <Route path="/authPage/*" Component={AuthPage}/>
           <Route path="/artisanPage/*" Component={ArtisanPage}/>
           {/* <Route path="/clientPage/*" Component={ClientPage}/> */}
