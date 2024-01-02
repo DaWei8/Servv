@@ -25,7 +25,7 @@ export default {
         "4xl": "2rem",
       },
       boxShadow: {
-        '3xl': '0 15px 20px -15px rgba(0, 0, 0, 0.3)',
+        '3xl': '0 0px 30px -15px rgba(0, 0, 0, 0.3)',
       }
     },
     

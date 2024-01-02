@@ -2,7 +2,7 @@
 import Login from './log-in/Login';
 import SignUp from './sign-up/SignUp';
 
-import "./AuthPage.scss"
+// import "./AuthPage.scss"
 import { Route, Routes } from 'react-router-dom';
 
 const AuthPage = () => {
@@ -19,7 +19,7 @@ const AuthPage = () => {
   // setUserValidationStatus.isLoggedIn = false;
 
   return (
-    <div className='auth-page'>
+    <div className='flex w-screen items-center flex-col'>
 
       <Routes>
         <Route path={"/"} exact Component={Login} />
