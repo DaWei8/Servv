@@ -42,7 +42,7 @@ const ForPage = () => {
 export default ForPage;
 
 const ForHeroSection = () => (
-  <div className=" md:px-0 px-[16px] container max-w-[1024px] mx-auto flex md:flex-row flex-col gap-[40px] justify-between mt-[50px] py-[96px] ">
+  <div className=" md:px-0 px-[20px] container max-w-[1024px] mx-auto flex md:flex-row flex-col gap-[40px] justify-between mt-[50px] py-[96px] ">
     <div className=" flex flex-col md:w-[55%] gap-[20px] ">
       <h1 className=" text-[48px] font-semibold ">
         Tailored to your Specific Business Needs
@@ -65,7 +65,7 @@ const ForHeroSection = () => (
         </button>
       </div>
     </div>
-    <div className="for-hero-image">
+    <div className=" flex flex-auto justify-center items-center ">
       <img src={ArtisanAgencyImage} alt="Artisan agency" />
     </div>
   </div>
