@@ -163,7 +163,7 @@ const AboutOurCommitmentCard = (props) => (
 );
 
 const AboutHeroSection = () => (
-  <section className=" container max-w-[1024px] gap-[40px] px-[16px] mx-auto -screen mt-[150px] flex flex-col flex-auto md:flex-row md:justify-between ">
+  <section className=" container max-w-[1024px] gap-[40px] px-[20px] mx-auto -screen mt-[150px] flex flex-col flex-auto md:flex-row md:justify-between ">
     <div className=" flex flex-col lg:w-[60%] md:w-[45%] justify-center ">
       <h1 className="text-[48px] font-[600] text-main-color  ">About Servv</h1>
       <p className="md:text-[24px] text-[20px] mb-[20px] ">
@@ -189,7 +189,7 @@ const AboutHeroSection = () => (
 );
 
 const AboutOurJourney = () => (
-  <section className="flex max-w-[1024px] px-[16px] flex-col gap-[40px] my-[60px]  ">
+  <section className="flex max-w-[1024px] px-[20px] flex-col gap-[40px] my-[60px]  ">
     <div className="flex flex-col items-center ">
       <h1 className=" md:text-[40px] text-[32px]  font-semibold ">Our Journey</h1>
       <p className=" text-[10px] md:text-[14px] uppercase tracking-[6px] ">How we got here</p>
@@ -214,7 +214,7 @@ const AboutOurJourney = () => (
 );
 
 const AboutOurVision = () => (
-  <section className="flex max-w-[1024px] px-[16px] flex-col gap-[40px] my-[60px] ">
+  <section className="flex max-w-[1024px] px-[20px] flex-col gap-[40px] my-[60px] ">
     <div className="flex flex-col items-center">
       <h1 className="md:text-[40px] text-[32px]  font-semibold">Our Vision</h1>
       <p className="uppercase text-[10px] md:text-[14px] tracking-[6px]">Where we are headed</p>
@@ -235,7 +235,7 @@ const AboutOurVision = () => (
 );
 
 const AboutWhyChoose = () => (
-  <section className=" my-[60px] max-w-[1024px] px-[16px] flex items-center flex-col ">
+  <section className=" my-[60px] max-w-[1024px] px-[20px] flex items-center flex-col gap-[40px] ">
     <div className="flex flex-col items-center ">
       <h1 className="md:text-[40px] text-[32px]  font-semibold">Why Choose Serv?</h1>
       <p className="uppercase text-[10px] md:text-[14px] tracking-[6px]">For all you need to know</p>
@@ -265,14 +265,14 @@ const AboutWhyChoose = () => (
 );
 
 const AboutOurCommitment = () => (
-  <section className=" flex max-w-[1024px] flex-col px-[16px] gap-[40px] my-[60px] items-center ">
+  <section className=" flex max-w-[1024px] flex-col px-[20px] gap-[40px] my-[60px] items-center ">
     <div className="flex flex-col items-center">
       <h1 className="md:text-[40px] text-[32px] text-center font-semibold">
         Our Commitment to Excellence
       </h1>
       <p className="uppercase text-[10px] md:text-[14px] tracking-[6px]">Success is our only option</p>
     </div>
-    <div className=" flex flex-row flex-wrap gap-[30px] ">
+    <div className=" flex flex-row flex-wrap gap-[30px] justify-center ">
       {AboutCommitmentCards.map((card, index) => (
         <AboutOurCommitmentCard
           key={index}

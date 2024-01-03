@@ -40,7 +40,7 @@ const HomePage = () => (
 export default HomePage;
 
 const HeroSection = () => (
-  <section className=" w-screen md:w-auto flex flex-col mx-auto text-center items-center mt-[150px] md:px-[0px] px-[16px] ">
+  <section className=" w-screen md:w-auto flex flex-col mx-auto text-center items-center mt-[150px] md:px-[0px] px-[20px] ">
     <h1 className="hero-header text-[48px] leading-normal md:text-[64px] mb-[10px] font-[600] text-main-color ">
       The Artisan Marketplace
     </h1>

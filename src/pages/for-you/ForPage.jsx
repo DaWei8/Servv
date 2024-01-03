@@ -72,7 +72,7 @@ const ForHeroSection = () => (
 );
 
 const ForCustomerSection = () => (
-  <div className=" md:px-0 px-[16px] flex max-w-[1024px] flex-col gap-[40px] my-[60px]  ">
+  <div className=" md:px-0 px-[20px] flex max-w-[1024px] flex-col gap-[40px] my-[60px]  ">
     <div className="flex flex-col items-center">
       <h1 className="md:text-[40px] text-[32px]  font-semibold">
         For Customers
@@ -96,7 +96,7 @@ const ForCustomerSection = () => (
   </div>
 );
 const ForArtisanSection = () => (
-  <div className=" md:px-0 px-[16px] flex max-w-[1024px] flex-col gap-[40px] my-[60px]  ">
+  <div className=" md:px-0 px-[20px] flex max-w-[1024px] flex-col gap-[40px] my-[60px]  ">
     <div className="flex flex-col items-center">
       <h1 className="md:text-[40px] text-[32px]  font-semibold">For Artisan</h1>
       <p className="text-[10px] md:text-[14px] uppercase tracking-[6px]">What you get</p>
@@ -116,7 +116,7 @@ const ForArtisanSection = () => (
   </div>
 );
 const ForAgencySection = () => (
-  <div className=" md:px-0 px-[16px] flex max-w-[1024px]  flex-col gap-[40px] my-[60px]  ">
+  <div className=" md:px-0 px-[20px] flex max-w-[1024px]  flex-col gap-[40px] my-[60px]  ">
     <div className="flex flex-col items-center">
       <h1 className="md:text-[40px] text-[32px]  font-semibold">For Agency</h1>
       <p className="text-[10px] md:text-[14px] uppercase tracking-[6px]">What you get</p>
