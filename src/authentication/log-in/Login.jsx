@@ -24,7 +24,6 @@ function Login() {
   });
 
   const [selectedOption, setSelectedOption] = useState(false);
-  // const [selectSignupOption, setSelectSignupOption] = useState(false);
 
   const validateFormData = (formData) => {
     if (!formData.mobilenumber) {
