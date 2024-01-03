@@ -2,7 +2,6 @@
 import Login from './log-in/Login';
 import SignUp from './sign-up/SignUp';
 
-// import "./AuthPage.scss"
 import { Route, Routes } from 'react-router-dom';
 
 const AuthPage = () => {
