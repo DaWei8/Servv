@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import "./log-in.scss";
 import logo from "../../assets/images/company-logo.png";
 import backgroundImg from "../../assets/icons/bg-logo.png";
 import QuoteMark from "../../assets/icons/quote.svg";
