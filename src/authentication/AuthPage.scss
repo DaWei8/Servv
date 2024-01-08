@@ -4,3 +4,22 @@ div.auth-page {
   align-items: center;
   justify-content: center;
 }
+
+input.input-otp {
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  border: 2px solid var(--primary-text-color-black, #26334d);
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  margin: 0 10px;
+  text-align: center;
+  font-size: 36px;
+  pointer-events: none;
+}
+
+input.input-otp:focus {
+  border: 2px solid transparent;
+  outline: none;
+  background-color: var(--card-color-transparent, rgba(180, 204, 252, 0.3));
+}

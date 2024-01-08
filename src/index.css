@@ -67,6 +67,9 @@ body {
 input:active {
   border-color: var(--main-color);
 }
+input {
+  padding-left: 10px;
+}
 
 code {
   font-family: Arial, Menlo, Monaco, Consolas, "Courier New", monospace;

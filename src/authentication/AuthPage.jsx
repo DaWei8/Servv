@@ -1,6 +1,9 @@
 // import { useState } from 'react'
-import Login from './log-in/Login';
-import SignUp from './sign-up/SignUp';
+import ConfirmOTP from './ConfirmOTP';
+import ForgotPassword from './ForgotPassword';
+import Login from './Login';
+import ResetPassword from './ResetPassword';
+import SignUp from './SignUp';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -25,6 +28,9 @@ const AuthPage = () => {
         <Route path={"/login"} exact Component={Login} />
         {/* <Route path="../login" Component={Login} /> */}
         <Route path="/signup" exact Component={SignUp} />
+        <Route path="/confirm-otp" exact Component={ConfirmOTP} />
+        <Route path="/forgot-password" exact Component={ForgotPassword} />
+        <Route path="/reset-password" exact Component={ResetPassword} />
       </Routes>
       {/* {
         userValidationStatus.isLoggedIn !== true ?

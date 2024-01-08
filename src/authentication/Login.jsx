@@ -1,19 +1,18 @@
 /* eslint-disable no-unused-vars */
-import logo from "../../assets/images/company-logo.png";
-import backgroundImg from "../../assets/icons/bg-logo.png";
-import QuoteMark from "../../assets/icons/quote.svg";
-import validMark from "../../assets/icons/valid-mark.svg";
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import LeftFillerComponent from "./LeftFillerComponent";
 
-function Login() {
+export default function Login() {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
     mobilenumber: "",
     email: "",
     password: "",
+  });
+
+  const [usertypeState, setUsertypeState] = useState({
+    client: Boolean,
+    artisan: Boolean,
   });
 
   const [errors, setErrors] = useState({
@@ -25,16 +24,26 @@ function Login() {
   const [selectedOption, setSelectedOption] = useState(false);
 
   const validateFormData = (formData) => {
-    if (!formData.mobilenumber) {
-      errors.mobilenumber = "Number is required";
-    }
-    if (!formData.email) {
-      errors.mobilenumber = "Email is required";
-    }
-    if (!formData.password) {
-      errors.mobilenumber = "password is required";
-    }
-    return errors;
+    if (formData.email === "client@email.com")
+      console.log("This is a cherry banana");
+    if (formData.email === "client@email.com" && formData.password === "1234")
+      setUsertypeState({
+        client: true,
+        artisan: false,
+      });
+    else if (
+      formData.email === "artisan@email.com" &&
+      formData.password === "1234"
+    )
+      setUsertypeState({
+        client: false,
+        artisan: true,
+      });
+    else
+      setUsertypeState({
+        client: false,
+        artisan: false,
+      });
   };
 
   const handleChange = (e) => {
@@ -44,15 +53,8 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    validateFormData(formData)
     const errors = validateFormData(formData);
-
-    if (Object.keys(errors).length > 0) {
-      setErrors(errors);
-    } else {
-      //submit the form data to the server
-    }
-    console.log(formData);
   };
 
   const handleSignupSelect = (e) => {
@@ -72,36 +74,13 @@ function Login() {
 
   return (
     <div className=" w-fit flex flex-col items-center justify-around  ">
-      <div className=" flex flex-row md:max-w-[80vw] mx-auto md:p-[20px] md:rounded-[20px] md:shadow-3xl ">
-        <div className=" relative overflow-x-hidden text-primary-text-color-white login-left hidden md:flex flex-col bg-primary-bg-color-blue py-[96px] px-[34px] w-fit rounded-[10px] max-h-[90vh] ">
-          <div className="login-company-logo max-w-[400px] flex flex-col gap-[25px] ">
-            {/* <Link to="../login"> */}
-            <img
-              className="company-logo w-[120px] "
-              src={logo}
-              alt="company logo"
-            />
-            {/* </Link> */}
-            <p className=" leading-[200%] ">
-              At Servv, we believe in the power of connecting people with
-              skilled artisans right in their local communities.
-            </p>
-          </div>
-          <img
-            className=" absolute flex self-center justify-self max-w-[500px] -rotate-[30deg] "
-            src={backgroundImg}
-            alt="background image"
-          />
-          <div className=" mt-[100px] ">
-            <LoginTestimonialCard />
-          </div>
-        </div>
-
+      <div className=" flex flex-row mx-auto md:p-[20px] md:rounded-[20px] md:shadow-3xl ">
+        <LeftFillerComponent />
         {/* form for login  */}
         <form
           id="login-form"
           name="login-form"
-          className="login-form flex flex-col md:px-[70px] px-[20px] md:w-auto w-full md:py-[40px] py-[100px] md:h-auto h-screen  "
+          className="login-form flex flex-col  px-[20px] md:w-auto  md:py-[40px] py-[100px] md:h-auto h-screen  "
           onSubmit={handleSubmit}
           autoComplete=""
           action="submit"
@@ -148,11 +127,12 @@ function Login() {
           </div>
 
           {selectedOption !== true ? (
-            <div className=" flex flex-col md:w-[500px] gap-[20px] text-[14px] ">
-              <label className=" flex flex-col gap-[10px] " htmlFor="">
+            <div className=" flex flex-col items-center justify-center md:w-[500px] gap-[20px] text-[14px] ">
+              <label className=" flex flex-col w-full gap-[10px] " htmlFor="">
                 Email{" "}
                 <input
                   type="email"
+                  autoComplete= "true"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -161,10 +141,11 @@ function Login() {
                 {errors.email && <span>{errors.email}</span>}
               </label>
 
-              <label className=" flex flex-col gap-[10px] " htmlFor="">
+              <label className=" flex flex-col w-full gap-[10px] " htmlFor="">
                 Password
                 <input
                   type="password"
+                  autoComplete= "true"
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
@@ -175,19 +156,28 @@ function Login() {
               <div className=" flex flex-row flex-auto w-full items-baseline justify-end gap-[10px] ">
                 <p>Forgot Password?</p>
                 <button
-                  onClick={handleSignupSelect}
+                  // onClick={handleSignupSelect}
+                  type=" button "
                   className=" text-main-color "
                 >
-                  Recover password
+                  <Link
+                    style={{
+                      display: "flex",
+                    }}
+                    to="../forgot-password"
+                  >
+                    Reset password
+                  </Link>
                 </button>
               </div>
             </div>
           ) : (
-            <div className=" flex flex-col md:w-[500px] gap-[20px] text-[14px] ">
-              <label className=" flex flex-col gap-[10px] " htmlFor="">
+            <div className=" flex flex-col items-center justify-center md:w-[500px] gap-[20px] text-[14px] ">
+              <label className=" flex flex-col w-full gap-[10px] " htmlFor="">
                 Mobile number
                 <input
                   type="text"
+                  autoComplete= "true"
                   name="mobilenumber"
                   value={formData.mobilenumber}
                   onChange={handleChange}
@@ -195,10 +185,11 @@ function Login() {
                 />
               </label>
 
-              <label className=" flex flex-col gap-[10px] " htmlFor="">
+              <label className=" flex flex-col w-full gap-[10px] " htmlFor="">
                 Password
                 <input
                   type="password"
+                  autoComplete= "true"
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
@@ -209,53 +200,45 @@ function Login() {
               <div className=" flex flex-row flex-auto w-full items-baseline justify-end gap-[10px] ">
                 <p>Forgot Password?</p>
                 <button
-                  onClick={handleSignupSelect}
+                  // onClick={handleSignupSelect}
+                  type=" button "
                   className=" text-main-color "
                 >
-                  Recover password
+                  <Link
+                    style={{
+                      display: "flex",
+                    }}
+                    to="../forgot-password"
+                  >
+                    Reset password
+                  </Link>
                 </button>
               </div>
             </div>
           )}
 
-          <button
-            onClick={handleSubmit}
-            className="submit-btn float-right h-[50px] py-[15px] mt-[100px] bg-primary-button-color-blue flex items-center justify-center "
-            type="submit"
+          <Link
+            // onClick={handleSubmit}
+            className=" rounded-[10px] float-right h-[50px] py-[15px] mt-[100px] w-full bg-primary-button-color-blue flex items-center justify-center "
+            style={{
+              display: "flex",
+              color: "#fff",
+            }}
+            onClick={() =>  validateFormData(formData) }
+            // onSubmit={ usertypeState.client === false && usertypeState.artisan === false ? alert("Hello\nThis is a multiline alert") : alert("Login\nSuccessful") }
+            to={
+              usertypeState.artisan === true
+                ? "/artisanPage"
+                : usertypeState.client === true
+                ? "/clientPage"
+                : "./"
+            }
           >
-            <Link
-              style={{
-                display: "flex",
-                color: "#fff",
-              }}
-              to="/artisanPage"
-            >
-              Login
-            </Link>
-          </button>
+            Login
+          </Link>
+          {/* </button> */}
         </form>
       </div>
     </div>
   );
 }
-
-export default Login;
-
-const LoginTestimonialCard = () => (
-  <div className=" backdrop-blur-[10px] max-w-[400px] bg-transparent-bg-blur px-[25px] rounded-[15px] py-[35px] ">
-    <div className="testimonial-name-and-title mb-[10px] ">
-      <h2 className="person-name text-[24px] font-semibold ">Idowu Taiwo</h2>
-      <p className="person-title">Mobile Car Detailing</p>
-      <img
-        className=" md:w-[48px] w-[38px] absolute right-[25px] top-[45px] "
-        src={QuoteMark}
-        alt="quote mark"
-      />
-    </div>
-    <div className="person-testimony text-[14px] ">
-      Serv has been the best thing to happen to me this year. I have gone from
-      loan to loan. Now i have cleared all debts and I can now take care of my
-      family.
-    </div>
-  </div>
-);

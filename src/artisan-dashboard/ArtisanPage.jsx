@@ -19,14 +19,14 @@ export const ArtisanPage = () => {
     <div className="artisan-page">
       <div className="artisan-page-container">
         <div className="artisan-page-top">
-        <div className="artisan-hamburger-menu">
-          <img
-            src={menuIcon}
-            alt="servv logo"
-            className="hamburger-menu-icon"
-          />
-        </div>
-        <ArtisanTopbar />
+          <div className="artisan-hamburger-menu">
+            <img
+              src={menuIcon}
+              alt="servv logo"
+              className="hamburger-menu-icon"
+            />
+          </div>
+          <ArtisanTopbar />
         </div>
         <div className="artisan-page-content">
           <ArtisanSidebar />
@@ -42,11 +42,15 @@ export const ArtisanPage = () => {
             <Route path="/artisanPayments" exact Component={ArtisanPayments} />
             <Route path="/artisanHistory" exact Component={ArtisanHistory} />
             <Route path="/artisanSupport" exact Component={ArtisanSupport} />
-            <Route path="/artisanSettings/*" exact Component={ArtisanSettings} />
+            <Route
+              path="/artisanSettings/*"
+              exact
+              Component={ArtisanSettings}
+            />
           </Routes>
         </div>
       </div>
-        <FooterDashboard />
+      <FooterDashboard />
     </div>
   );
 };

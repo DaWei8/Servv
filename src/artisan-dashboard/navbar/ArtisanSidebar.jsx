@@ -7,7 +7,7 @@ import { sidebarContentTop, sidebarContentBottom } from "../../data/Datasets";
 const ArtisanSidebar = () => {
   
   return (
-    <div className="artisan-sidebar">
+    <div className="artisan-sidebar rounded-[8px] flex justify-center items-center h-[86vh]  ">
       <div className="artisan-sidebar-container">
         <div className="artisan-sidebar-container-top">
           {sidebarContentTop.map((content, index) => (
@@ -40,7 +40,7 @@ export default ArtisanSidebar;
 const ArtisanSidebarButton = (props) => {
   return (
     <Link to={props.link}>
-      <div className="artisan-sidebar-button">
+      <div className=" hover:bg-pale-blue-grey flex gap-[10px] py-[12px] px-[16px] rounded-[8px]  ">
         <img
           src={props.icon}
           alt="sidebar icon"
