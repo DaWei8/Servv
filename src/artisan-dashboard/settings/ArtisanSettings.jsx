@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./ArtisanSettings.scss";
+// import "./ArtisanSettings.scss";
 import personIcon from "../../assets/icons/person-1-icon.svg";
 import personAddIcon from "../../assets/icons/person-add-icon.svg";
 import securityIcon from "../../assets/icons/security-icon.svg";
@@ -9,7 +9,6 @@ import rightArrow from "../../assets/icons/arrow-down.svg";
 import qrCodeIcon from "../../assets/icons/ri-qr-code-line.svg";
 import referralImage from "../../assets/images/referral.png";
 import { Link, Route, Routes } from "react-router-dom";
-import profilePicture from "../../assets/images/testimonial_1.png";
 import { artisanProfileInfo, transactionData2 } from "../../data/Datasets";
 import TextBoxCard from "../components/TextBoxCard";
 import TransactionItem from "../components/TransactionItem";
@@ -39,24 +38,22 @@ const settingsContent = [
 
 const ArtisanSettings = () => {
   return (
-    <div className="artisan-settings">
-      <div className="artisan-settings-container">
-        <Routes>
-          <Route path="/" exact Component={SettingsHomes} />
-          <Route
-            path="/personalInformation"
-            exact
-            Component={PersonalInformationPage}
-          />
-          <Route
-            path="/passwordSecurity"
-            exact
-            Component={PasswordSecurityPage}
-          />
-          <Route path="/sendInvite" exact Component={SendInvite} />
-          <Route path="/activity" exact Component={Activity} />
-        </Routes>
-      </div>
+    <div className=" flex flex-auto w-full ">
+      <Routes>
+        <Route path="/" exact Component={SettingsHomes} />
+        <Route
+          path="/personalInformation"
+          exact
+          Component={PersonalInformationPage}
+        />
+        <Route
+          path="/passwordSecurity"
+          exact
+          Component={PasswordSecurityPage}
+        />
+        <Route path="/sendInvite" exact Component={SendInvite} />
+        <Route path="/activity" exact Component={Activity} />
+      </Routes>
     </div>
   );
 };
@@ -64,18 +61,20 @@ const ArtisanSettings = () => {
 export default ArtisanSettings;
 
 const SettingsCard = (props) => (
-  <Link to={props.link} className="settings-card">
-    <div className="settings-card-container">
-      <img src={props.icon} alt="settings icon" />
-      <div className="settings-card-title">{props.title}</div>
+  <Link to={props.link} className="  ">
+    <div className="flex flex-col items-center justify-center gap-[10px] rounded-[10px] hover:bg-pale-blue-grey bg-[#fff] shadow-3xl px-[15px] pt-[25px] h-[150px] w-[160px] md:w-[180px] ">
+      <img src={props.icon} alt="settings icon" className=" w-[45px] " />
+      <div className=" md:text-[14px] text-[12px] ">{props.title}</div>
     </div>
   </Link>
 );
 
 const SettingsHomes = () => (
   <div className="settings-home artisan-settings-container">
-    <h1 className="artisam-settings-heading">Settings</h1>
-    <div className="artisan-settings-content">
+    <h1 className="text-[24px] text-main-color font-[600] mb-[20px]">
+      Settings
+    </h1>
+    <div className=" flex flex-wrap gap-[20px] justify-center ">
       {settingsContent.map((content, index) => (
         <SettingsCard
           key={index}
@@ -89,16 +88,16 @@ const SettingsHomes = () => (
 );
 
 const SettingsChildPage = (props) => (
-  <div className="artisan-settings-child-container">
-    <div className="artisan-settings-child-heading">
+  <div className=" flex flex-col w-full gap-[20px] ">
+    <div className=" flex items-center gap-[10px] ">
       <Link to="../">
-        <img className="back-button" src={backButton} alt="back button" />
+        <img className=" w-[40px] " src={backButton} alt="back button" />
       </Link>
-      <h4>Settings</h4>
+      <h2 className=" text-[24px] text-main-color font-[600] ">Settings</h2>
       <img className="right-arrow" src={rightArrow} alt="back button" />
       <p>{props.childLink}</p>
     </div>
-    <div className="artisan-settings-child-content">{props.childContent}</div>
+    <div className="">{props.childContent}</div>
   </div>
 );
 
@@ -106,22 +105,28 @@ const PasswordSecurityPage = () => (
   <SettingsChildPage
     childLink="Password & Security"
     childContent={
-      <div className="password-security-container">
-        <div className="profile-information-section">
-          <h2 className="profile-information-heading">Password & Security</h2>
-          <div className="profile-information-content">
+      <div className="flex flex-wrap gap-[20px] flex-auto ">
+        <div className=" flex flex-col gap-[20px] lg:max-w-[450px] ">
+          <h2 className="text-[20px] font-[600] text-primary-text-color-black">
+            Password & Security
+          </h2>
+          <div className=" w-[450px] flex flex-col gap-[10px] ">
             <TextBoxCard title="Password" content="**********" />
             <TextBoxCard title="Security code" content="2345" />
 
-            <button className="change-password">Change Password</button>
+            <button className=" primary-button-blue h-[50px] w-auto ">
+              Change Password
+            </button>
           </div>
         </div>
-        <div className="two-factor-auth">
-          <h2 className="profile-information-heading">
+        <div className=" flex flex-col gap-[20px] lg:max-w-[450px] ">
+          <h2 className="text-[20px] font-[600] text-primary-text-color-black">
             Two Factor Authentication
           </h2>
-          <div className="profile-information-content">
-            <h3>Enable Two-Factor Authentication</h3>
+          <div className=" flex flex-col gap-[20px] ">
+            <h3 className=" text-[16px] font-[600] ">
+              Enable Two-Factor Authentication
+            </h3>
             <p>
               1. To enable 2FA, you need to install an authenticator app like
               Authy, or Google Authenticator.
@@ -131,8 +136,16 @@ const PasswordSecurityPage = () => (
               you can’t scan this barcode, enter the text code (Nue99PSH) on the
               authenticator app.
             </p>
-            <img src={qrCodeIcon} alt="" />
+            <p>3. Enter the OTP generated by the app and click enable</p>
+            <img
+              src={qrCodeIcon}
+              alt=" qr code image "
+              className=" w-[100px] "
+            />
           </div>
+          <button className=" primary-button-blue h-[50px] w-auto ">
+            Authenticate
+          </button>
         </div>
       </div>
     }
@@ -143,20 +156,22 @@ const PersonalInformationPage = () => (
   <SettingsChildPage
     childLink="Personal Information"
     childContent={
-      <div className="profile-information-container">
-        <div className="profile-information-picture-section">
+      <div className=" flex flex-wrap flex-auto gap-[20px] ">
+        <div className="relative flex-col flex w-[100%] rounded-[10px] md:w-[250px] overflow-hidden object-fill ">
           <img
-            src={profilePicture}
+            src={artisanProfileInfo[0].picture}
             alt="profile image"
-            className="profile-image"
+            className="profile-image  "
           />
-          <p>
+          <p className=" absolute text-primary-text-color-white bottom-[0px] bg-[#0a0a0c7e] p-[5px] leading-5 ">
             You can only change your profile picture once in a year(or 6 months)
           </p>
         </div>
-        <div className="profile-information-section">
-          <h2 className="profile-information-heading">Personal Information</h2>
-          <div className="profile-information-content">
+        <div className="flex flex-col gap-[20px] w-full md:w-[350px] ">
+          <h2 className="text-[20px] font-[600] text-primary-text-color-black">
+            Personal Information
+          </h2>
+          <div className=" flex flex-col gap-[10px]  ">
             <TextBoxCard
               title="First name"
               content={artisanProfileInfo[0].firstName}
@@ -185,23 +200,42 @@ const Activity = () => (
   <SettingsChildPage
     childLink="Activity"
     childContent={
-      <div className="activity-container">
-        <h2>Activity Log</h2>
-        <TransactionItem
-          date="Date"
-          activity="Activity"
-          description="Description"
-          status="Status"
-        />
-        {transactionData2.map((content, index) => (
-          <TransactionItem
-            key={index}
-            date={content.date}
-            activity={content.activity}
-            description={content.description}
-            status={content.status}
-          />
-        ))}
+      <div className=" flex flex-col flex-auto gap-[20px] ">
+        <h2 className=" text-[20px] font-[600] text-primary-text-color-black  ">
+          Activity Log
+        </h2>
+        <table className="recent-transactions-collection flex-auto flex-col gap-[12px] ">
+          <thead className="transaction-item flex-auto flex-col gap-[12px] ">
+            <tr className="flex px-[10px] bg-[#B4CCFC1A] items-center md:text-[16px] text-[12px] justify-between">
+              <th className="transaction-date md:w-[80px] w-[80px] h-[40px] flex items-center ">
+                Date
+              </th>
+              <th className="transaction-activity md:w-[150px] w-[120px] h-[40px] flex items-center ">
+                Activity
+              </th>
+              <th className="transaction-description text-clip md:w-[150px] w-[50px] h-[40px] md:flex items-center hidden ">
+                Description
+              </th>
+              <th className="transaction-description md:w-[150px] w-[50px] h-[40px] flex justify-center items-center md:hidden ">
+                ...
+              </th>
+              <th className="transaction-status md:w-[150px] w-[100px] h-[40px] flex items-center justify-end ">
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody className=" flex flex-col gap-[10px] pt-[10px] ">
+            {transactionData2.map((content, index) => (
+              <TransactionItem
+                key={index}
+                date={content.date}
+                activity={content.activity}
+                description={content.description}
+                status={content.status}
+              />
+            ))}
+          </tbody>
+        </table>
       </div>
     }
   />
@@ -211,13 +245,15 @@ const SendInvite = () => (
   <SettingsChildPage
     childLink="Send Invite"
     childContent={
-      <div className="send-invite-container">
-        <h2 className="heading">Send Invite</h2>
+      <div className=" flex flex-col gap-[10px] justify-center items-center px-[20px] ">
+        <h2 className=" text-[20px] font-[600] ">Send Invite</h2>
         <img src={referralImage} alt="referral image" />
-        <div className="copy-referral-section">
-          <h2 className="copy-referral-heading">Copy Referral Link:</h2>
+        <div className=" flex flex-col gap-[10px] justify-center items-center ">
+          <h2 className=" text-[16px] text-main-color font-[600]  ">
+            Copy Referral Link:
+          </h2>
           <p className="referral-link">
-            https://savvy.com/invite/a98fjjs9292dfx
+            https://servvmarketplace.com/invite/a98fjjs9292dfx
           </p>
         </div>
       </div>

@@ -7,8 +7,10 @@ const ArtisanSupport = () => {
   return (
     <div className="artisan-support">
       <div className="artisan-support-container">
-        <h1 className="artisam-support-heading">Live Chat & Support</h1>
-        <div className="artisan-support-content">
+        <h1 className="text-[24px] text-main-color font-[600] mb-[20px]">
+          Live Chat & Support
+        </h1>
+        <div className=" flex md:max-w-[350px] justify-center ">
           <StartLiveChat />
         </div>
       </div>
@@ -21,10 +23,12 @@ export default ArtisanSupport;
 const StartLiveChat = () => {
   return (
     <div className="start-live-chat">
-      <div className="start-live-chat-container">
-        <h3 className="heading">Select specific option</h3>
-        <div className="start-live-chat-content">
-          <form action="submit" method="post">
+      <div className=" flex flex-col gap-[10px] ">
+        <h3 className="text-[20px] font-[600]  rounded-[8px] text-primary-text-color-black">
+          Select specific option
+        </h3>
+        <div className=" flex flex-col ">
+          <form className=" flex flex-col gap-[10px] w-full " action="submit" method="post">
             {liveChatOptions.map((content, index) => (
               <TextBoxCardSelection
                 key={index}
@@ -32,7 +36,7 @@ const StartLiveChat = () => {
                 content={content.description}
               />
             ))}
-            <button>Start Live Chat</button>
+            <button className=" primary-button-blue h-[50px] mt-[10px] ">Start Live Chat</button>
           </form>
         </div>
       </div>
@@ -47,9 +51,9 @@ const TextBoxCardSelection = (props) => {
     setSelectedOption(selection);
   };
   return (
-    <div className="text-box-card-selection">
-      <div className="text-box-card-content">
-        <h3 className="text-box-card-multiple-heading">{props.title}</h3>
+    <div className=" flex items-center justify-between p-[10px] rounded-[10px] shadow-md ">
+      <div className=" flex flex-col gap-[5px] ">
+        <h3 className=" font-[700] ">{props.title}</h3>
         <p>{props.content}</p>
       </div>
       <input
@@ -58,6 +62,7 @@ const TextBoxCardSelection = (props) => {
         value={props.content}
         checked={selectedOption === props.title}
         onChange={() => handleSelection(props.title)}
+        className=" bg-primary-button-color-blue w-[15px] h-[15px] border-[1px] border-solid border-primary-bg-color-white accent-primary-button-color-blue "
       />
     </div>
   );

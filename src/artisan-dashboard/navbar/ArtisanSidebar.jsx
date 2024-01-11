@@ -5,11 +5,14 @@ import "./ArtisanSidebar.scss";
 import { sidebarContentTop, sidebarContentBottom } from "../../data/Datasets";
 
 const ArtisanSidebar = () => {
-  
   return (
-    <div className="artisan-sidebar rounded-[8px] flex justify-center items-center h-[86vh]  ">
-      <div className="artisan-sidebar-container">
-        <div className="artisan-sidebar-container-top">
+    <div
+      className={
+        "artisan-sidebar hidden pl-[6px] lg:py-[10px] max-h-[80vh] lg:rounded-[10px] bg-primary-bg-color-white shadow-3xl justify-center lg:flex lg:left-[20px] lg:top-[90px] duration-[500ms] "
+      }
+    >
+      <div className=" justify-between mr-[6px] flex-col flex rounded-[10px] h-full lg:px-0 px-[20px] group  duration-[500ms]  ">
+        <div className=" flex flex-col gap-[10px] ">
           {sidebarContentTop.map((content, index) => (
             <ArtisanSidebarButton
               key={index}
@@ -20,7 +23,7 @@ const ArtisanSidebar = () => {
           ))}
         </div>
 
-        <div className="artisan-sidebar-container-bottom">
+        <div className=" flex flex-col  gap-[10px] ">
           {sidebarContentBottom.map((content, index) => (
             <ArtisanSidebarButton
               key={index}
@@ -39,14 +42,16 @@ export default ArtisanSidebar;
 
 const ArtisanSidebarButton = (props) => {
   return (
-    <Link to={props.link}>
-      <div className=" hover:bg-pale-blue-grey flex gap-[10px] py-[12px] px-[16px] rounded-[8px]  ">
+    <Link to={props.link} className=" w-fit " >
+      <div className=" hover:bg-pale-blue-grey lg:shadow-none group-hover:w-[170px] bg-primary-bg-color-white shadow-3xl flex gap-[10px] lg:py-[12px] py-[15px] px-[16px] items-center rounded-[8px] duration-500 ">
         <img
           src={props.icon}
           alt="sidebar icon"
           className="artisan-sidebar-icon"
         />
-        <p className="artisan-sidebar-paragraph">{props.title}</p>
+        <p className=" text-[14px] font-[400] hidden group-hover:flex leading-[27px] text-primary-text-color-black ">
+          {props.title}
+        </p>
       </div>
     </Link>
   );

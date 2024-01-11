@@ -1,4 +1,4 @@
-import "./components.scss"
+// import "./components.scss"
 
 const Statistics = () => {
   return <div className="statistics">Statistics</div>;

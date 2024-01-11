@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import addIcon from "../../assets/icons/add.svg";
-import "./components.scss";
+// import "./components.scss";
 
 const ProfileButtonType = (props) => {
   return (

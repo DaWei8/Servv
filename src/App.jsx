@@ -15,7 +15,7 @@ import { ArtisanPage } from "./artisan-dashboard/ArtisanPage";
 const App = () => {
 
   return (
-    <div className="App relativeflex flex-col content-center items-center ">
+    <div className="App relativeflex flex flex-col content-center items-center w-screen mx-0 duration-500 ">
       <BrowserRouter>
         <Routes>
           <Route path="/" exact Component={HomePage} />
