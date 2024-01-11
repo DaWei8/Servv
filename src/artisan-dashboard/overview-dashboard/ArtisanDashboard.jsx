@@ -1,16 +1,11 @@
 /* eslint-disable react/prop-types */
-// import "./ArtisanDashboard.scss";
 
-// import Notifications from "../components/Notifications";
 import RecentTransactions from "../components/RecentTransactions";
-import searchIcon from "../../assets/icons/search-icon-black.svg";
-// import Statistics from "../components/Statistics";
+import searchIcon from "../../assets/icons/search-icon.svg";
 import DashboardBalance from "./DashboardBalance";
 import AdvertSection from "../components/AdvertCard";
 import { projectContent } from "../../data/Datasets";
 import ProjectCard from "../components/ProjectCard";
-
-// import ArtisanSidebar from "../navbar/ArtisanSidebar";
 
 const ArtisanDashboard = () => {
   return (
@@ -20,18 +15,12 @@ const ArtisanDashboard = () => {
       </h1>
       <SearchBar />
       <div className="flex flex-row gap-[20px] md:mt-0 mt-[10px] h-full  ">
-        {/* <div className="flex flex-row md:flex-nowrap flex-wrap justify-between gap-[10px] "> */}
-        {/* <div className=" flex flex-col gap-[20px] md:max-w-[59%] lg:max-w-full w-full "> */}
         <div className=" flex flex-col gap-[20px]  ">
           <DashboardBalance />
-          <Projects title="Recent Projects"  />
+          <Projects title="Recent Projects" />
           <RecentTransactions />
         </div>
         <AdvertSection />
-        {/* <div className="flex flex-col flex-wrap gap-[20px] lg:max-w-full md:max-w-[39%] md:items-end items-center flex-auto pt-[20px] ">
-          <Notifications />
-          <Notifications />
-        </div> */}
       </div>
     </div>
   );
@@ -55,7 +44,6 @@ const SearchBar = () => (
   </div>
 );
 
-
 const Projects = (props) => (
   <div className="_projects">
     <div className=" flex flex-col gap-[20px] ">
@@ -63,7 +51,7 @@ const Projects = (props) => (
         {props.title}
       </h2>
       <div className="_projects-collection">
-        <div className=" flex flex-wrap gap-[20px] ">
+        <div className=" flex flex-wrap gap-[20px] md:justify-normal justify-center items-center ">
           {projectContent.map((content, index) => (
             <ProjectCard
               key={index}

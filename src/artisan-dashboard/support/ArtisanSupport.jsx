@@ -10,7 +10,7 @@ const ArtisanSupport = () => {
         <h1 className="text-[24px] text-main-color font-[600] mb-[20px]">
           Live Chat & Support
         </h1>
-        <div className=" flex md:max-w-[350px] justify-center ">
+        <div className=" flex md:max-w-[350px]">
           <StartLiveChat />
         </div>
       </div>
@@ -51,7 +51,7 @@ const TextBoxCardSelection = (props) => {
     setSelectedOption(selection);
   };
   return (
-    <div className=" flex items-center justify-between p-[10px] rounded-[10px] shadow-md ">
+    <div className=" flex items-center justify-between p-[10px] gap-[10px] rounded-[10px] shadow-md ">
       <div className=" flex flex-col gap-[5px] ">
         <h3 className=" font-[700] ">{props.title}</h3>
         <p>{props.content}</p>

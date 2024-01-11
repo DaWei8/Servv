@@ -33,7 +33,7 @@ const Projects = (props) => (
         {props.title}
       </h2>
       <div className="_projects-collection">
-        <div className=" flex flex-wrap gap-[20px] ">
+        <div className=" flex flex-wrap gap-[20px] md:justify-normal justify-center items-center  ">
           {projectContent.map((content, index) => (
             <ProjectCard
               key={index}

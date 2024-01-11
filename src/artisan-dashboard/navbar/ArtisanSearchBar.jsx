@@ -1,4 +1,4 @@
-import searchIcon from "../../assets/icons/search-icon-black.svg";
+import searchIcon from "../../assets/icons/search-icon.svg";
 // import "./ArtisanSearchBar.scss";
 
 const ArtisanSearchBar = () => (
