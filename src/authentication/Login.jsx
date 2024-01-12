@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import LeftFillerComponent from "./LeftFillerComponent";
+import backButton from "../assets/icons/prev-arrow.svg";
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -53,7 +54,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    validateFormData(formData)
+    validateFormData(formData);
     const errors = validateFormData(formData);
   };
 
@@ -90,6 +91,9 @@ export default function Login() {
             Login
           </h1>
           <div className=" flex flex-row gap-[15px] items-center ">
+            <Link to="/">
+              <img className=" w-[40px] " src={backButton} alt="back button" />
+            </Link>
             <p>Dont have an account?</p>
             <button className=" text-main-color " onClick={handleSignupSelect}>
               <Link to="../signup">Create Account</Link>
@@ -132,7 +136,7 @@ export default function Login() {
                 Email{" "}
                 <input
                   type="email"
-                  autoComplete= "true"
+                  autoComplete="true"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -145,7 +149,7 @@ export default function Login() {
                 Password
                 <input
                   type="password"
-                  autoComplete= "true"
+                  autoComplete="true"
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
@@ -177,7 +181,7 @@ export default function Login() {
                 Mobile number
                 <input
                   type="text"
-                  autoComplete= "true"
+                  autoComplete="true"
                   name="mobilenumber"
                   value={formData.mobilenumber}
                   onChange={handleChange}
@@ -189,7 +193,7 @@ export default function Login() {
                 Password
                 <input
                   type="password"
-                  autoComplete= "true"
+                  autoComplete="true"
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
@@ -224,7 +228,7 @@ export default function Login() {
               display: "flex",
               color: "#fff",
             }}
-            onClick={() =>  validateFormData(formData) }
+            onClick={() => validateFormData(formData)}
             // onSubmit={ usertypeState.client === false && usertypeState.artisan === false ? alert("Hello\nThis is a multiline alert") : alert("Login\nSuccessful") }
             to={
               usertypeState.artisan === true

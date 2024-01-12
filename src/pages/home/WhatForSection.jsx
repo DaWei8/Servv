@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import CheckMark from "../../assets/icons/check-mark.svg";
 import { whatForServiceCard } from "../../data/Datasets";
-import AuthPage from "../../authentication/AuthPage";
+
 
 const WhatForSection = () => (
   <section className="py-[80px] px-[16px] container mx-auto flex flex-col gap-[24px] w-screen md:max-w-[1240px] ">
@@ -14,7 +14,7 @@ const WhatForSection = () => (
         For Businesses, For Individuals
       </p>
     </div>
-    <div className="flex flex-wrap gap-[15px] justify-center items-start ">
+    <div className="flex flex-wrap gap-[20px] justify-center items-start ">
       {whatForServiceCard.map((card, index) => (
         <WhatforServiceCard
           key={index}
@@ -30,8 +30,8 @@ const WhatForSection = () => (
       </p>
       <p>Sign up today and experience the difference!</p>
     </div>
-    <Link className="mx-auto" to="../AuthPage">
-      <button className=" primary-button-blue ">Sign Up</button>
+    <Link className="mx-auto" to="../authPage/signup">
+      <button className=" primary-button-blue h-[50px] ">Sign Up</button>
     </Link>
   </section>
 );

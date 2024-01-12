@@ -1,12 +1,14 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import CustomerAvatar from "../../assets/images/customer-avatar.png";
 import WorkerAvatar from "../../assets/images/worker-avatar.png";
+import { Link } from "react-router-dom";
 // import "./GetStartedSection.css";
 
 const GetStartedSection = () => (
   <section className="lex flex-col w-full gap-[24px] text-primary-text-color-white items-center bg-primary-bg-color-blue py-[80px] md:px-0 px-[20px] justify-center ">
     <div className="flex flex-col md:gap-[20px] gap-[10px] mb-[24px] ">
-      <h1 className="text-[28px] md:text-[40px] md:text-center font-semibold ">
+      <h1 className="text-[28px] md:text-[40px] md:text-center font-semibold leading-[35px] ">
         Ready to get Started?
       </h1>
       <p className=" tracking-[6px] gap-[10px] md:text-center md:text-[14px] text-[10px] uppercase ">
@@ -19,12 +21,16 @@ const GetStartedSection = () => (
         You are not sure yet? Open an account now
       </p>
       <div className="flex flex-row justify-center gap-[20px] ">
-        <button className=" primary-button h-[50px] flex-col items-center justify-center flex ">
-          Sign up
-        </button>
-        <button className=" border-button h-[50px] flex flex-col items-center justify-center hover:bg-[#fff] ">
-          Log in
-        </button>
+        <Link to="../authPage/signup" >
+          <button className=" primary-button h-[50px] flex-col items-center justify-center flex ">
+            Sign up
+          </button>
+        </Link>
+        <Link to=" ../authPage/ " >
+          <button className=" border-button h-[50px] flex flex-col items-center justify-center hover:bg-[#fff] hover:text-main-color ">
+            Log in
+          </button>
+        </Link>
       </div>
     </div>
   </section>
@@ -69,11 +75,7 @@ const SelectionCard = (props) => {
             : "get-started-card flex flex-col items-center bg-[#b4ccfc2f] rounded-[10px] overflow-hidden flex-auto "
         }
       >
-        <img
-          className=" max-w-[250px] "
-          src={props.avatar}
-          alt="avatar"
-        />
+        <img className=" max-w-[250px] " src={props.avatar} alt="avatar" />
         <h3 className=" mt-[10px] text-[24px] font-medium my-[10px] ">
           {props.title}
         </h3>

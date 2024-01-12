@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import CheckMark from "../../assets/icons/check-mark.svg";
 import { discoverCards } from "../../data/Datasets";
 
 const DiscoverSection = () => (
   <section className=" flex flex-col w-full gap-[24px] items-center bg-primary-bg-color-blue py-[80px] md:px-0 px-[20px] ">
     <div className="flex flex-col flex-auto md:gap-[20px] text-left md:text-center items-center text-primary-text-color-white ">
-      <h1 className=" text-[28px] md:text-[40px] font-semibold ">
+      <h1 className=" text-[28px] md:text-[40px] font-semibold leading-[35px] ">
         Discover the Best Artisans Near You with Servv
       </h1>
-      <p className=" w-full leading-[27px] " >
+      <p className=" w-full leading-[27px] ">
         Our platform connects you with experienced professionals who are
         passionate about delivering exceptional results for every project.
       </p>
@@ -25,7 +26,9 @@ const DiscoverSection = () => (
       </p>
       <p>Sign up today and experience the difference!</p>
     </div>
-    <button className="">Sign Up</button>
+    <Link to="../authPage/signup" >
+      <button className=" primary-button h-[50px] ">Sign Up</button>
+    </Link>
   </section>
 );
 

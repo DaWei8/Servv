@@ -9,6 +9,8 @@ import { useState } from "react";
 const NavBar = () => {
   const [clickState, setClickState] = useState(true);
 
+  const [authState, setAuthState] = useState(false);
+
   const handleMenuClick = () => {
     return setClickState(false);
   };
@@ -18,7 +20,7 @@ const NavBar = () => {
   return (
     <div className=" w-screen px-[16px] md:pt-[20px] pt-[10px] pb-[5px] fixed right-0 left-0 top-0 bg-transparent-bg-blur backdrop-blur-[20px] z-10 ">
       <div className=" container mx-auto flex items-center w-full justify-between ">
-        <div className="logo__container hidden md:flex ">
+        <div className="logo__container hidden md:flex w-[180px] ">
           <Link to="/">
             <img className=" h-[55px] " src={logo} alt="Servv Logo" />
           </Link>
@@ -52,13 +54,33 @@ const NavBar = () => {
             </Link>
           </li>
         </ul>
-        <div className="profile__button md:flex hidden  ">
-          <Link to="/authPage">
-            <button className=" relative bg-primary-button-color-blue rounded-[100px] h-[40px] text-primary-text-color-white flex items-center justify-center w-[40px]  ">
-              <div className="profile__state inactive absolute rounded-[40px] w-[11px] h-[11px] bottom-[0px] right-[3px] bg-default-green "></div>
-              D
-            </button>
-          </Link>
+        <div className="">
+          {authState ? (
+            <Link to="/authPage" className="md:flex hidden ">
+              <button className=" relative bg-primary-button-color-blue rounded-[100px] h-[40px] text-primary-text-color-white flex items-center justify-center w-[40px]  ">
+                <div className="profile__state inactive absolute rounded-[40px] w-[11px] h-[11px] bottom-[0px] right-[3px] bg-default-green "></div>
+                D
+              </button>
+            </Link>
+          ) : (
+            <div
+              className=" flex flex-row gap-[20px] flex-auto text-[14px] "
+              onClick={() => setAuthState(true)}
+            >
+              <Link
+                to="/authPage/signup"
+                className="  h-[40px] max-w-[130px] hidden md:flex items-center justify-center "
+              >
+                Sign Up
+              </Link>
+              <Link
+                to="/authPage"
+                className=" border-button-blue h-[40px] max-w-[100px] hidden md:flex items-center justify-center "
+              >
+                Login
+              </Link>
+            </div>
+          )}
         </div>
 
         <div onClick={handleMenuClick} className=" flex md:hidden ">
@@ -106,13 +128,33 @@ const NavBar = () => {
                 <p>Support</p>
               </Link>
             </li>
-            <div className="profile__button  ">
-              <Link to="/authPage">
-                <button className=" relative rounded-[5px] h-[40px] bg-primary-button-color-blue text-primary-text-color-white flex items-center justify-center w-full  ">
-                  <div className="profile__state inactive absolute rounded-[40px] w-[11px] h-[11px] bottom-1/2 top-1/2 right-[3px] bg-default-green "></div>
-                  D
-                </button>
-              </Link>
+            <div className=" flex flex-col gap-[20px] ">
+              {authState ? (
+                <Link to="/authPage">
+                  <button className=" relative rounded-[5px] h-[50px] bg-primary-button-color-blue text-primary-text-color-white flex items-center justify-center w-full  ">
+                    <div className="profile__state inactive absolute rounded-[40px] w-[40px] h-[20px] bottom-1/2 top-4 right-[3px] bg-default-green "></div>
+                    D
+                  </button>
+                </Link>
+              ) : (
+                <div
+                  className=" flex flex-row gap-[20px] flex-auto "
+                  onClick={() => setAuthState(true)}
+                >
+                  <Link
+                    to="/authPage"
+                    className=" border-button-blue h-[50px] flex items-center flex-auto justify-center "
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    to="/authPage/signup"
+                    className=" border-button-blue h-[50px] flex items-center flex-auto justify-center "
+                  >
+                    Sign Up
+                  </Link>
+                </div>
+              )}
             </div>
           </ul>
         </div>

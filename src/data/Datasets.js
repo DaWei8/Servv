@@ -164,8 +164,8 @@ var discoverCards = [
 const faqQuestionsAndAnswers = [
   {
     question: "Do I have to pay to use Servv?",
-    answer: "Lorem Ipsum",
-    isExpanded: false,
+    answer: "No you don'have to pay to use Servv. However, servv also offers specific paid services to it users that help address their business needs",
+    isExpanded: true,
   },
 
   {
@@ -399,6 +399,22 @@ const artisanProfileInfo = [
       "I will do several things this that this that this lorem ipsum dolor sit imet. I will do several things this that this that this lorem ipsum dolor sit imet.",
   },
 ];
+const clientProfileInfo = [
+  {
+    firstName: "Samuel",
+    lastName: "Adesasnya",
+    otherName: "Ajayi",
+    country: "Nigeria",
+
+    picture: profilePicture,
+    name: "Abike Furnishing Ltd",
+    workField: "Interior Decoration",
+    location: ["Akure", "Ondo"],
+    skills: ["Capentry", "Roofing", "Interior Decoration"],
+    description:
+      "I will do several things this that this that this lorem ipsum dolor sit imet. I will do several things this that this that this lorem ipsum dolor sit imet.",
+  },
+];
 
 const liveChatOptions = [
   {
@@ -422,6 +438,7 @@ const liveChatOptions = [
 export {
   liveChatOptions,
   artisanProfileInfo,
+  clientProfileInfo,
   transactionData,
   transactionData2,
   projectContent,

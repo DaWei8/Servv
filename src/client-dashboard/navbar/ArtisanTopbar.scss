@@ -1,0 +1,134 @@
+div.artisan-topbar {
+  width: 100%;
+  div.artisan-topbar-container {
+    // padding-top: 20px;
+    // padding-inline: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    // div.artisan-hamburger-menu {
+    //   display: none;
+    // }
+
+    div.artisan-company-logo {
+      img.servv-logo {
+        width: 121px;
+      }
+    }
+
+    div.artisan-topbar-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      div.profile-button {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        button {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          color: var(--primary-text-color-white);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: var(--main-color);
+          div.profile-button-state {
+            text-align: center;
+            font-size: small;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            text-transform: uppercase;
+            background-color: var(--default-green);
+            border: solid 1px var(--primary-bg-color);
+          }
+        }
+      }
+
+      div.artisan-notifications {
+        align-self: stretch;
+
+        button {
+          text-align: center;
+          align-items: center;
+          padding: 0px;
+          width: 50px;
+          height: 50px;
+          border-radius: 5px;
+          background: var(--transparent-10, rgba(180, 204, 252, 0.1));
+
+          img.artisan-notification {
+            width: 21.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// div.message-overlay.hidden {
+//   display: flex;
+//   flex-direction: column;
+//   padding: 10px;
+//   gap: 12px;
+//   align-items: flex-start;
+//   background: var(--primary-bg-color, #fff);
+//   border-radius: 5px;
+//   background: var(----transparent-10, rgba(180, 204, 252, 0.1));
+//   div.message-overlay-heading {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     h1 {
+//       color: var(----primary-text-color-black, #26334d);
+//       /* --Heading-20 */
+//       font-size: 20px;
+//       font-style: normal;
+//       font-weight: 600;
+//       line-height: normal;
+//     }
+//     p {
+//       color: var(----primary-text-color-blue, #0080ff);
+//       /* --paragraph-14 */
+//       font-size: 14px;
+//       font-style: normal;
+//       font-weight: 400;
+//       line-height: normal;
+//     }
+//   }
+// }
+
+@media screen and (max-width: 768px) {
+  div.artisan-topbar {
+    div.artisan-topbar-container {
+      justify-content: flex-end;
+      div.artisan-hamburger-menu {
+        display: flex;
+      }
+
+      div.artisan-company-logo {
+        display: none;
+        img.servv-logo {
+          width: 121px;
+        }
+      }
+
+      div.artisan-topbar-search {
+        display: none;
+      }
+    }
+  }
+}

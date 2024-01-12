@@ -23,7 +23,7 @@ const Dropdown = () => {
   };
 
   return (
-    <div className="dropdown flex flex-col bg-pale-blue-grey rounded-[5px] gap-[10px]  ">
+    <div className="dropdown flex flex-col bg-pale-blue-grey rounded-[5px] gap-[10px] shadow-2xl  ">
       <button className="dropdown-toggle flex-auto justify-between flex p-[10px] items-center gap-[10px] " onClick={toggleDropdown}>
         <div className="dropdown-placeholder">
           <p className=" w-[80px] truncate " >{selectedOption ? selectedOption : "Location"}</p>

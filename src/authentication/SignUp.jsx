@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import LeftFillerComponent from "./LeftFillerComponent";
+import backButton from "../assets/icons/prev-arrow.svg";
+
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -71,6 +73,9 @@ function SignUp() {
             <span className=" text-main-color ">Create </span>Account
           </h1>
           <div className="flex flex-row gap-[15px] mb-[50px] items-center text-[14px] " >
+          <Link to="/">
+              <img className=" w-[40px] " src={backButton} alt="back button" />
+            </Link>
             Already have an account?
             <button
               onClick={handleLoginSelect}
