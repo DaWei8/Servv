@@ -24,6 +24,34 @@ import logoutIcon from "../assets/icons/logout.svg";
 import projectPicture from "../assets/images/project-picture-frame.png";
 import profilePicture from "../assets/images/testimonial_1.png";
 
+var userData = [
+  {
+    "_id": {
+      "$oid": "656d0008aa142a1cb85047f7"
+    },
+    "name": "Alpha Omega",
+    "firstName": "Alpha",
+    "lastName": "Omega",
+    "email": "alphaomega@email.com",
+    "mobileNumber": "08123456789",
+    "password": "b7b875v645cve56b8",
+    "location": "New Orleans, United States of America",
+    "isWorker": {
+      "isRegistered": true,
+      "isActive": false,
+      "isFlagged": false
+    },
+    "isClient": true,
+    "isAgency": {
+      "isRegistered": true,
+      "isActive": false,
+      "isFlagged": false
+    },
+    "isLoggedin": false,
+    "govtIDvalid": true
+  }
+]
+
 var popularServicesCards = [
   {
     title: "Plumbing and electrical repairs",
@@ -121,6 +149,22 @@ const whatForServiceCard = [
 ];
 
 const testimonialsCard = [
+  {
+    picture: tstm1,
+    name: "Idowu Taiwo",
+    title: "Mobile Car Detailing",
+    description:
+      "Serv has been the best thing to happen to me this year. I have gone from loan to loan. Now  i have cleared all debts and I can now take care of my family.",
+  },
+
+  {
+    picture: tstm2,
+    name: "Idowu Taiwo",
+    title: "Mobile Car Detailing",
+    description:
+      "Serv has been the best thing to happen to me this year. I have gone from loan to loan. Now  i have cleared all debts and I can now take care of my family.",
+  },
+
   {
     picture: tstm1,
     name: "Idowu Taiwo",

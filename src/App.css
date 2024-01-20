@@ -1,0 +1,10 @@
+.slide-show {
+  animation: moveSlideshow 9s linear infinite;
+  -webkit-animation: moveSlideshow 9s linear infinite;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}

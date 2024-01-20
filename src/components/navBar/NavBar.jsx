@@ -42,7 +42,11 @@ const NavBar = () => {
               <p>About</p>
             </Link>
           </li>
-          {/* <li><Link to="/marketplace">Marketplace</Link></li> */}
+          <li>
+            <Link to="/marketplace">
+              <p>Marketplace</p>
+            </Link>
+          </li>
           <li>
             <Link to="/for">
               <p>For you</p>
@@ -71,13 +75,13 @@ const NavBar = () => {
                 to="/authPage/signup"
                 className="  h-[40px] max-w-[130px] hidden md:flex items-center justify-center "
               >
-                Sign Up
+                <p className=" text-main-color ">Sign Up</p>
               </Link>
               <Link
                 to="/authPage"
                 className=" border-button-blue h-[40px] max-w-[100px] hidden md:flex items-center justify-center "
               >
-                Login
+                <p className="text-main-color">Login</p>
               </Link>
             </div>
           )}

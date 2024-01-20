@@ -112,6 +112,7 @@ button {
   font-family: inherit;
   background-color: var(--primary-bg-color);
   cursor: pointer;
+  transition-duration: 500ms;
 }
 
 .primary-button {
@@ -124,6 +125,7 @@ button {
   background-color: var(--primary-bg-color);
   cursor: pointer;
   color: var(--main-color);
+  transition-duration: 500ms;
 }
 
 .primary-button-blue {
@@ -136,6 +138,7 @@ button {
   font-family: inherit;
   background-color: #0080ff;
   cursor: pointer;
+  transition-duration: 500ms;
 }
 
 .border-button {
@@ -148,6 +151,7 @@ button {
   font-family: inherit;
   background: transparent;
   cursor: pointer;
+  transition-duration: 500ms;
 }
 
 .border-button-blue {
@@ -160,11 +164,19 @@ button {
   font-family: inherit;
   background: transparent;
   cursor: pointer;
+  transition-duration: 500ms;
 }
 
 
-button:hover {
+button:hover, border-button:hover, border-button-blue:hover, primary-button:hover, primary-button-blue:hover {
   border-color: var(--main-color);
+  transition-duration: 500ms;
+  box-shadow: 0 2px 30px 15px rgba(28, 12, 71, 0.2);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 button:focus,
 button:focus-visible {

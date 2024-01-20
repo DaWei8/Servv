@@ -5,6 +5,8 @@ import LeftFillerComponent from "./LeftFillerComponent";
 import backButton from "../assets/icons/prev-arrow.svg";
 
 export default function Login() {
+
+  
   const [formData, setFormData] = useState({
     mobilenumber: "",
     email: "",
@@ -157,22 +159,12 @@ export default function Login() {
                 />
               </label>
 
-              <div className=" flex flex-row flex-auto w-full items-baseline justify-end gap-[10px] ">
+              <div className=" flex flex-row flex-auto w-full items-baseline justify-end gap-[20px] ">
                 <p>Forgot Password?</p>
-                <button
-                  // onClick={handleSignupSelect}
-                  type=" button "
-                  className=" text-main-color "
-                >
-                  <Link
-                    style={{
-                      display: "flex",
-                    }}
-                    to="../forgot-password"
-                  >
-                    Reset password
-                  </Link>
-                </button>
+
+                <Link  to="../forgot-password">
+                  <p className=" text-main-color " >Reset password</p>
+                </Link>
               </div>
             </div>
           ) : (

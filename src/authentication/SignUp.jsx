@@ -7,8 +7,36 @@ import backButton from "../assets/icons/prev-arrow.svg";
 
 
 function SignUp() {
+  // const [fname, setFName] = useState("");
+  // const [lname,  setLName] = useState("");
+  // const [pnumber, setNumber] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+
+  // const handleSubmit = async (e) => {
+  //     e.preventDefault();
+  //     let result = await fetch(
+  //     'http://localhost:5000/register', {
+  //         method: "post",
+  //         body: JSON.stringify({ name, email }),
+  //         headers: {
+  //             'Content-Type': 'application/json'
+  //         }
+  //     })
+  //     result = await result.json();
+  //     console.warn(result);
+  //     if (result) {
+  //         alert("Data saved succesfully");
+  //         setEmail("");
+  //         setLName("");
+  //         setFName("");
+  //         setNumber("");
+  //         setPassword("");
+  //     }
+  // }
+
   const [formData, setFormData] = useState({
-    firstname: " ",
+    firstname: "",
     lastname: "",
     mobilenumber: "",
     email: "",
