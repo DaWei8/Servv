@@ -13,14 +13,13 @@ import { ArtisanPage } from "./artisan-dashboard/ArtisanPage";
 import { ClientPage } from "./client-dashboard/ClientPage";
 
 const App = () => {
-
   return (
     <div className="App relativeflex flex flex-col content-center items-center w-screen mx-0 duration-500 ">
       <BrowserRouter>
         <Routes>
           <Route path="/" exact Component={HomePage} />
           <Route path="/about" Component={AboutPage} />
-          <Route path="/marketplace" Component={MarketPage} />
+          <Route path="/marketplace/*" Component={MarketPage} />
           <Route path="/for" Component={ForPage} />
           <Route path="/support" Component={SupportPage} />
           <Route path="/authPage/*" Component={AuthPage}/>

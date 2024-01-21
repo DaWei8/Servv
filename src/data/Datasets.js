@@ -24,33 +24,33 @@ import logoutIcon from "../assets/icons/logout.svg";
 import projectPicture from "../assets/images/project-picture-frame.png";
 import profilePicture from "../assets/images/testimonial_1.png";
 
-var userData = [
-  {
-    "_id": {
-      "$oid": "656d0008aa142a1cb85047f7"
-    },
-    "name": "Alpha Omega",
-    "firstName": "Alpha",
-    "lastName": "Omega",
-    "email": "alphaomega@email.com",
-    "mobileNumber": "08123456789",
-    "password": "b7b875v645cve56b8",
-    "location": "New Orleans, United States of America",
-    "isWorker": {
-      "isRegistered": true,
-      "isActive": false,
-      "isFlagged": false
-    },
-    "isClient": true,
-    "isAgency": {
-      "isRegistered": true,
-      "isActive": false,
-      "isFlagged": false
-    },
-    "isLoggedin": false,
-    "govtIDvalid": true
-  }
-]
+// var userData = [
+//   {
+//     _id: {
+//       $oid: "656d0008aa142a1cb85047f7",
+//     },
+//     name: "Alpha Omega",
+//     firstName: "Alpha",
+//     lastName: "Omega",
+//     email: "alphaomega@email.com",
+//     mobileNumber: "08123456789",
+//     password: "b7b875v645cve56b8",
+//     location: "New Orleans, United States of America",
+//     isWorker: {
+//       isRegistered: true,
+//       isActive: false,
+//       isFlagged: false,
+//     },
+//     isClient: true,
+//     isAgency: {
+//       isRegistered: true,
+//       isActive: false,
+//       isFlagged: false,
+//     },
+//     isLoggedin: false,
+//     govtIDvalid: true,
+//   },
+// ];
 
 var popularServicesCards = [
   {
@@ -208,7 +208,8 @@ var discoverCards = [
 const faqQuestionsAndAnswers = [
   {
     question: "Do I have to pay to use Servv?",
-    answer: "No you don'have to pay to use Servv. However, servv also offers specific paid services to it users that help address their business needs",
+    answer:
+      "No you don'have to pay to use Servv. However, servv also offers specific paid services to it users that help address their business needs",
     isExpanded: true,
   },
 
@@ -320,6 +321,57 @@ const projectContent = [
   },
 ];
 
+const serviceContent = [
+  {
+    title: "Mobile car detailing",
+    date: "28 Jan 2024",
+    description: "Skill offering description about what the skill is about.",
+    artisanName: "Idowu Taiwo",
+    rating: 4.5,
+    status: "accepted",
+    displayImage: projectPicture,
+    profileImage: profilePicture,
+    images: {},
+    price: "N20,000",
+  },
+  {
+    title: "Mobile car detailing",
+    date: "28 Jan 2024",
+    description: "Skill offering description about what the skill is about.",
+    artisanName: "Idowu Taiwo",
+    rating: 4.5,
+    status: "accepted",
+    displayImage: projectPicture,
+    profile: profilePicture,
+    images: {},
+    price: "N20,000",
+  },
+  {
+    title: "Mobile car detailing",
+    date: "28 Jan 2024",
+    description: "Skill offering description about what the skill is about.",
+    artisanName: "Idowu Taiwo",
+    rating: 4.5,
+    status: "accepted",
+    displayImage: projectPicture,
+    profile: profilePicture,
+    images: {},
+    price: "N20,000",
+  },
+  {
+    title: "Mobile car detailing",
+    date: "28 Jan 2024",
+    description: "Skill offering description about what the skill is about.",
+    artisanName: "Idowu Taiwo",
+    rating: 4.5,
+    status: "accepted",
+    displayImage: projectPicture,
+    profile: profilePicture,
+    images: {},
+    price: "N20,000",
+  },
+];
+
 const transactionData = [
   {
     date: "28-11-23",
@@ -352,6 +404,7 @@ const transactionData = [
     status: "Success",
   },
 ];
+
 const transactionData2 = [
   {
     date: "28-11-23",
@@ -462,22 +515,22 @@ const clientProfileInfo = [
 
 const liveChatOptions = [
   {
-    title : "Complaint",
-    description: "Lodge any complaints and suggestion you have"
+    title: "Complaint",
+    description: "Lodge any complaints and suggestion you have",
   },
   {
-    title : "Suggestion",
-    description: "Give us the suggestions you have"
+    title: "Suggestion",
+    description: "Give us the suggestions you have",
   },
   {
-    title : "Need Assistance",
-    description: "Having a problem and need assitance"
+    title: "Need Assistance",
+    description: "Having a problem and need assitance",
   },
   {
-    title : "Report an Issue",
-    description: "Report any issues you are having"
+    title: "Report an Issue",
+    description: "Report any issues you are having",
   },
-]
+];
 
 export {
   liveChatOptions,
@@ -492,6 +545,7 @@ export {
   whatForServiceCard,
   testimonialsCard,
   discoverCards,
+  serviceContent,
   faqQuestionsAndAnswers,
   psc1,
   psc2,
