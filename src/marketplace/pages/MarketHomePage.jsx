@@ -46,7 +46,7 @@ const MarketHomePage = () => {
         <div className=" flex flex-auto mx-auto ">
           <div className=" flex gap-[50px] items-center ">
             <div
-              className=" nav-link h-[50px] flex flex-col items-center "
+              className=" nav-link h-[50px] flex flex-col justify-center items-center "
               onClick={homeSelection}
             >
               <p>Home Services</p>
@@ -57,7 +57,7 @@ const MarketHomePage = () => {
               )}
             </div>
             <div
-              className=" nav-link h-[50px]  flex flex-col items-center  "
+              className=" nav-link h-[50px] justify-center flex flex-col items-center  "
               onClick={localShopsSelection}
             >
               <p>Local Shops</p>
@@ -68,7 +68,7 @@ const MarketHomePage = () => {
               )}
             </div>
             <div
-              className=" nav-link h-[50px] flex flex-col items-center  "
+              className=" nav-link h-[50px] justify-center flex flex-col items-center  "
               onClick={localServicesSelection}
             >
               <p>Local Services</p>
@@ -79,7 +79,7 @@ const MarketHomePage = () => {
               )}
             </div>
             <div
-              className=" nav-link h-[50px]  flex flex-col items-center  "
+              className=" nav-link h-[50px] justify-center flex flex-col items-center  "
               onClick={rareServiceSelection}
             >
               <p>Rare Services</p>

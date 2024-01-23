@@ -48,7 +48,7 @@ const MProjectCard = (props) => (
       </div>
       <Link
         className=" flex gap-[5px] md:text-[16px] w-fit group "
-        to=""
+        to="../category/workerskillpage"
         style={{ color: "#0080ff" }}
       >
         <p className=" text-[14px] group-hover:text-[15px] ">View service</p>
