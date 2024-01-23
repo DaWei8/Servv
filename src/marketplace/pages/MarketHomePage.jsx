@@ -45,28 +45,57 @@ const MarketHomePage = () => {
       <div className=" flex flex-col pt-[60px] gap-[20px] ">
         <div className=" flex flex-auto mx-auto ">
           <div className=" flex gap-[50px] items-center ">
-            <p className=" nav-link py-[20px] " onClick={homeSelection}>
-              Home Services
-            </p>
-            <p className=" nav-link py-[20px] " onClick={localShopsSelection}>
-              Local Shops
-            </p>
-            <p
-              className=" nav-link py-[20px] "
+            <div
+              className=" nav-link h-[50px] flex flex-col items-center "
+              onClick={homeSelection}
+            >
+              <p>Home Services</p>
+              {navSelection.homeServices == true ? (
+                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
+              ) : (
+                <div className=" hidden "></div>
+              )}
+            </div>
+            <div
+              className=" nav-link h-[50px]  flex flex-col items-center  "
+              onClick={localShopsSelection}
+            >
+              <p>Local Shops</p>
+              {navSelection.localShops == true ? (
+                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
+              ) : (
+                <div className=" hidden "></div>
+              )}
+            </div>
+            <div
+              className=" nav-link h-[50px] flex flex-col items-center  "
               onClick={localServicesSelection}
             >
-              Local Services
-            </p>
-            <p className=" nav-link py-[20px] " onClick={rareServiceSelection}>
-              Rare Services
-            </p>
+              <p>Local Services</p>
+              {navSelection.localServices == true ? (
+                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
+              ) : (
+                <div className=" hidden "></div>
+              )}
+            </div>
+            <div
+              className=" nav-link h-[50px]  flex flex-col items-center  "
+              onClick={rareServiceSelection}
+            >
+              <p>Rare Services</p>
+              {navSelection.rareServices == true ? (
+                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
+              ) : (
+                <div className=" hidden "></div>
+              )}
+            </div>
             <Link
               to="/artisanPage"
               className=" bg-primary-bg-color-blue px-[20px] h-[50px] rounded-[4px] flex items-center justify-center   "
             >
-              <p className=" text-primary-text-color-white ">
+              <div className=" text-primary-text-color-white ">
                 Create job request
-              </p>
+              </div>
             </Link>
           </div>
         </div>

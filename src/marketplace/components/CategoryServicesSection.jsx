@@ -1,14 +1,17 @@
 /* eslint-disable react/prop-types */
 import { serviceContent } from "../../data/Datasets";
 import MProjectCard from "./MProjectCard";
-import MarketPageProjectSection from "./MarketPageProjectSection";
+import MarketPageCategorySection from "./MarketPageCategorySection";
 
-const SkillServiceSection = (props) => {
+const CategoryServiceSection = (props) => {
   return (
-    <div className=" w-full items-center flex flex-col gap-[30px] ">
-      <MarketPageProjectSection
+    <div className=" w-full items-center flex flex-col gap-[0px] ">
+      <MarketPageCategorySection
         categoryTitle={props.title}
         exploreLink={"../category"}
+        bgSettings={
+          " flex flex-col gap-[5px] w-full items-center pt-[20px] pb-[40px] "
+        }
         projectList={serviceContent.map((content, index) => (
           <MProjectCard
             key={index}
@@ -22,9 +25,12 @@ const SkillServiceSection = (props) => {
           />
         ))}
       />
-      <MarketPageProjectSection
+      <MarketPageCategorySection
         categoryTitle={props.title}
         exploreLink={"../category"}
+        bgSettings={
+          " flex flex-col gap-[5px] w-full items-center pt-[20px] pb-[40px]"
+        }
         projectList={serviceContent.map((content, index) => (
           <MProjectCard
             key={index}
@@ -38,9 +44,12 @@ const SkillServiceSection = (props) => {
           />
         ))}
       />
-      <MarketPageProjectSection
+      <MarketPageCategorySection
         categoryTitle={props.title}
         exploreLink={"../category"}
+        bgSettings={
+          " flex flex-col gap-[5px] w-full items-center pt-[10px] pb-[10px] "
+        }
         projectList={serviceContent.map((content, index) => (
           <MProjectCard
             key={index}
@@ -54,9 +63,12 @@ const SkillServiceSection = (props) => {
           />
         ))}
       />
-      <MarketPageProjectSection
+      <MarketPageCategorySection
         categoryTitle={props.title}
         exploreLink={"./category"}
+        bgSettings={
+          " flex flex-col gap-[5px] w-full items-center pt-[20px] pb-[40px]"
+        }
         projectList={serviceContent.map((content, index) => (
           <MProjectCard
             key={index}
@@ -74,4 +86,4 @@ const SkillServiceSection = (props) => {
   );
 };
 
-export default SkillServiceSection;
+export default CategoryServiceSection;
