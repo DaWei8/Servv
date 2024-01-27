@@ -532,7 +532,90 @@ const liveChatOptions = [
   },
 ];
 
+const serviceReview = [
+  {
+    client: "Idowu Taiwo",
+    // picture:{},
+    rating: 4,
+    review:
+      "He was very professional and delivered on time. I have zero complaints.",
+  },
+  {
+    client: "James Taiwo",
+    rating: 4,
+    review:
+      "He pays attention to details. He did a good job ",
+  },
+  {
+    client: "Idowu Saheed",
+    rating: 5,
+    review:
+      "He went above my expectations. He was very professional and delivered on time. I have zero complaints.",
+  },
+  {
+    client: "Mariam Tinubeh",
+    rating: 4,
+    review:
+      "He was very professional and delivered on time. I have zero complaints.",
+  },
+  {
+    client: "James Taiwo",
+    rating: 4,
+    review:
+      "He pays attention to details. He did a good job ",
+  },
+  {
+    client: "Idowu Saheed",
+    rating: 5,
+    review:
+      "He went above my expectations. He was very professional and delivered on time. I have zero complaints.",
+  },
+  {
+    client: "Mariam Tinubeh",
+    rating: 4,
+    review:
+      "He was very professional and delivered on time. I have zero complaints.",
+  },
+  {
+    client: "James Taiwo",
+    rating: 4,
+    review:
+      "He pays attention to details. He did a good job ",
+  },
+  {
+    client: "Idowu Saheed",
+    rating: 5,
+    review:
+      "He went above my expectations. He was very professional and delivered on time. I have zero complaints.",
+  },
+  {
+    client: "Mariam Tinubeh",
+    rating: 4,
+    review:
+      "He was very professional and delivered on time. I have zero complaints.",
+  },
+  {
+    client: "James Taiwo",
+    rating: 4,
+    review:
+      "He pays attention to details. He did a good job ",
+  },
+  {
+    client: "Idowu Saheed",
+    rating: 5,
+    review:
+      "He went above my expectations. He was very professional and delivered on time. I have zero complaints.",
+  },
+  {
+    client: "Mariam Tinubeh",
+    rating: 4,
+    review:
+      "He was very professional and delivered on time. I have zero complaints.",
+  },
+];
+
 export {
+  serviceReview,
   liveChatOptions,
   artisanProfileInfo,
   clientProfileInfo,

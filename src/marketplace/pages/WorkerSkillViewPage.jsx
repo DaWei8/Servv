@@ -3,9 +3,12 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import MProjectCard from "../components/MProjectCard";
 import MarketPageProjectSection2 from "../components/MarketPageProjectSection2";
 import MarketPlaceHero2 from "../components/MarketPlaceHero2";
-import skillImage from "../../assets/images/project-picture-frame.png";
-import StarRating from "../../components/starRating";
+
 import { useState } from "react";
+import AboutService from "../components/AboutService";
+import AboutArtisan from "../components/AboutArtisan";
+import ArtisanReviews from "../components/ArtisanReviews";
+import WorkerServiceOverviewCard from "../components/WorkerServiceOverviewCard";
 
 export default function WorkerSkillViewPage() {
   const [navSelection, setNavSelection] = useState({
@@ -13,33 +16,23 @@ export default function WorkerSkillViewPage() {
     aboutArtisan: false,
     artisanReview: false,
   });
-  const homeSelection = () =>
+  const aboutServiceSelection = () =>
     setNavSelection({
-      homeServices: true,
-      localShops: false,
-      localServices: false,
-      rareServices: false,
+      aboutService: true,
+      aboutArtisan: false,
+      artisanReview: false,
     });
-  const localShopsSelection = () =>
+  const aboutArtisanSelection = () =>
     setNavSelection({
-      homeServices: false,
-      localShops: true,
-      localServices: false,
-      rareServices: false,
+      aboutService: false,
+      aboutArtisan: true,
+      artisanReview: false,
     });
-  const localServicesSelection = () =>
+  const artisanReviewSelection = () =>
     setNavSelection({
-      homeServices: false,
-      localShops: false,
-      localServices: true,
-      rareServices: false,
-    });
-  const rareServiceSelection = () =>
-    setNavSelection({
-      homeServices: false,
-      localShops: false,
-      localServices: false,
-      rareServices: true,
+      aboutService: false,
+      aboutArtisan: false,
+      artisanReview: true,
     });
 
   return (
@@ -54,100 +47,57 @@ export default function WorkerSkillViewPage() {
           />
         </div>
         <div className=" flex flex-row gap-[20px] max-w-[1134px] mx-auto ">
-          <div className=" p-[10px] flex flex-col gap-[12px] max-w-[40%] bg-primary-bg-color-white rounded-[10px] shadow-3xl ">
-            <img
-              className=" w-full max-h-[280px] flex flex-auto "
-              src={skillImage}
-              alt=""
-            />
-            <div className=" flex flex-row justify-between ">
-              <div className=" flex flex-col gap-[5px] ">
-                <p className=" text-[20px] font-[600] ">Mobile car detailing</p>
-                <p className=" text-[16px] ">Mobile Shine</p>
-                <div className=" rounded-[10px] flex items-center gap-[5px] bg-default-green px-[8px] w-fit ">
-                  <div className=" w-[10px] h-[10px] rounded-[10px] bg-primary-button-color-white "></div>
-                  <p className=" text-[12px] ">Active</p>
+          <WorkerServiceOverviewCard />
+          <div className=" flex-col gap-[20px] flex flex-auto max-w-[60%] ">
+            <div className=" flex ">
+              <div className=" flex gap-[50px] items-center h-[50px] bg-pale-blue-grey w-full px-[10px] ">
+                <div
+                  className=" nav-link h-[50px] flex flex-col justify-center items-center "
+                  onClick={aboutServiceSelection}
+                >
+                  {navSelection.aboutService == true ? (
+                    <p className=" text-[16px] font-[600] text-primary-button-color-blue ">
+                      About Service
+                    </p>
+                  ) : (
+                    <p className=" text-[16px]">About Service</p>
+                  )}
+                </div>
+                <div
+                  className=" nav-link h-[50px] justify-center flex flex-col items-center  "
+                  onClick={aboutArtisanSelection}
+                >
+                  {navSelection.aboutArtisan == true ? (
+                    <p className=" text-[16px] font-[600] text-primary-button-color-blue ">
+                      About Artisan
+                    </p>
+                  ) : (
+                    <p className=" text-[16px]">About Artisan</p>
+                  )}
+                </div>
+                <div
+                  className=" nav-link h-[50px] justify-center flex flex-col items-center  "
+                  onClick={artisanReviewSelection}
+                >
+                  {navSelection.artisanReview == true ? (
+                    <p className=" text-[16px] font-[600] text-primary-button-color-blue ">
+                      Review
+                    </p>
+                  ) : (
+                    <p className=" text-[16px]">Review</p>
+                  )}
                 </div>
               </div>
-              <div className=" flex flex-col pl-[10px] pr-[5px] items-end ">
-                <StarRating />
-                <p className=" text-[12px] ">
-                  <span className=" text-[18px] ">4.8/</span>5.0 rating
-                </p>
-                <p className=" text-[12px] ">19 jobs</p>
-              </div>
             </div>
-            <div className=" flex flex-col gap-[10px] w-full border-t-2 border-t-primary-button-color-blue border-solid border-x-0 border-b-0 pt-[10px] ">
-              <h2 className=" text-[20px] font-[600] ">Overview</h2>
-              <p className=" text-[14px] leading-[200%] ">
-                At Mobile Shine, we&lsquo;re not just a car detailing service; we`&lsquo;re
-                your vehicle&lsquo;s personal spa on wheels, bringing a refreshing and
-                rejuvenating experience to your doorstep. Our mission is to
-                transform your car into a sparkling masterpiece, ensuring it
-                radiates that new car feel, no matter its age.
-              </p>
-            </div>
-          </div>
-          <div className=" flex-3 flex flex-auto max-w-[60%] ">
-          <div className=" flex flex-auto mx-auto ">
-          <div className=" flex gap-[50px] items-center ">
-            <div
-              className=" nav-link h-[50px] flex flex-col justify-center items-center "
-              onClick={homeSelection}
-            >
-              <p>Home Services</p>
-              {navSelection.homeServices == true ? (
-                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
-              ) : (
-                <div className=" hidden "></div>
-              )}
-            </div>
-            <div
-              className=" nav-link h-[50px] justify-center flex flex-col items-center  "
-              onClick={localShopsSelection}
-            >
-              <p>Local Shops</p>
-              {navSelection.localShops == true ? (
-                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
-              ) : (
-                <div className=" hidden "></div>
-              )}
-            </div>
-            <div
-              className=" nav-link h-[50px] justify-center flex flex-col items-center  "
-              onClick={localServicesSelection}
-            >
-              <p>Local Services</p>
-              {navSelection.localServices == true ? (
-                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
-              ) : (
-                <div className=" hidden "></div>
-              )}
-            </div>
-            <div
-              className=" nav-link h-[50px] justify-center flex flex-col items-center  "
-              onClick={rareServiceSelection}
-            >
-              <p>Rare Services</p>
-              {navSelection.rareServices == true ? (
-                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
-              ) : (
-                <div className=" hidden "></div>
-              )}
-            </div>
-          </div>
-        </div>
-        {navSelection.homeServices == true ? (
-          <SkillServiceSection title="Home Services Category Title" />
-        ) : navSelection.localServices == true ? (
-          <SkillServiceSection title="Local Services Category Title" />
-        ) : navSelection.localShops == true ? (
-          <SkillServiceSection title="Local Shops Category Title" />
-        ) : navSelection.rareServices == true ? (
-          <SkillServiceSection title="Rare Services Category Title" />
-        ) : (
-          <SkillServiceSection />
-        )}
+            {navSelection.aboutService == true ? (
+              <AboutService />
+            ) : navSelection.aboutArtisan == true ? (
+              <AboutArtisan />
+            ) : navSelection.artisanReview == true ? (
+              <ArtisanReviews />
+            ) : (
+              <AboutService />
+            )}
           </div>
         </div>
         <MarketPageProjectSection2

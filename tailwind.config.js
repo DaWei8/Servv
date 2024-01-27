@@ -9,6 +9,7 @@ export default {
         "main-color": "#0080FF",
         "primary-bg-color-blue": "#0080FF",
         "primary-bg-color-white": "#ffffff",
+        "primary-tab-select-color": "#BAD0FB",
         "primary-text-color-black": "#26334D",
         "primary-text-color-white": "#ffffff",
         "default-green": "#1DBF73",
@@ -25,7 +26,7 @@ export default {
         "4xl": "2rem",
       },
       boxShadow: {
-        '3xl': '0 0px 30px -15px rgba(0, 0, 0, 0.3)',
+        '3xl': '-5px 15px 15px 0px rgba(41, 74, 113, 0.05)',
       }
     },
     

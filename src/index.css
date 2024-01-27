@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,10 +8,10 @@
   --primary-bg-color: #ffffff;
   --primary-text-color-black: #26334d;
   --primary-text-color-white: #ffffff;
-  --secondary-text-color: #AFB0B1;
+  --secondary-text-color: #afb0b1;
   --default-green: #1dbf73;
   --transparent-bg-blur: #ffffff15;
-  --card-color-transparent: rgba(180, 204, 252, 0.30);
+  --card-color-transparent: rgba(180, 204, 252, 0.3);
   --button-shadow: #00000025;
   --tab-select-color: #bad0fb;
   --pale-blue-grey: #f2f6ff;
@@ -63,7 +62,6 @@ body {
   /* overflow: hidden; */
 }
 
-
 input:active {
   border-color: var(--main-color);
 }
@@ -85,12 +83,11 @@ a:hover {
   color: #0080ff;
 }
 
-
 h1 {
   font-size: 48px;
   line-height: 1.1;
 }
- /* h2 {
+/* h2 {
   font-size: 36px;
  }
 
@@ -167,8 +164,11 @@ button {
   transition-duration: 500ms;
 }
 
-
-button:hover, border-button:hover, border-button-blue:hover, primary-button:hover, primary-button-blue:hover {
+button:hover,
+border-button:hover,
+border-button-blue:hover,
+primary-button:hover,
+primary-button-blue:hover {
   border-color: var(--main-color);
   transition-duration: 500ms;
   box-shadow: 0 2px 30px 15px rgba(28, 12, 71, 0.2);
@@ -182,3 +182,33 @@ button:focus,
 button:focus-visible {
   outline: 0px auto -webkit-focus-ring-color;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+
+  height: 8px;
+
+  background-color: var(--card-color-transparent);
+}
+
+::-webkit-scrollbar-thumb {
+
+  background-color: var(--tab-select-color);
+  
+  border-radius: 10px;
+  
+  }
+
+  input:hover {
+    box-shadow: 0 1px 30px 5px rgba(28, 12, 71, 0.1);
+    border: 2px solid #0080ff;
+  }
+
+  input:active {
+    /* box-shadow: 0 1px 30px 5px rgba(28, 12, 71, 0.1); */
+    border: 2px solid #0080ff;
+  }
+
+  input:focus{
+    border: 2px solid #0080ff;
+  }

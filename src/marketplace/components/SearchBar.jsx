@@ -1,5 +1,5 @@
 import Dropdown from "../../components/Dropdown/Dropdown";
-import searchIcon from "../../assets/icons/search-icon.svg";
+import searchIcon from "../../assets/icons/search-icon-black.svg";
 
 const SearchBar = () => (
   <div className="flex gap-[6px] max-w-[600px] flex-row-reverse md:flex-row flex-auto w-full ">
@@ -10,7 +10,8 @@ const SearchBar = () => (
         className=" bg-pale-blue-grey flex flex-auto w-full h-[50px] px-[10px] "
       />
       <button className="flex items-center w-[50px] h-[50px] absolute right-0 ">
-        <img src={searchIcon} alt="Search Icon" className="mx-auto  " />
+        <svg src={searchIcon} alt="Search Icon" className="mx-auto  " />
+        <svg className="fill-cyan-500 hover:fill-cyan-700"></svg>
       </button>
     </div>
     <Dropdown />
