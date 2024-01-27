@@ -5,7 +5,7 @@ const PopularServicesSection = () => (
   <section className="py-[80px] px-[16px] container mx-auto flex flex-col gap-[24px] w-screen md:max-w-[1240px] ">
     <div className="flex flex-col md:gap-[20px]">
       <h2 className="text-[28px] md:text-[40px] md:text-center font-semibold leading-[35px] ">
-        Popular Services, Delivered Fast with Serv
+        Popular Services, Delivered Fast with Servv
       </h2>
       <p className=" tracking-[6px] gap-[10px] md:text-center md:text-[14px] text-[10px] uppercase ">
         For Businesses, For Individuals

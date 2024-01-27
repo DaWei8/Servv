@@ -6,7 +6,7 @@ import StarIcon from "../../assets/icons/star.svg";
 // import axios from "axios";
 
 const MProjectCard = (props) => (
-  <div className="flex lg:max-w-[350px] lg:w-[330px] md:max-w-[180px] max-w-[180px] w-[150px] md:w-auto p-[10px] flex-auto rounded-[10px] shadow-3xl flex-col ">
+  <div className="flex lg:max-w-[350px] md:min-w-[160px] lg:w-[330px] md:max-w-[200px] max-w-[180px] md:w-auto p-[10px] flex-auto rounded-[10px] shadow-3xl flex-col ">
     <div className="project-image-and-rating relative flex mb-[6px] ">
       <div className="project-card-rating absolute bottom-0 text-primary-text-color-white rounded-tr-[3px] flex flex-col gap-[1px] bg-[#1846a3b9] w-[45px] h-[45px] items-center justify-center ">
         <img src={StarIcon} alt="" className="project-star w-[16px] " />
@@ -26,7 +26,7 @@ const MProjectCard = (props) => (
     <div className=" flex gap-[10px] ">
       <img
         src={props.profileImage}
-        className=" w-[38px] border-solid border-[4px] border-default-green h-[38px] rounded-[50%] "
+        className=" md:hidden lg:flex flex w-[38px] border-solid border-[4px] border-default-green h-[38px] rounded-[50%] "
         alt="profile image"
       />
       <div>
@@ -47,11 +47,11 @@ const MProjectCard = (props) => (
         </p>
       </div>
       <Link
-        className=" flex gap-[5px] md:text-[16px] w-fit group "
+        className=" flex gap-[1px] md:text-[16px] w-fit group "
         to="../category/workerskillpage"
         style={{ color: "#0080ff" }}
       >
-        <p className=" text-[14px] group-hover:text-[15px] ">View service</p>
+        <p className=" text-[14px] group-hover:text-[15px] ">View</p>
         <img src={RightArrow} className=" group-hover:w-[23px] " alt="right arrow" />
       </Link>
     </div>

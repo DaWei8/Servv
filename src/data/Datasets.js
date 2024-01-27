@@ -24,33 +24,6 @@ import logoutIcon from "../assets/icons/logout.svg";
 import projectPicture from "../assets/images/project-picture-frame.png";
 import profilePicture from "../assets/images/testimonial_1.png";
 
-// var userData = [
-//   {
-//     _id: {
-//       $oid: "656d0008aa142a1cb85047f7",
-//     },
-//     name: "Alpha Omega",
-//     firstName: "Alpha",
-//     lastName: "Omega",
-//     email: "alphaomega@email.com",
-//     mobileNumber: "08123456789",
-//     password: "b7b875v645cve56b8",
-//     location: "New Orleans, United States of America",
-//     isWorker: {
-//       isRegistered: true,
-//       isActive: false,
-//       isFlagged: false,
-//     },
-//     isClient: true,
-//     isAgency: {
-//       isRegistered: true,
-//       isActive: false,
-//       isFlagged: false,
-//     },
-//     isLoggedin: false,
-//     govtIDvalid: true,
-//   },
-// ];
 
 var popularServicesCards = [
   {
@@ -139,11 +112,11 @@ const whatForServiceCard = [
     description: "Homeowners looking to renovate or repair their homes.",
   },
   {
-    title: "Homeowners",
+    title: "Creatives",
     description: "Homeowners looking to renovate or repair their homes.",
   },
   {
-    title: "Homeowners",
+    title: "Talents",
     description: "Homeowners looking to renovate or repair their homes.",
   },
 ];
@@ -278,7 +251,7 @@ const sidebarContentBottom = [
   {
     icon: logoutIcon,
     title: "Logout",
-    link: "../",
+    link: "./logout",
   },
 ];
 

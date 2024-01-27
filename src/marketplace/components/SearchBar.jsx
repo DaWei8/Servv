@@ -10,8 +10,7 @@ const SearchBar = () => (
         className=" bg-pale-blue-grey flex flex-auto w-full h-[50px] px-[10px] "
       />
       <button className="flex items-center w-[50px] h-[50px] absolute right-0 ">
-        <svg src={searchIcon} alt="Search Icon" className="mx-auto  " />
-        <svg className="fill-cyan-500 hover:fill-cyan-700"></svg>
+        <img src={searchIcon} alt="Search Icon" className="mx-auto  " />
       </button>
     </div>
     <Dropdown />

@@ -17,10 +17,11 @@ import { FooterDashboard } from "../components/footer/FooterDashboard";
 import ArtisanSidebar from "./navbar/ArtisanSidebar";
 import { sidebarContentTop, sidebarContentBottom } from "../data/Datasets";
 import { useState } from "react";
+import LogOut from "../authentication/LogOut";
 
 export const ArtisanPage = () => {
   const [activateMenuState, setActivateMenuState] = useState(false);
-
+const [hideLogOut, setHideLogOut] = useState(true)
   const handleClick = () => {
     setActivateMenuState(true);
     console.log("this is working");
@@ -104,6 +105,11 @@ export const ArtisanPage = () => {
               path="/artisanSettings/*"
               exact
               Component={ArtisanSettings}
+            />
+            <Route
+              path="/logout"
+              exact
+              Component={LogOut}
             />
           </Routes>
         </div>

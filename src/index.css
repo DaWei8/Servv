@@ -212,3 +212,8 @@ button:focus-visible {
   input:focus{
     border: 2px solid #0080ff;
   }
+
+  .mobile-nav-button:hover {
+background-color: var(--primary-button-color);
+color: var(--primary-text-color-white);
+  }

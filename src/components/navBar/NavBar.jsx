@@ -2,7 +2,6 @@ import logo from "../../assets/icons/servv-logo-dk.svg";
 import hamburger from "../../assets/icons/hamburger-menu.svg";
 import hCancel from "../../assets/icons/cancel-icon.svg";
 
-// import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -18,9 +17,9 @@ const NavBar = () => {
     return setClickState(true);
   };
   return (
-    <div className=" w-screen px-[16px] md:pt-[20px] pt-[10px] pb-[5px] fixed right-0 left-0 top-0 bg-transparent-bg-blur backdrop-blur-[20px] z-10 ">
-      <div className=" container mx-auto flex items-center w-full justify-between ">
-        <div className="logo__container hidden md:flex w-[180px] ">
+    <div className=" w-full px-[16px] md:pt-[20px] pt-[10px] pb-[5px] fixed right-0 left-0 top-0 bg-transparent-bg-blur backdrop-blur-[20px] z-10 ">
+      <div className=" mx-auto flex items-center w-full justify-between ">
+        <div className="logo__container hidden md:flex 2xl:w-[180px] ">
           <Link to="/">
             <img className=" h-[55px] " src={logo} alt="Servv Logo" />
           </Link>
@@ -31,7 +30,7 @@ const NavBar = () => {
           </Link>
         </div>
 
-        <ul className="navbar__menu items-center md:flex gap-[40px] hidden ">
+        <ul className="navbar__menu items-center lg:flex gap-[40px] hidden ">
           <li>
             <Link to="/">
               <p>Home</p>
@@ -60,7 +59,7 @@ const NavBar = () => {
         </ul>
         <div className="">
           {authState ? (
-            <Link to="/authPage" className="md:flex hidden ">
+            <Link to="/authPage" className="lg:flex hidden ">
               <button className=" relative bg-primary-button-color-blue rounded-[100px] h-[40px] text-primary-text-color-white flex items-center justify-center w-[40px]  ">
                 <div className="profile__state inactive absolute rounded-[40px] w-[11px] h-[11px] bottom-[0px] right-[3px] bg-default-green "></div>
                 D
@@ -73,13 +72,13 @@ const NavBar = () => {
             >
               <Link
                 to="/authPage/signup"
-                className="  h-[40px] max-w-[130px] hidden md:flex items-center justify-center "
+                className="  h-[40px] max-w-[130px] hidden lg:flex items-center justify-center "
               >
                 <p className=" text-main-color ">Sign Up</p>
               </Link>
               <Link
                 to="/authPage"
-                className=" border-button-blue h-[40px] max-w-[100px] hidden md:flex items-center justify-center "
+                className=" border-button-blue h-[40px] max-w-[100px] hidden lg:flex items-center justify-center "
               >
                 <p className="text-main-color">Login</p>
               </Link>
@@ -87,7 +86,7 @@ const NavBar = () => {
           )}
         </div>
 
-        <div onClick={handleMenuClick} className=" flex md:hidden ">
+        <div onClick={handleMenuClick} className=" flex lg:hidden ">
           <img src={hamburger} alt="hamburger menu icon" />
         </div>
       </div>
@@ -111,27 +110,25 @@ const NavBar = () => {
           </div>
 
           <ul className="flex flex-col px-[10px] text-[#232E35] justify-between gap-[35px] text-[14px] ">
-            <li className="text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] ">
-              <Link onClick={handleCancelClick} to="/">
-                <p>Home</p>
-              </Link>
-            </li>
-            <li className="text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] ">
-              <Link onClick={handleCancelClick} to="/about">
-                <p>About</p>
-              </Link>
-            </li>
+            <Link
+              className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] "
+              onClick={handleCancelClick}
+              to="/"
+            >
+              <p>Home</p>
+            </Link>
+            <Link className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] " onClick={handleCancelClick} to="/about">
+              <p>About</p>
+            </Link>
             {/* <li><Link to="/marketplace">Marketplace</Link></li> */}
-            <li className="text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] ">
-              <Link onClick={handleCancelClick} to="/for">
-                <p>For you</p>
-              </Link>
-            </li>
-            <li className="text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] ">
-              <Link onClick={handleCancelClick} to="/support">
-                <p>Support</p>
-              </Link>
-            </li>
+            <Link className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] " onClick={handleCancelClick} to="/for">
+              <p>For you</p>
+            </Link>
+
+            <Link className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] " onClick={handleCancelClick} to="/support">
+              <p>Support</p>
+            </Link>
+
             <div className=" flex flex-col gap-[20px] ">
               {authState ? (
                 <Link to="/authPage">

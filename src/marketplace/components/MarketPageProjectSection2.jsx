@@ -11,7 +11,7 @@ const MarketPageProjectSection2 = (props) => {
         <div className=" flex justify-between items-start ">
           <h2 className=" text-[20px] font-[600] ">{props.categoryTitle}</h2>
         </div>
-        <div className=" gap-[20px] justify-between flex flex-auto ">
+        <div className=" gap-[20px] justify-between flex flex-auto overflow-x-scroll ">
           {props.projectList}
         </div>
       </div>

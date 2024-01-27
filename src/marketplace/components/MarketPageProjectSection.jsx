@@ -17,7 +17,7 @@ const MarketPageProjectSection = (props) => {
             <img className="right-arrow" src={rightArrow} alt="back button" />
           </Link>
         </div>
-        <div className=" gap-[20px] justify-between flex flex-auto ">
+        <div className=" gap-[20px] justify-between flex flex-auto overflow-x-scroll ">
           {props.projectList}
         </div>
       </div>
