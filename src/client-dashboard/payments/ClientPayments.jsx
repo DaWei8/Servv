@@ -4,17 +4,17 @@
 import AdvertSection from "../components/AdvertCard";
 
 import RecentTransactions from "../components/RecentTransactions";
-import DashboardBalance from "../overview-dashboard/DashboardBalance";
+import PaymentMethods from "./PaymentMethods";
 
 const ClientPayments = () => {
   return (
     <div className="flex flex-col w-full ">
       <h1 className="text-[24px] text-main-color font-[600] mb-[20px]">
-        Payments
+        Bills and Payments
       </h1>
-      <div className=" flex flex-row gap-[20px] h-full   ">
-        <div className="flex flex-col gap-[20px] ">
-          <DashboardBalance />
+      <div className=" flex flex-row gap-[20px] h-full w-full  ">
+        <div className="flex flex-col gap-[20px] flex-auto ">
+          <PaymentMethods />
           <RecentTransactions />
         </div>
         <AdvertSection />

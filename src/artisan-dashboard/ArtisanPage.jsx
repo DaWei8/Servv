@@ -21,7 +21,7 @@ import LogOut from "../authentication/LogOut";
 
 export const ArtisanPage = () => {
   const [activateMenuState, setActivateMenuState] = useState(false);
-const [hideLogOut, setHideLogOut] = useState(true)
+// const [hideLogOut, setHideLogOut] = useState(true)
   const handleClick = () => {
     setActivateMenuState(true);
     console.log("this is working");

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./ClientSupport.scss";
+
 import { useState } from "react";
 import { liveChatOptions } from "../../data/Datasets";
 

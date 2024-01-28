@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-import "./ClientSidebar.scss";
-import { sidebarContentTop, sidebarContentBottom } from "../../data/Datasets";
+
+import {sidebarContentTopClient, sidebarContentBottomClient } from "../../data/Datasets";
 
 const ClientSidebar = () => {
   return (
@@ -13,7 +13,7 @@ const ClientSidebar = () => {
     >
       <div className=" justify-between mr-[6px] flex-col flex rounded-[10px] h-full lg:px-0 px-[20px] group  duration-[500ms]  ">
         <div className=" flex flex-col gap-[10px] ">
-          {sidebarContentTop.map((content, index) => (
+          {sidebarContentTopClient.map((content, index) => (
             <ClientSidebarButton
               key={index}
               icon={content.icon}
@@ -24,7 +24,7 @@ const ClientSidebar = () => {
         </div>
 
         <div className=" flex flex-col  gap-[10px] ">
-          {sidebarContentBottom.map((content, index) => (
+          {sidebarContentBottomClient.map((content, index) => (
             <ClientSidebarButton
               key={index}
               icon={content.icon}

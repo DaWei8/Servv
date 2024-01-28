@@ -1,4 +1,5 @@
-import "./ClientNotifications.scss"
+/* eslint-disable react/prop-types */
+
 import servvIcon from "../../assets/icons/servv.svg";
 import chatIcon from "../../assets/icons/messages-3.svg";
 import { Link } from "react-router-dom";

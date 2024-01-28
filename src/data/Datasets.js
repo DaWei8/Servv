@@ -241,12 +241,56 @@ const sidebarContentTop = [
     link: "./artisanSupport",
   },
 ];
+const sidebarContentTopClient = [
+  {
+    icon: dashboardIcon,
+    title: "Dashboard",
+    link: "./clientDashboard",
+  },
+  {
+    icon: profileIcon,
+    title: "Profile",
+    link: "./clientProfile",
+  },
+  {
+    icon: projectsIcon,
+    title: "Projects",
+    link: "./clientProjects",
+  },
+  {
+    icon: paymentsIcon,
+    title: "Payments",
+    link: "./clientPayments",
+  },
+  {
+    icon: historyIcon,
+    title: "History",
+    link: "./clientHistory",
+  },
+  {
+    icon: supportIcon,
+    title: "Support",
+    link: "./clientSupport",
+  },
+];
 
 const sidebarContentBottom = [
   {
     icon: settingsIcon,
     title: "Settings",
     link: "./artisanSettings",
+  },
+  {
+    icon: logoutIcon,
+    title: "Logout",
+    link: "./logout",
+  },
+];
+const sidebarContentBottomClient = [
+  {
+    icon: settingsIcon,
+    title: "Settings",
+    link: "./clientSettings",
   },
   {
     icon: logoutIcon,
@@ -595,6 +639,8 @@ export {
   transactionData,
   transactionData2,
   projectContent,
+  sidebarContentTopClient,
+  sidebarContentBottomClient,
   sidebarContentTop,
   sidebarContentBottom,
   popularServicesCards,

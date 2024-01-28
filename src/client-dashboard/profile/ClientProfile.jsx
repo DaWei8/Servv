@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
-// import "./ClientProfile.scss";
-// import { useState } from "react";
-// import "./ClientProfile.scss";
+
 import { projectContent, clientProfileInfo } from "../../data/Datasets";
 import AdvertSection from "../components/AdvertCard";
 import ProjectsCategory from "../components/ProjectCategory";
@@ -12,10 +10,10 @@ import TextBoxCardMultipleItems from "../components/TextBoxCardMultipleItems";
 
 const ClientProfile = () => {
   return (
-    <div className="Client-profile w-full ">
-      <div className="Client-profile-container">
+    <div className="w-full ">
+      <div className="">
         <h1 className="text-[24px] text-main-color font-[600] mb-[20px] ">
-          Work Profile(s)
+          Profile(s)
         </h1>
         <div className=" flex flex-row gap-[20px] ">
           <div className=" flex flex-col gap-[20px] ">
@@ -70,7 +68,7 @@ const ClientProfileInformation = () => {
         <div className=" flex md:flex-row flex-wrap gap-[20px] justify-between  ">
           <div className="relative flex-col flex w-[100%] rounded-[10px] md:w-[250px] overflow-hidden object-fill ">
             <img
-              src={ClientProfileInfo[0].picture}
+              src={clientProfileInfo[0].picture}
               alt="profile image"
               className="profile-image  "
             />
@@ -81,36 +79,36 @@ const ClientProfileInformation = () => {
           </div>
           <div className="gap-[10px] flex-col lg:w-[350px] flex-auto flex ">
             <h2 className="text-[20px] font-[600] text-primary-text-color-black">
-              Company Information
+              Personal Information
             </h2>
             <div className=" flex flex-col gap-[10px] ">
-              <TextBoxCard title="Name" content={ClientProfileInfo[0].name} />
-              <TextBoxCard
+              <TextBoxCard title="Name" content={clientProfileInfo[0].name} />
+              {/* <TextBoxCard
                 title="Work Field"
-                content={ClientProfileInfo[0].workField}
-              />
+                content={clientProfileInfo[0].workField}
+              /> */}
 
               <TextBoxCardMultipleItems
                 title="Location(s)"
-                content={ClientProfileInfo[0].location}
+                content={clientProfileInfo[0].location}
               />
             </div>
           </div>
-          <div className=" gap-[10px] flex-auto lg:w-[350px] flex-col flex">
+          {/* <div className=" gap-[10px] flex-auto lg:w-[350px] flex-col flex">
             <h2 className="text-[20px] font-[600] text-primary-text-color-black">
               Skill Description
             </h2>
             <div className="flex flex-col gap-[10px] ">
               <TextBoxCardMultipleItems
                 title="Skill Offered"
-                content={ClientProfileInfo[0].skills}
+                content={clientProfileInfo[0].skills}
               />
               <TextBoxCard
                 title="What you Offer"
-                content={ClientProfileInfo[0].description}
+                content={clientProfileInfo[0].description}
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

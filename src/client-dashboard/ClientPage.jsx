@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 import { Routes, Route, Link } from "react-router-dom";
-
-// import "./ClientPage.scss";
 import menuIcon from "../assets/icons/hamburger-menu.svg";
 import cancelIcon from "../assets/icons/cancel-icon.svg";
 
@@ -15,8 +13,12 @@ import ClientSupport from "./support/ClientSupport";
 import ClientSettings from "./settings/ClientSettings";
 import { FooterDashboard } from "../components/footer/FooterDashboard";
 import ClientSidebar from "./navbar/ClientSidebar";
-import { sidebarContentTop, sidebarContentBottom } from "../data/Datasets";
+import {
+  sidebarContentBottomClient,
+  sidebarContentTopClient,
+} from "../data/Datasets";
 import { useState } from "react";
+import LogOut from "../authentication/LogOut";
 
 export const ClientPage = () => {
   const [activateMenuState, setActivateMenuState] = useState(false);
@@ -37,7 +39,7 @@ export const ClientPage = () => {
           <img
             src={menuIcon}
             alt="hamburger-menu-icon"
-            className="hamburger-menu-icon  "  
+            className="hamburger-menu-icon  "
             onClick={handleClick}
           />
         </div>
@@ -63,20 +65,19 @@ export const ClientPage = () => {
                 />
               </div>
               <div className=" flex flex-col pt-[10px] gap-[10px] ">
-                {sidebarContentTop.map((content, index) => (
+                {sidebarContentTopClient.map((content, index) => (
                   <ClientSidebarButton
                     key={index}
                     icon={content.icon}
                     title={content.title}
                     link={content.link}
                     onClick={handleCancel}
-                    F
                   />
                 ))}
               </div>
 
               <div className=" flex flex-col pb-[10px] gap-[10px] ">
-                {sidebarContentBottom.map((content, index) => (
+                {sidebarContentBottomClient.map((content, index) => (
                   <ClientSidebarButton
                     key={index}
                     icon={content.icon}
@@ -90,21 +91,14 @@ export const ClientPage = () => {
           </div>
           <Routes>
             <Route path="/" exact Component={ClientDashboard} />
-            <Route
-              path="/ClientDashboard"
-              exact
-              Component={ClientDashboard}
-            />
-            <Route path="/ClientProfile" exact Component={ClientProfile} />
-            <Route path="/ClientProjects" exact Component={ClientProjects} />
-            <Route path="/ClientPayments" exact Component={ClientPayments} />
-            <Route path="/ClientHistory" exact Component={ClientHistory} />
-            <Route path="/ClientSupport" exact Component={ClientSupport} />
-            <Route
-              path="/ClientSettings/*"
-              exact
-              Component={ClientSettings}
-            />
+            <Route path="/clientDashboard" exact Component={ClientDashboard} />
+            <Route path="/clientProfile" exact Component={ClientProfile} />
+            <Route path="/clientProjects" exact Component={ClientProjects} />
+            <Route path="/clientPayments" exact Component={ClientPayments} />
+            <Route path="/clientHistory" exact Component={ClientHistory} />
+            <Route path="/clientSupport" exact Component={ClientSupport} />
+            <Route path="/clientSettings/*" exact Component={ClientSettings} />
+            <Route path="/logout" exact Component={LogOut} />
           </Routes>
         </div>
       </div>

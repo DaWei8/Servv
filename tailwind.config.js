@@ -14,6 +14,7 @@ export default {
         "primary-text-color-white": "#ffffff",
         "default-green": "#1DBF73",
         "transparent-bg-blur": "#ffffff15",
+        "transparent-blue-10": "rgba(180, 204, 252, 0.10)",
         "pale-blue-grey": "#F2F6FF",
         "dark-bg": "#000035",
         "grey-400": "#98A2B3",
