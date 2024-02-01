@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ProjectCard from "../components/ProjectCard";
+import { projectContent } from "../../data/Datasets";
 
 const ArtisanProjects = () => {
   return (
@@ -29,30 +30,32 @@ const PorjectNav = () => {
 };
 
 const Projects = (props) => {
-  const [projects, setProjects] = useState([]);
+  const [projects, getProjects] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/projects")
-      .then(response => setProjects(response.data))
-      .catch(error => console.error(error));
+    axios
+      .get("http://localhost:5000/task/api/projects")
+      .then((response) => getProjects(response.data.data))
+      .catch((error) => console.error(error));
   }, []);
+  // console.log(projects.data)
 
   return (
-    <div className="_projects flex flex-auto w-full ">
+    <div className=" flex flex-auto w-full ">
       <div className=" flex flex-auto flex-col gap-[20px] ">
         <h2 className=" flex flex-auto text-[20px] font-[600] p-[10px] text-primary-text-color-black  ">
           {props.title}
         </h2>
         <div className="_projects-collection">
           <div className=" flex flex-wrap gap-[20px] md:justify-normal justify-center items-center  ">
-            {projects.map(project => (
+            {projects.map((project) => (
               <ProjectCard
                 key={project._id}
                 rating={project.rating}
-                image={`${(project.displayImage)}`}
+                image={`${project.displayImage}`}
                 title={project.title}
                 description={project.description}
-                date={project.date.slice(0,10)}
+                date={project.date.slice(0, 10)}
               />
             ))}
           </div>
