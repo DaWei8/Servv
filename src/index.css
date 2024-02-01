@@ -128,9 +128,10 @@ button {
 .primary-button-blue {
   border-radius: 8px;
   border: 0px solid transparent;
-  padding-inline: 60px;
-  width: max-content;
+  padding: 0.6em 20px;
+  /* width: max-content; */
   color: #ffffff;
+  font-size: 14px;
   font-weight: 500;
   font-family: inherit;
   background-color: #0080ff;

@@ -90,10 +90,10 @@ export const ClientPage = () => {
             </div>
           </div>
           <Routes>
-            <Route path="/" exact Component={ClientDashboard} />
+            <Route path={"/"} Component={ClientDashboard} />
             <Route path="/clientDashboard" exact Component={ClientDashboard} />
             <Route path="/clientProfile" exact Component={ClientProfile} />
-            <Route path="/clientProjects" exact Component={ClientProjects} />
+            <Route path="/clientProjects/*" exact Component={ClientProjects} />
             <Route path="/clientPayments" exact Component={ClientPayments} />
             <Route path="/clientHistory" exact Component={ClientHistory} />
             <Route path="/clientSupport" exact Component={ClientSupport} />
