@@ -33,7 +33,7 @@ export const ClientPage = () => {
   };
 
   return (
-    <div className="flex flex-col flex-auto gap-[40px] w-full min-h-screen duration-500 ">
+    <div className="flex flex-col flex-auto gap-[40px] w-screen min-h-screen duration-500 ">
       <div className=" flex gap-[10px] justify-between  px-[20px] pt-[20px] ">
         <div className="Client-hamburger-menu flex lg:hidden ">
           <img
