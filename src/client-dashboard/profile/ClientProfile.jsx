@@ -10,21 +10,32 @@ import TextBoxCardMultipleItems from "../components/TextBoxCardMultipleItems";
 
 const ClientProfile = () => {
   return (
-    <div className="w-full ">
-      <div className="">
-        <h1 className="text-[24px] text-main-color font-[600] mb-[20px] ">
-          Profile(s)
-        </h1>
-        <div className=" flex flex-row gap-[20px] ">
-          <div className=" flex flex-col gap-[20px] ">
-            {/* <ClientCreateWorkProfile /> */}
-            <ClientProfileContent />
-            <ClientCreateWorkProfile />
-          </div>
-          <AdvertSection />
+    <div className="flex flex-col w-screen ">
+      <h1 className="text-[24px] text-main-color font-[600] mb-[20px]">
+        Profile(s)
+      </h1>
+      <div className=" flex flex-row gap-[20px] h-full w-full  ">
+        <div className="flex flex-col gap-[20px] flex-auto ">
+          {/* <ClientCreateWorkProfile /> */}
+          <ClientProfileContent />
+          <ClientCreateWorkProfile />
         </div>
+        <AdvertSection />
       </div>
     </div>
+    // <div className=" w-screen flex ">
+    //   <div className=" flex flex-auto flex-col ">
+    //     <h1 className="text-[24px] text-main-color font-[600] mb-[20px] ">
+    //       Profile(s)
+    //     </h1>
+    //     <div className=" flex flex-auto flex-row gap-[20px] ">
+    //       {/* <ClientCreateWorkProfile /> */}
+    //       <ClientProfileContent />
+    //       <ClientCreateWorkProfile />
+    //     </div>
+    //   </div>
+    //     <AdvertSection />
+    // </div>
   );
 };
 
@@ -40,7 +51,7 @@ const ClientCreateWorkProfile = () => {
 
 const ClientProfileContent = () => {
   return (
-    <div className="Client-profile-content flex flex-col gap-[20px] ">
+    <div className=" flex-auto flex flex-col gap-[20px] ">
       <ClientProfileInformation />
       <ProjectsCategory
         heading="Favourite Projects"
@@ -60,7 +71,7 @@ const ClientProfileContent = () => {
 
 const ClientProfileInformation = () => {
   return (
-    <div className="Client-profile-information flex-3 ">
+    <div className=" w-full ">
       <div className="Client-profile-information-container flex gap-[10px] flex-col ">
         <h2 className="  text-[20px] font-[600] text-primary-text-color-black  ">
           About Your Work

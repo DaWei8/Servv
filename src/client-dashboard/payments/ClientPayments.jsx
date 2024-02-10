@@ -8,7 +8,7 @@ import PaymentMethods from "./PaymentMethods";
 
 const ClientPayments = () => {
   return (
-    <div className="flex flex-col w-full ">
+    <div className="flex flex-col w-screen ">
       <h1 className="text-[24px] text-main-color font-[600] mb-[20px]">
         Bills and Payments
       </h1>

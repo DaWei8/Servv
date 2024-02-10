@@ -5,7 +5,7 @@ import TransactionItem from "../components/TransactionItem";
 const ClientHistory = () => {
   return (
 
-      <div className=" flex flex-col w-full flex-auto ">
+      <div className=" flex flex-col w-screen flex-auto ">
         <h1 className="text-[24px] text-main-color font-[600] mb-[20px]">
           History
         </h1>

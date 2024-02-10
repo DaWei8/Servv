@@ -5,7 +5,7 @@ import { liveChatOptions } from "../../data/Datasets";
 
 const ClientSupport = () => {
   return (
-    <div className="Client-support">
+    <div className="Client-support w-screen ">
       <div className="Client-support-container">
         <h1 className="text-[24px] text-main-color font-[600] mb-[20px]">
           Live Chat & Support

@@ -17,7 +17,7 @@ const NavBar = () => {
     return setClickState(true);
   };
   return (
-    <div className=" w-full px-[16px] md:pt-[20px] pt-[10px] pb-[5px] fixed right-0 left-0 top-0 bg-transparent-bg-blur backdrop-blur-[20px] z-10 ">
+    <div className=" w-screen max-w-[1440px]  px-[16px] md:pt-[20px] pt-[10px] pb-[5px] sticky top-0 bg-transparent-bg-blur backdrop-blur-[20px] z-10 rounded-b-[20px] shadow-3xl ">
       <div className=" mx-auto flex items-center w-full justify-between ">
         <div className="logo__container hidden md:flex 2xl:w-[180px] ">
           <Link to="/">
@@ -43,7 +43,7 @@ const NavBar = () => {
           </li>
           <li>
             <Link to="/marketplace">
-              <p>Marketplace</p>
+              <p className=" text-[20px] font-[700] " >Marketplace</p>
             </Link>
           </li>
           <li>

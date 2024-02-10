@@ -75,10 +75,10 @@ const Footer = () => (
           </li>
         </a>
       </ul>
-      <div className=" items-center text-[14px] flex-wrap flex w-[400px] gap-[10px]">
-        <li>Terms and Conditions</li>
-        <li>Privacy Policy</li>
-        <li>Partnerships</li>
+      <div className=" items-center flex-auto text-[14px] flex-wrap flex max-w-[400px] gap-[10px]">
+        <div>Terms and Conditions</div>
+        <div>Privacy Policy</div>
+        <div>Partnerships</div>
       </div>
     </div>
   </div>

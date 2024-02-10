@@ -51,8 +51,8 @@ a:active {
   text-decoration: none;
 }
 body {
-  margin: 0;
-  width: 100dvw;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -193,28 +193,59 @@ button:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-
   background-color: var(--tab-select-color);
-  
+
   border-radius: 10px;
-  
-  }
+}
 
-  input:hover {
-    box-shadow: 0 1px 30px 5px rgba(28, 12, 71, 0.1);
-    border: 2px solid #0080ff;
-  }
+input:hover {
+  /* box-shadow: 0 1px 30px 5px rgba(28, 12, 71, 0.1); */
+  border: 2px solid #0080ff;
+}
 
-  input:active {
-    /* box-shadow: 0 1px 30px 5px rgba(28, 12, 71, 0.1); */
-    border: 2px solid #0080ff;
-  }
+input:active {
+  /* box-shadow: 0 1px 30px 5px rgba(28, 12, 71, 0.1); */
+  border: 2px solid #0080ff;
+}
 
-  input:focus{
-    border: 2px solid #0080ff;
-  }
+input:focus {
+  border: 2px solid #0080ff;
+}
 
-  .mobile-nav-button:hover {
-background-color: var(--primary-button-color);
-color: var(--primary-text-color-white);
+.mobile-nav-button:hover {
+  background-color: var(--primary-button-color);
+  color: var(--primary-text-color-white);
+}
+
+/* input[type="file"] {
+  font-size: 10px;
+  color: #fff;
+  background-color: #ffff;
+} */
+
+input[type="file"] {
+  position: absolute;
+  /* z-index: -1; */
+
+  font-size: 10px;
+  color: #b8b8b8;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-show {
+  animation: moveSlideshow 9s linear infinite;
+  -webkit-animation: moveSlideshow 9s linear infinite;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-66.6666%);
   }
+}
+
+.nav-link:hover {
+  color: var(--main-color);
+  cursor: pointer;
+  font-weight: 600;
+}

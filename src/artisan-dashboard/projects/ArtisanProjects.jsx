@@ -4,7 +4,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ProjectCard from "../components/ProjectCard";
-import { projectContent } from "../../data/Datasets";
 
 const ArtisanProjects = () => {
   return (

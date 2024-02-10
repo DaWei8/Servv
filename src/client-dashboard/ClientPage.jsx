@@ -33,7 +33,7 @@ export const ClientPage = () => {
   };
 
   return (
-    <div className="flex flex-col flex-auto w-screen gap-[40px] min-h-screen duration-500 ">
+    <div className="flex flex-col flex-auto gap-[40px] w-full min-h-screen duration-500 ">
       <div className=" flex gap-[10px] justify-between  px-[20px] pt-[20px] ">
         <div className="Client-hamburger-menu flex lg:hidden ">
           <img
@@ -45,8 +45,8 @@ export const ClientPage = () => {
         </div>
         <ClientTopbar />
       </div>
-      <div className="flex duration-[600ms] flex-auto overflow-hidden ">
-        <div className=" flex-row gap-[20px] px-[20px] flex max-w-[1440px] duration-[500ms] flex-auto ">
+      <div className="flex duration-[600ms] flex-auto w-full overflow-hidden ">
+        <div className=" flex-row gap-[20px] px-[20px] w-full flex duration-[500ms] flex-auto ">
           <ClientSidebar onClick={activateMenuState === true ? true : false} />
           <div
             className={

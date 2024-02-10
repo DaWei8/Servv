@@ -38,7 +38,7 @@ const settingsContent = [
 
 const ClientSettings = () => {
   return (
-    <div className=" flex flex-auto w-full ">
+    <div className=" flex flex-auto w-screen ">
       <Routes>
         <Route path="/" exact Component={SettingsHomes} />
         <Route

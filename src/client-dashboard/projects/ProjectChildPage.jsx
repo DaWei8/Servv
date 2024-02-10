@@ -14,7 +14,7 @@ const ProjectChildPage = (props) => {
         <img className="right-arrow" src={rightArrow} alt="back button" />
         <p>{props.childLink}</p>
       </div>
-      <div className="">{props.childContent}</div>
+      <>{props.childContent}</>
     </div>
   );
 };

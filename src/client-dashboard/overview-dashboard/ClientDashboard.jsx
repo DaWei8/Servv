@@ -9,7 +9,7 @@ import ProjectCard from "../components/ProjectCard";
 
 const ClientDashboard = () => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col flex-auto w-screen ">
       <h1 className=" text-[24px] text-main-color font-[600] mb-[20px] ">
         Dashboard
       </h1>

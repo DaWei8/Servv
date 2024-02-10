@@ -40,7 +40,7 @@ const MarketHomePage = () => {
     });
 
   return (
-    <div className=" flex flex-col flex-auto w-auto ">
+    <div className=" flex flex-col flex-auto w-[100$] ">
       <MarketPlaceHero />
       <div className=" flex flex-col pt-[60px] gap-[20px] ">
         <div className=" flex flex-auto mx-auto ">
