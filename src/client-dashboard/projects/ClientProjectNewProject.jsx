@@ -10,6 +10,7 @@ import cancelRed from "../../assets/icons/cancel-red.svg";
 import { useRef, useState } from "react";
 import ProjectContextProvider from "./ProjectContext";
 import styled from "styled-components";
+import axios from "axios";
 
 const StyledInput = styled.input`
   padding: 8px;
@@ -63,24 +64,49 @@ const ClientProjectNewProject = () => {
     displayImage: "",
     projectImages: [],
   });
+  const createNewProject = async () => {
+    // e.preventDefault();
+    const url = "http://localhost:5000/task/api/projects";
+    const data = { ...formData };
+    try {
+      await axios.post(url, data).then(({ data }) => {
+        console.log(data);
+      });
+    } catch (error) {
+      console.error("Error :", error);
+    }
+  };
 
   const imageInputRef = useRef(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    validateFormData(formData) === true ? createNewProject : null;
     console.log("Form submitted:", formData);
   };
 
+  const validateFormData = () => {
+    return formData.projectTitle && formData.projectDescription ? true : false;
+  };
+
   const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    console.log(formData);
   };
 
   const handleDisplayImageChange = (event) => {
     event.preventDefault();
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+    console.log(formData.displayImage);
   };
 
   const handleImageChange = (event) => {
     event.preventDefault();
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+    console.log(formData.projectImages);
   };
 
   return (
@@ -94,7 +120,10 @@ const ClientProjectNewProject = () => {
               <ClientProjectSubSection
                 title="Project Name"
                 button={
-                  <div className=" ml-auto w-fit flex items-center primary-button-blue gap-[10px] ">
+                  <div
+                    onClick={() => createNewProject}
+                    className=" ml-auto w-fit flex items-center primary-button-blue gap-[10px] "
+                  >
                     <p className=" text-primary-text-color-white ">
                       Save Project
                     </p>
@@ -175,7 +204,7 @@ const ClientProjectNewProject = () => {
                                 <StyledInput
                                   type="text"
                                   name="work-category"
-                                  value={
+                                  defaultValue={
                                     formData.projectRequirements.workCategory
                                   }
                                   onChange={handleInputChange}
@@ -188,7 +217,9 @@ const ClientProjectNewProject = () => {
                                 <StyledInput
                                   type="text"
                                   name="budget"
-                                  value={formData.projectRequirements.budget}
+                                  defaultValue={
+                                    formData.projectRequirements.budget
+                                  }
                                   onChange={handleInputChange}
                                 />
                               </StyledFormDiv>
@@ -200,7 +231,9 @@ const ClientProjectNewProject = () => {
                               <StyledInput
                                 type="text"
                                 name="location"
-                                value={formData.projectRequirements.location}
+                                defaultValue={
+                                  formData.projectRequirements.location
+                                }
                                 onChange={handleInputChange}
                               />
                             </StyledFormDiv>
@@ -211,7 +244,7 @@ const ClientProjectNewProject = () => {
                               <StyledInput
                                 type="text"
                                 name="otherRequirements"
-                                value={
+                                defaultValue={
                                   formData.projectRequirements.otherRequirements
                                 }
                                 onChange={handleInputChange}
@@ -237,8 +270,9 @@ const ClientProjectNewProject = () => {
                               {/* <label className=" w-full h-full " label="image-input"> */}
                               <StyledInputImage
                                 type="file"
+                                defaultValue={formData.displayImage}
                                 onChange={handleDisplayImageChange}
-                                name="image"
+                                name="displayImage"
                                 id="image"
                               />
                               {/* </label> */}
@@ -248,8 +282,9 @@ const ClientProjectNewProject = () => {
                                 {/* <label label="image-input"> */}
                                 <StyledInputImage
                                   type="file"
+                                  defaultValue={formData.projectImages[1]}
                                   onChange={handleImageChange}
-                                  name="image"
+                                  name="projectImage1"
                                   id="image"
                                 />
                                 {/* </label> */}
@@ -258,8 +293,9 @@ const ClientProjectNewProject = () => {
                                 {/* <label label="image-input"> */}
                                 <StyledInputImage
                                   type="file"
+                                  defaultValue={formData.projectImages[2]}
                                   onChange={handleImageChange}
-                                  name="image"
+                                  name="projectImage2"
                                   id="image"
                                 />
                                 {/* </label> */}
@@ -268,8 +304,9 @@ const ClientProjectNewProject = () => {
                                 {/* <label label="image-input"> */}
                                 <StyledInputImage
                                   type="file"
+                                  defaultValue={formData.projectImages[2]}
                                   onChange={handleImageChange}
-                                  name="image"
+                                  name="projectImage3"
                                   id="image"
                                 />
                                 {/* </label> */}

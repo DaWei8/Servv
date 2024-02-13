@@ -16,7 +16,7 @@ const ClientTopbar = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-between w-auto flex-auto lg:rounded-[10px] lg:px-[20px] h-fit lg:shadow-md ">
+    <div className="relative flex items-center justify-between w-auto flex-auto lg:rounded-[10px] lg:px-[20px] h-fit lg:shadow-3xl ">
       {/* <div className="Client-hamburger-menu">
           <img
             src={menuIcon}
