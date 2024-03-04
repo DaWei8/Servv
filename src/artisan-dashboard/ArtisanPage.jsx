@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // import "./ArtisanPage.scss";
 import menuIcon from "../assets/icons/hamburger-menu.svg";
@@ -18,6 +18,7 @@ import ArtisanSidebar from "./navbar/ArtisanSidebar";
 import { sidebarContentTop, sidebarContentBottom } from "../data/Datasets";
 import { useState } from "react";
 import LogOut from "../authentication/LogOut";
+import ArtisanSidebarButton from "./components/ArtisanSidebarButton";
 
 export const ArtisanPage = () => {
   const [activateMenuState, setActivateMenuState] = useState(false);
@@ -119,22 +120,5 @@ export const ArtisanPage = () => {
   );
 };
 
-const ArtisanSidebarButton = (props) => {
-  return (
-    <Link to={props.link}>
-      <div
-        onClick={props.onClick}
-        className=" lg:hover:bg-pale-blue-grey lg:shadow-none bg-primary-bg-color-white shadow-3xl flex gap-[10px] lg:py-[12px] py-[15px] px-[16px] items-center rounded-[8px]  "
-      >
-        <img
-          src={props.icon}
-          alt="sidebar icon"
-          className="artisan-sidebar-icon"
-        />
-        <p className=" text-[14px] font-[400] lg:hidden leading-[27px] text-primary-text-color-black ">
-          {props.title}
-        </p>
-      </div>
-    </Link>
-  );
-};
+
+

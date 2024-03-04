@@ -11,11 +11,17 @@ import AuthPage from "./authentication/AuthPage";
 // import ArtisanDashboard from "./artisan-dashboard/ArtisanPage";
 import { ArtisanPage } from "./artisan-dashboard/ArtisanPage";
 import { ClientPage } from "./client-dashboard/ClientPage";
+import ProtectedRoute from "./authentication/ProtectedRoute";
+import { useState } from "react";
+
 
 const App = () => {
+  const [isAuth, setAuth] = useState(false);
+  const [hideLogin, setHideLogin] = useState(false);
+
   return (
     <div className="App relative flex flex-row items-center justify-center w-screen content-center duration-500 ">
-      <div className="bg-primary-bg-color-white " >
+      <div className="bg-primary-bg-color-white ">
         <BrowserRouter>
           <Routes>
             <Route path="/" exact Component={HomePage} />
@@ -24,8 +30,27 @@ const App = () => {
             <Route path="/for" Component={ForPage} />
             <Route path="/support" Component={SupportPage} />
             <Route path="/authPage/*" Component={AuthPage} />
-            <Route path="/artisanPage/*" Component={ArtisanPage} />
-            <Route path="/clientPage/*" Component={ClientPage} />
+
+            {/* <Route path="/artisanPage/*" Component={ArtisanPage} /> */}
+            {/* <Route path="/clientPage/*" Component={ClientPage} /> */}
+
+            <Route
+              path="/artisanPage/*"
+              element={
+                <ProtectedRoute isAuthenticated={isAuth}>
+                  <ArtisanPage />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/clientPage/*"
+              element={
+                <ProtectedRoute isAuthenticated={isAuth}>
+                  <ClientPage />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </div>

@@ -3,10 +3,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import LeftFillerComponent from "./LeftFillerComponent";
 import backButton from "../assets/icons/prev-arrow.svg";
+import axios from "axios";
 
 export default function Login() {
-
-  
   const [formData, setFormData] = useState({
     mobilenumber: "",
     email: "",
@@ -23,6 +22,20 @@ export default function Login() {
     email: "",
     password: "",
   });
+
+  const checkUser = async (email) => {
+    try {
+      const response = await axios.get("/api/user", { ...formData, email });
+      if (response.status === 200) {
+        return true;
+      } else {
+        alert("User is not registered");
+        return false;
+      }
+    } catch (error) {
+      console.error("User Check Error: ", error);
+    }
+  };
 
   const [selectedOption, setSelectedOption] = useState(false);
 
@@ -54,10 +67,15 @@ export default function Login() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (formData) => {
     validateFormData(formData);
-    const errors = validateFormData(formData);
+    checkUser(formData.email)
+      .then(() => {
+        console.log("function was fired");
+      })
+      .catch((err) => {
+        console.error("check user error: ", err);
+      });
   };
 
   const handleSignupSelect = (e) => {
@@ -77,32 +95,32 @@ export default function Login() {
 
   return (
     <div className=" w-fit flex flex-col items-center justify-around  ">
-      <div className=" flex flex-row mx-auto md:p-[20px] md:rounded-[20px] md:shadow-3xl ">
+      <div className=" flex items-center flex-row mx-auto md:p-[20px] md:rounded-[20px] md:shadow-3xl ">
         <LeftFillerComponent />
         {/* form for login  */}
         <form
           id="login-form"
           name="login-form"
-          className="login-form flex flex-col  px-[20px] md:w-auto  md:py-[40px] py-[100px] md:h-auto h-screen  "
+          className="flex flex-col  px-[20px] md:w-auto  md:py-[40px] py-[100px] md:h-auto h-screen  "
           onSubmit={handleSubmit}
           autoComplete=""
           action="submit"
           method="post"
         >
-          <h1 className=" text-main-color text-[30px] flex font-semibold mb-[20px] ">
-            Login
-          </h1>
-          <div className=" flex flex-row gap-[15px] items-center ">
+         
+          <div className=" flex flex-row gap-[15px] mb-[10px] items-center text-[14px] ">
             <Link to="/">
               <img className=" w-[40px] " src={backButton} alt="back button" />
             </Link>
             <p>Dont have an account?</p>
-            <button className=" text-main-color " onClick={handleSignupSelect}>
+            <div className=" text-main-color " >
               <Link to="../signup">Create Account</Link>
-            </button>
-          </div>
+            </div>
+          </div> <h1 className=" text-main-color text-[30px] flex font-semibold mb-[20px] ">
+            Login
+          </h1>
 
-          <div className=" mt-[50px] flex gap-[20px] mb-[20px] items-center justify-center ">
+          <div className=" mt-[50px] flex gap-[20px] mb-[20px] items-center  ">
             <button
               onClick={handleMailSelection}
               value="useMail"
@@ -134,7 +152,7 @@ export default function Login() {
 
           {selectedOption !== true ? (
             <div className=" flex flex-col items-center justify-center md:w-[500px] gap-[20px] text-[14px] ">
-              <label className=" flex flex-col w-full gap-[10px] " htmlFor="">
+              <label className=" flex flex-col w-full gap-[5px] " htmlFor="">
                 Email{" "}
                 <input
                   type="email"
@@ -142,12 +160,12 @@ export default function Login() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className=" h-[50px] rounded-[5px] bg-pale-blue-grey border-l-1 border-t-0 border-b-0 border-r-0 border-solid border-l-main-color "
+                  className=" form-input "
                 />
                 {errors.email && <span>{errors.email}</span>}
               </label>
 
-              <label className=" flex flex-col w-full gap-[10px] " htmlFor="">
+              <label className=" flex flex-col w-full gap-[5px] " htmlFor="">
                 Password
                 <input
                   type="password"
@@ -155,15 +173,15 @@ export default function Login() {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className=" h-[50px] rounded-[5px] bg-pale-blue-grey border-l-1 border-t-0 border-b-0 border-r-0 border-solid border-l-main-color"
+                  className=" form-input "
                 />
               </label>
 
               <div className=" flex flex-row flex-auto w-full items-baseline justify-end gap-[20px] ">
                 <p>Forgot Password?</p>
 
-                <Link  to="../forgot-password">
-                  <p className=" text-main-color " >Reset password</p>
+                <Link to="../forgot-password">
+                  <p className=" text-main-color ">Reset password</p>
                 </Link>
               </div>
             </div>
@@ -177,7 +195,7 @@ export default function Login() {
                   name="mobilenumber"
                   value={formData.mobilenumber}
                   onChange={handleChange}
-                  className=" h-[50px] rounded-[5px] bg-pale-blue-grey border-l-1 border-t-0 border-b-0 border-r-0 border-solid border-l-main-color "
+                  className=" form-input "
                 />
               </label>
 
@@ -189,26 +207,16 @@ export default function Login() {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className=" h-[50px] rounded-[5px] bg-pale-blue-grey border-l-1 border-t-0 border-b-0 border-r-0 border-solid border-main-color "
+                  className=" form-input "
                 />
               </label>
 
-              <div className=" flex flex-row flex-auto w-full items-baseline justify-end gap-[10px] ">
+              <div className=" flex flex-row flex-auto w-full items-baseline justify-end gap-[20px] ">
                 <p>Forgot Password?</p>
-                <button
-                  // onClick={handleSignupSelect}
-                  type=" button "
-                  className=" text-main-color "
-                >
-                  <Link
-                    style={{
-                      display: "flex",
-                    }}
-                    to="../forgot-password"
-                  >
-                    Reset password
-                  </Link>
-                </button>
+
+                <Link to="../forgot-password">
+                  <p className=" text-main-color ">Reset password</p>
+                </Link>
               </div>
             </div>
           )}
@@ -220,7 +228,7 @@ export default function Login() {
               display: "flex",
               color: "#fff",
             }}
-            onClick={() => validateFormData(formData)}
+            onClick={() => handleSubmit(formData)}
             // onSubmit={ usertypeState.client === false && usertypeState.artisan === false ? alert("Hello\nThis is a multiline alert") : alert("Login\nSuccessful") }
             to={
               usertypeState.artisan === true

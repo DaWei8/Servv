@@ -170,14 +170,9 @@ border-button:hover,
 border-button-blue:hover,
 primary-button:hover,
 primary-button-blue:hover {
-  border-color: var(--main-color);
+  border: solid var(--tab-select-color) 1px ;
   transition-duration: 500ms;
-  box-shadow: 0 2px 30px 15px rgba(28, 12, 71, 0.2);
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
+  box-shadow: 0 2px 30px 15px rgba(13, 5, 34, 0.062);
 }
 button:focus,
 button:focus-visible {
@@ -196,6 +191,18 @@ button:focus-visible {
   background-color: var(--tab-select-color);
 
   border-radius: 10px;
+}
+
+.form-input {
+  height: 42px;
+  width: 100%;
+  border: solid 1px var(--tab-select-color);
+  background-color: transparent;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 input:hover {

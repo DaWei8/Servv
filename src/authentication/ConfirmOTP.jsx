@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import backButton from "../assets/icons/prev-arrow.svg";
-import "./AuthPage.scss";
+
 // import validMark from "../../assets/icons/valid-mark.svg";
 
 import LeftFillerComponent from "./LeftFillerComponent";

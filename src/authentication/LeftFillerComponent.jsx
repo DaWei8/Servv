@@ -4,7 +4,7 @@ import QuoteMark from "../assets/icons/quote.svg";
 
 export default function LeftFillerComponent() {
   return (
-    <div className="relative overflow-x-hidden text-primary-text-color-white login-left hidden lg:flex flex-col bg-primary-bg-color-blue py-[96px] px-[34px] w-fit rounded-[10px] max-h-[90vh]">
+    <div className="relative overflow-hidden text-primary-text-color-white login-left hidden lg:flex flex-col bg-primary-bg-color-blue py-[96px] px-[34px] w-fit rounded-[10px] max-h-[650px]">
       <div className="login-company-logo max-w-[400px] flex flex-col gap-[25px]">
         {/* <Link to="../signup"> */}
         <img
