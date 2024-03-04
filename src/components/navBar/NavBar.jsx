@@ -4,11 +4,12 @@ import hCancel from "../../assets/icons/cancel-icon.svg";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../../authentication/context/AuthContext";
 
 const NavBar = () => {
   const [clickState, setClickState] = useState(true);
 
-  const [authState, setAuthState] = useState(false);
+  const { isAuthenticated, userName } = useAuth();
 
   const handleMenuClick = () => {
     return setClickState(false);
@@ -16,6 +17,7 @@ const NavBar = () => {
   const handleCancelClick = () => {
     return setClickState(true);
   };
+
   return (
     <div className=" w-screen max-w-[1440px]  px-[16px] md:pt-[20px] pt-[10px] pb-[5px] sticky top-0 bg-transparent-bg-blur backdrop-blur-[20px] z-10 rounded-b-[20px] shadow-3xl ">
       <div className=" mx-auto flex items-center w-full justify-between ">
@@ -43,7 +45,7 @@ const NavBar = () => {
           </li>
           <li>
             <Link to="/marketplace">
-              <p className=" text-[20px] font-[700] " >Marketplace</p>
+              <p className=" text-[20px] font-[700] ">Marketplace</p>
             </Link>
           </li>
           <li>
@@ -58,26 +60,23 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="">
-          {authState ? (
-            <Link to="/authPage" className="lg:flex hidden ">
+          {isAuthenticated ? (
+            <Link to="/clientPage/" className="lg:flex hidden ">
               <button className=" relative bg-primary-button-color-blue rounded-[100px] h-[40px] text-primary-text-color-white flex items-center justify-center w-[40px]  ">
                 <div className="profile__state inactive absolute rounded-[40px] w-[11px] h-[11px] bottom-[0px] right-[3px] bg-default-green "></div>
-                D
+                {userName.charAt(0).toUpperCase()}
               </button>
             </Link>
           ) : (
-            <div
-              className=" flex flex-row gap-[20px] flex-auto text-[14px] "
-              onClick={() => setAuthState(true)}
-            >
+            <div className=" flex flex-row gap-[20px] flex-auto text-[14px] ">
               <Link
-                to="/authPage/signup"
+                to="/auth/signup"
                 className="  h-[40px] max-w-[130px] hidden lg:flex items-center justify-center "
               >
                 <p className=" text-main-color ">Sign Up</p>
               </Link>
               <Link
-                to="/authPage"
+                to="/auth/login"
                 className=" border-button-blue h-[40px] max-w-[100px] hidden lg:flex items-center justify-center "
               >
                 <p className="text-main-color">Login</p>
@@ -117,39 +116,48 @@ const NavBar = () => {
             >
               <p>Home</p>
             </Link>
-            <Link className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] " onClick={handleCancelClick} to="/about">
+            <Link
+              className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] "
+              onClick={handleCancelClick}
+              to="/about"
+            >
               <p>About</p>
             </Link>
             {/* <li><Link to="/marketplace">Marketplace</Link></li> */}
-            <Link className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] " onClick={handleCancelClick} to="/for">
+            <Link
+              className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] "
+              onClick={handleCancelClick}
+              to="/for"
+            >
               <p>For you</p>
             </Link>
 
-            <Link className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] " onClick={handleCancelClick} to="/support">
+            <Link
+              className=" mobile-nav-button text-[14px] p-[15px] rounded-[5px] bg-[#EDF5FF] "
+              onClick={handleCancelClick}
+              to="/support"
+            >
               <p>Support</p>
             </Link>
 
             <div className=" flex flex-col gap-[20px] ">
-              {authState ? (
-                <Link to="/authPage">
+              {isAuthenticated ? (
+                <Link to="/clientPage/">
                   <button className=" relative rounded-[5px] h-[50px] bg-primary-button-color-blue text-primary-text-color-white flex items-center justify-center w-full  ">
                     <div className="profile__state inactive absolute rounded-[40px] w-[40px] h-[20px] bottom-1/2 top-4 right-[3px] bg-default-green "></div>
-                    D
+                    {userName.charAt(0).toUpperCase()}
                   </button>
                 </Link>
               ) : (
-                <div
-                  className=" flex flex-row gap-[20px] flex-auto "
-                  onClick={() => setAuthState(true)}
-                >
+                <div className=" flex flex-row gap-[20px] flex-auto ">
                   <Link
-                    to="/authPage"
+                    to="/auth"
                     className=" border-button-blue h-[50px] flex items-center flex-auto justify-center "
                   >
                     Login
                   </Link>
                   <Link
-                    to="/authPage/signup"
+                    to="/auth/signup"
                     className=" border-button-blue h-[50px] flex items-center flex-auto justify-center "
                   >
                     Sign Up

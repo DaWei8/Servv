@@ -1,20 +1,18 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LeftFillerComponent from "./LeftFillerComponent";
 import backButton from "../assets/icons/prev-arrow.svg";
 import axios from "axios";
+import { useAuth } from "./context/AuthContext";
 
 export default function Login() {
+  const navigate = useNavigate();
+  const { setIsAuthenticated, setUserName } = useAuth();
   const [formData, setFormData] = useState({
     mobilenumber: "",
     email: "",
     password: "",
-  });
-
-  const [usertypeState, setUsertypeState] = useState({
-    client: Boolean,
-    artisan: Boolean,
   });
 
   const [errors, setErrors] = useState({
@@ -23,74 +21,27 @@ export default function Login() {
     password: "",
   });
 
-  const checkUser = async (email) => {
-    try {
-      const response = await axios.get("/api/user", { ...formData, email });
-      if (response.status === 200) {
-        return true;
-      } else {
-        alert("User is not registered");
-        return false;
-      }
-    } catch (error) {
-      console.error("User Check Error: ", error);
-    }
-  };
-
   const [selectedOption, setSelectedOption] = useState(false);
-
-  const validateFormData = (formData) => {
-    if (formData.email === "client@email.com")
-      console.log("This is a cherry banana");
-    if (formData.email === "client@email.com" && formData.password === "1234")
-      setUsertypeState({
-        client: true,
-        artisan: false,
-      });
-    else if (
-      formData.email === "artisan@email.com" &&
-      formData.password === "1234"
-    )
-      setUsertypeState({
-        client: false,
-        artisan: true,
-      });
-    else
-      setUsertypeState({
-        client: false,
-        artisan: false,
-      });
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    console.log(JSON.stringify(formData));
   };
 
-  const handleSubmit = (formData) => {
-    validateFormData(formData);
-    checkUser(formData.email)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const url = "http://localhost:5000/api/users/login";
+    const data = { mobilenumber: formData.mobilenumber, email: formData.email };
+    axios
+      .post(url, data)
       .then(() => {
-        console.log("function was fired");
+        console.log("validation successful");
+        setIsAuthenticated(true);
+        setUserName(formData.email)
+        navigate("/");
       })
-      .catch((err) => {
-        console.error("check user error: ", err);
-      });
-  };
-
-  const handleSignupSelect = (e) => {
-    // setSelectSignupOption(true);
-    e.preventDefault();
-  };
-
-  const handleMailSelection = (e) => {
-    e.preventDefault();
-    setSelectedOption(false);
-  };
-
-  const handleNumberSelection = (e) => {
-    e.preventDefault();
-    setSelectedOption(true);
+      .catch((error) => console.error("User Check Error: ", error));
   };
 
   return (
@@ -102,29 +53,33 @@ export default function Login() {
           id="login-form"
           name="login-form"
           className="flex flex-col  px-[20px] md:w-auto  md:py-[40px] py-[100px] md:h-auto h-screen  "
-          onSubmit={handleSubmit}
+          onSubmit={(e) => handleSubmit(e)}
           autoComplete=""
-          action="submit"
           method="post"
         >
-         
           <div className=" flex flex-row gap-[15px] mb-[10px] items-center text-[14px] ">
-            <Link to="/">
-              <img className=" w-[40px] " src={backButton} alt="back button" />
-            </Link>
+            <img
+              onClick={() => navigate("/")}
+              className=" w-[32px] "
+              src={backButton}
+              alt="back button"
+            />
+
             <p>Dont have an account?</p>
-            <div className=" text-main-color " >
-              <Link to="../signup">Create Account</Link>
+            <div
+              className=" text-main-color "
+              onClick={() => navigate("/auth/signup")}
+            >
+              Create Account
             </div>
-          </div> <h1 className=" text-main-color text-[30px] flex font-semibold mb-[20px] ">
+          </div>{" "}
+          <h1 className=" text-main-color text-[30px] flex font-semibold mb-[20px] ">
             Login
           </h1>
-
-          <div className=" mt-[50px] flex gap-[20px] mb-[20px] items-center  ">
-            <button
-              onClick={handleMailSelection}
-              value="useMail"
-              className="use-email-btn  "
+          <div className=" mt-[10px] flex gap-[20px] mb-[20px] items-center  ">
+            <div
+              onClick={(e) => setSelectedOption(false)}
+              className="use-btn "
               style={{
                 background:
                   selectedOption !== true
@@ -133,12 +88,11 @@ export default function Login() {
               }}
             >
               Use Email
-            </button>
+            </div>
             OR
-            <button
-              className="use-number-btn"
-              onClick={handleNumberSelection}
-              value="usePhone"
+            <div
+              className="use-btn "
+              onClick={(e) => setSelectedOption(true)}
               style={{
                 background:
                   selectedOption !== true
@@ -147,9 +101,8 @@ export default function Login() {
               }}
             >
               Use Phone Number
-            </button>
+            </div>
           </div>
-
           {selectedOption !== true ? (
             <div className=" flex flex-col items-center justify-center md:w-[500px] gap-[20px] text-[14px] ">
               <label className=" flex flex-col w-full gap-[5px] " htmlFor="">
@@ -187,7 +140,7 @@ export default function Login() {
             </div>
           ) : (
             <div className=" flex flex-col items-center justify-center md:w-[500px] gap-[20px] text-[14px] ">
-              <label className=" flex flex-col w-full gap-[10px] " htmlFor="">
+              <label className=" flex flex-col w-full gap-[5px] " htmlFor="">
                 Mobile number
                 <input
                   type="text"
@@ -199,7 +152,7 @@ export default function Login() {
                 />
               </label>
 
-              <label className=" flex flex-col w-full gap-[10px] " htmlFor="">
+              <label className=" flex flex-col w-full gap-[5px] " htmlFor="">
                 Password
                 <input
                   type="password"
@@ -220,26 +173,25 @@ export default function Login() {
               </div>
             </div>
           )}
-
-          <Link
+          <div
             // onClick={handleSubmit}
             className=" rounded-[10px] float-right h-[50px] py-[15px] mt-[100px] w-full bg-primary-button-color-blue flex items-center justify-center "
             style={{
               display: "flex",
               color: "#fff",
             }}
-            onClick={() => handleSubmit(formData)}
+            onClick={(e) => handleSubmit(e)}
             // onSubmit={ usertypeState.client === false && usertypeState.artisan === false ? alert("Hello\nThis is a multiline alert") : alert("Login\nSuccessful") }
-            to={
-              usertypeState.artisan === true
-                ? "/artisanPage"
-                : usertypeState.client === true
-                ? "/clientPage"
-                : "./"
-            }
+            // to={
+            //   usertypeState.artisan === true
+            //     ? "/artisanPage"
+            //     : usertypeState.client === true
+            //     ? "/clientPage"
+            //     : "./"
+            // }
           >
             Login
-          </Link>
+          </div>
           {/* </button> */}
         </form>
       </div>

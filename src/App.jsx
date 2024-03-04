@@ -12,12 +12,10 @@ import AuthPage from "./authentication/AuthPage";
 import { ArtisanPage } from "./artisan-dashboard/ArtisanPage";
 import { ClientPage } from "./client-dashboard/ClientPage";
 import ProtectedRoute from "./authentication/ProtectedRoute";
-import { useState } from "react";
 
 
 const App = () => {
-  const [isAuth, setAuth] = useState(false);
-  const [hideLogin, setHideLogin] = useState(false);
+  
 
   return (
     <div className="App relative flex flex-row items-center justify-center w-screen content-center duration-500 ">
@@ -29,7 +27,7 @@ const App = () => {
             <Route path="/marketplace/*" Component={MarketPage} />
             <Route path="/for" Component={ForPage} />
             <Route path="/support" Component={SupportPage} />
-            <Route path="/authPage/*" Component={AuthPage} />
+            <Route path="/auth/*" Component={AuthPage} />
 
             {/* <Route path="/artisanPage/*" Component={ArtisanPage} /> */}
             {/* <Route path="/clientPage/*" Component={ClientPage} /> */}
@@ -37,7 +35,7 @@ const App = () => {
             <Route
               path="/artisanPage/*"
               element={
-                <ProtectedRoute isAuthenticated={isAuth}>
+                <ProtectedRoute>
                   <ArtisanPage />
                 </ProtectedRoute>
               }
@@ -46,7 +44,7 @@ const App = () => {
             <Route
               path="/clientPage/*"
               element={
-                <ProtectedRoute isAuthenticated={isAuth}>
+                <ProtectedRoute>
                   <ClientPage />
                 </ProtectedRoute>
               }

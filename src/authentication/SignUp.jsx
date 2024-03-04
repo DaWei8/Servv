@@ -55,11 +55,11 @@ const SignUp = () => {
 
   const createNewUser = async () => {
     // e.preventDefault();
-    const url = "http://localhost:5000/task/api/users";
+    const url = "http://localhost:5000/api/users";
     const data = { ...formData };
     axios
       .post(url, data)
-      .then(() => navigate("/authPage/login"))
+      .then(() => navigate("/auth/login"))
       .catch((error) => console.error("User Check Error: ", error));
     // if (checkUser) console.log("creating new user", data);
     // else await axios.post(url, data);

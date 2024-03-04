@@ -99,6 +99,22 @@ p {
   font-size: 14px;
   line-height: 27px;
 }
+.use-btn {
+  padding: 10px 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.use-btn:hover {
+  border: solid var(--tab-select-color) 1px ;
+  transition-duration: 500ms;
+  box-shadow: 0 2px 30px 15px rgba(13, 5, 34, 0.062);
+}
 
 button {
   border-radius: 8px;
