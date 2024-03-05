@@ -1,7 +1,7 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 const NewProjectBasicInformation = () => {
-  const [formDataSegment, setformDataSegment] = useState([]);
+  // const [formDataSegment, setformDataSegment] = useState([]);
   return (
     <div className=" min-w-[320px] flex flex-col flex-auto gap-[10px] ">
       <h2 className=" text-[18px] font-[600] ">Basic Information</h2>

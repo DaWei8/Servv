@@ -44,9 +44,9 @@ const App = () => {
             <Route
               path="/clientPage/*"
               element={
-                <ProtectedRoute>
+                // <ProtectedRoute>
                   <ClientPage />
-                </ProtectedRoute>
+                // </ProtectedRoute> */}
               }
             />
           </Routes>

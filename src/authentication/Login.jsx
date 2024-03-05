@@ -8,7 +8,7 @@ import { useAuth } from "./context/AuthContext";
 
 export default function Login() {
   const navigate = useNavigate();
-  const { setIsAuthenticated, setUserName } = useAuth();
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     mobilenumber: "",
     email: "",
@@ -25,7 +25,7 @@ export default function Login() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ ...formData, [name]: value});
     console.log(JSON.stringify(formData));
   };
 
@@ -36,9 +36,7 @@ export default function Login() {
     axios
       .post(url, data)
       .then(() => {
-        console.log("validation successful");
-        setIsAuthenticated(true);
-        setUserName(formData.email)
+        login(formData.email)
         navigate("/");
       })
       .catch((error) => console.error("User Check Error: ", error));
@@ -173,7 +171,7 @@ export default function Login() {
               </div>
             </div>
           )}
-          <div
+          <button
             // onClick={handleSubmit}
             className=" rounded-[10px] float-right h-[50px] py-[15px] mt-[100px] w-full bg-primary-button-color-blue flex items-center justify-center "
             style={{
@@ -181,17 +179,9 @@ export default function Login() {
               color: "#fff",
             }}
             onClick={(e) => handleSubmit(e)}
-            // onSubmit={ usertypeState.client === false && usertypeState.artisan === false ? alert("Hello\nThis is a multiline alert") : alert("Login\nSuccessful") }
-            // to={
-            //   usertypeState.artisan === true
-            //     ? "/artisanPage"
-            //     : usertypeState.client === true
-            //     ? "/clientPage"
-            //     : "./"
-            // }
           >
             Login
-          </div>
+          </button>
           {/* </button> */}
         </form>
       </div>

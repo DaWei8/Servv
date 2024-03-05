@@ -43,13 +43,13 @@ export default ClientSidebar;
 const ClientSidebarButton = (props) => {
   return (
     <Link to={props.link} className=" w-fit " >
-      <div className=" hover:bg-pale-blue-grey lg:shadow-none group-hover:w-[170px] bg-primary-bg-color-white shadow-3xl flex gap-[10px] lg:py-[12px] py-[15px] px-[16px] items-center rounded-[8px] duration-500 ">
+      <div className=" hover:bg-pale-blue-grey lg:shadow-none w-[170px] bg-primary-bg-color-white shadow-3xl flex gap-[10px] lg:py-[12px] py-[15px] px-[16px] items-center rounded-[8px] duration-500 ">
         <img
           src={props.icon}
           alt="sidebar icon"
           className=" min-w-[20px] max-w-[20px] "
         />
-        <p className=" text-[14px] font-[400] hidden group-hover:flex leading-[27px] text-primary-text-color-black ">
+        <p className=" text-[14px] font-[400] flex leading-[27px] text-primary-text-color-black ">
           {props.title}
         </p>
       </div>

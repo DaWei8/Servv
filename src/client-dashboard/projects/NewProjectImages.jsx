@@ -3,19 +3,35 @@ import addIcon from "../../assets/icons/add.svg";
 import cancelRed from "../../assets/icons/cancel-red.svg";
 import newProjectImage from "../../assets/images/new-project-image.png";
 import ImageUpload from "react-image-upload";
+import axios from "axios";
 
 import { useContext, useState } from "react";
 import { ProjectContext } from "./ProjectContext";
+
 
 export default function NewProjectImages() {
   const { formData, setFormData } = useContext(ProjectContext);
   const [displayImage, setDisplayImage] = useState(null);
   const [projectImages, setProjectImages] = useState([]);
 
-  const handleDisplayImageChange = (image) => {
-    setDisplayImage(image);
-    setFormData({ ...formData, displayImage: image });
-    console.log(formData.displayImage);
+  const handleImageUpload = async () => {
+    const formData = new FormData();
+    formData.append("image", setDisplayImage);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/task/api/create-project",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);  
+    }
   };
 
   const handleImageChange = (event) => {
@@ -39,7 +55,7 @@ export default function NewProjectImages() {
             withIcon={true}
             buttonText={"Choose an image"}
             buttonClassName="primary-button-blue"
-            onChange={handleDisplayImageChange}
+            onChange={handleImageUpload}
             imgClass="w-full h-full"
             maxFileSize={5242880} // 5MB
             maxFileCount={1}
@@ -61,7 +77,7 @@ export default function NewProjectImages() {
               withIcon={true}
               buttonText={"Choose an image"}
               buttonClassName="primary-button-blue"
-              onChange={handleDisplayImageChange}
+              onChange={handleImageUpload}
               imgClass="w-full h-full"
               maxFileSize={5242880} // 5MB
               maxFileCount={1}
@@ -82,7 +98,7 @@ export default function NewProjectImages() {
               withIcon={true}
               buttonText={"Choose an image"}
               buttonClassName="primary-button-blue"
-              onChange={handleDisplayImageChange}
+              onChange={handleImageUpload}
               imgClass="w-full h-full"
               maxFileSize={5242880} // 5MB
               maxFileCount={1}

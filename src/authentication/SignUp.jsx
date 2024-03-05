@@ -36,23 +36,6 @@ const SignUp = () => {
   const [hidePassword, setHidePassword] = useState(true);
   const navigate = useNavigate();
 
-  // const checkUser = async (email) => {
-
-  //   const data = { ...formData };
-  //   const response = await axios.get("http://localhost:5000/task/api/users", {
-  //     formData,
-  //   });
-  //   try {
-  //     if (response.status === 200) {
-  //       return true;
-  //     } else {
-  //       return false;
-  //     }
-  //   } catch (error) {
-  //     console.error("User Check Error: ", error);
-  //   }
-  // };
-
   const createNewUser = async () => {
     // e.preventDefault();
     const url = "http://localhost:5000/api/users";
@@ -61,8 +44,6 @@ const SignUp = () => {
       .post(url, data)
       .then(() => navigate("/auth/login"))
       .catch((error) => console.error("User Check Error: ", error));
-    // if (checkUser) console.log("creating new user", data);
-    // else await axios.post(url, data);
   };
 
   // handles data submission to the database

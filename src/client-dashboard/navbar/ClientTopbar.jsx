@@ -7,8 +7,10 @@ import chatIcon from "../../assets/icons/messages-3.svg";
 import ClientSearchBar from "./ClientSearchBar";
 import Notifications from "../components/Notifications";
 import { useState } from "react";
+import { useAuth } from "../../authentication/context/AuthContext";
 
 const ClientTopbar = () => {
+  const { userName } = useAuth();
   const [notificationShowState, setShowNotificationState] = useState(false);
 
   const showNotifications = () => {
@@ -63,7 +65,7 @@ const ClientTopbar = () => {
         >
           <div className=" absolute w-[10px] h-[10px] rounded-[50%] bg-default-green -bottom-0 right-1 "></div>
           <p className="text-primary-button-color-white text-[20px] leading-[100%] ">
-            D
+            {userName.charAt(0).toUpperCase()}
           </p>
         </Link>
       </div>

@@ -1,22 +1,38 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const ProjectContext = createContext();
 
-export default function ProjectContextProvider({ children }) {
-  const [formData, setFormData] = useState([
-    {
-      projectTitle: "",
-      projectStatus: "",
-      projectDescription: "",
-      projectRequirements: "",
-      displayImage: null,
-      projectImages: [null],
-    },
-  ]);
+const ProjectContextProvider = ({ children }) => {
+  const [projectRequirements, setProjectRequirements] = useState({
+    location: "",
+    gender: "any",
+    budget: "none",
+    category: "all",
+    otherRequirements: "none",
+  });
+  const [formData, setFormData] = useState({
+    title: "",
+    status: "Pending",
+    duration: "",
+    description: "",
+    displayImage: null,
+    images: [null],
+    requirements: projectRequirements,
+  });
   return (
-    <ProjectContext.Provider value={(formData, setFormData)}>
+    <ProjectContext.Provider
+      value={{
+        formData,
+        projectRequirements,
+        setFormData,
+        setProjectRequirements,
+      }}
+    >
       {children}
     </ProjectContext.Provider>
   );
-}
+};
+const useProject = () => useContext(ProjectContext);
+
+export { ProjectContextProvider, useProject };
