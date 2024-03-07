@@ -17,15 +17,19 @@ import {
   StyledInputImage,
 } from "../utils/constants";
 import { useNavigate } from "react-router-dom";
-import { states } from "../../../dist/assets/data/locations";
+import { states } from "../../assets/data/locations";
+import { useAuth } from "../../authentication/context/AuthContext";
 
 const ClientProjectNewProject = () => {
   const { formData, setFormData, projectRequirements, setProjectRequirements } =
     useProject();
+  const { userId } = useAuth();
+
   const navigate = useNavigate();
 
   const createNewProject = async (data) => {
     // e.preventDefault();
+    console.log("user id being used for storing project", userId);
     const url = "http://localhost:5000/api/projects/createproject";
     axios
       .post(url, data)
@@ -39,6 +43,7 @@ const ClientProjectNewProject = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setFormData({ ...formData, user_id: localStorage.getItem("userId")});
     validateFormData(formData) === true
       ? createNewProject({ ...formData }).then(() =>
           console.log("Form submitted:", formData)
@@ -208,11 +213,7 @@ const ClientProjectNewProject = () => {
                             className=" form-input h-[50px] border-grey-400 border-solid border-[0.5px] px-[4px] bg-primary-bg-color-white rounded-[4px] "
                           >
                             {states.map((state, i) => (
-                              <option
-                                key={i}
-                        
-                                defaultValue={`${state}`}
-                              >
+                              <option key={i} defaultValue={`${state}`}>
                                 {state}
                               </option>
                             ))}

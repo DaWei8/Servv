@@ -21,8 +21,8 @@ const ClientProjectHome = () => {
       </div>
       <ProjectNav />
       <div className=" flex flex-col py-[20px] gap-[20px] ">
-        <Projects title="Ongoing" />
-        <Projects title="Past Jobs" />
+        <Projects title="All Projects" />
+        {/* <Projects title="Past Jobs" /> */}
       </div>
     </div>
   );

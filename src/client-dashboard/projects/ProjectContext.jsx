@@ -12,6 +12,7 @@ const ProjectContextProvider = ({ children }) => {
     otherRequirements: "none",
   });
   const [formData, setFormData] = useState({
+    user_id: "",
     title: "",
     status: "Pending",
     duration: "",

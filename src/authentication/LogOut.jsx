@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logoutIcon from "../assets/icons/logout-icon.svg";
+import { useAuth } from "./context/AuthContext";
 // import { useState } from "react";
 
 export default function LogOut() {
+
+  const navigate = useNavigate(true);
+  const {logout} = useAuth()
+
   return (
     <div className=" w-screen h-full flex pt-[200px] justify-center bg-transparent-bg-blur backdrop-blur-3xl absolute right-0">
       <div className=" max-w-[600px] h-fit bg-primary-bg-color-white rounded-[10px] flex flex-col py-[60px] px-[80px] shadow-3xl h- ">
@@ -15,10 +20,12 @@ export default function LogOut() {
           </div>
           <img src={logoutIcon} alt="log out icon" />
           <div className=" flex flex-row flex-auto gap-[15px] ">
-            <Link to={"..//"}>
-              <button className=" h-[50px] border-button-blue ">Log out</button>
-            </Link>
-            <Link to={"../artisanDashboard"} >
+            <button onClick={()=> {
+              logout()
+              navigate("/");
+            }} className=" h-[50px] border-button-blue ">Log out</button>
+
+            <Link to={"../artisanDashboard"}>
               <button className=" h-[50px] primary-button-blue ">Cancel</button>
             </Link>
           </div>

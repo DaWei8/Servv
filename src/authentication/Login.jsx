@@ -8,7 +8,8 @@ import { useAuth } from "./context/AuthContext";
 
 export default function Login() {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { login, userId } = useAuth();
+  // const [userId, setUserId] = useState();
   const [formData, setFormData] = useState({
     mobilenumber: "",
     email: "",
@@ -25,19 +26,30 @@ export default function Login() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value});
+    setFormData({ ...formData, [name]: value });
     console.log(JSON.stringify(formData));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const url = "http://localhost:5000/api/users/login";
-    const data = { mobilenumber: formData.mobilenumber, email: formData.email };
+    const data = {
+      email: formData.email,
+      mobileNumber: formData.mobilenumber,
+      password: formData.password,
+    };
     axios
       .post(url, data)
-      .then(() => {
-        login(formData.email)
-        navigate("/");
+      .then((user) => {
+        if (user.data) {
+          login({ email: formData.email, user: user.data });
+          userId !== "failed"? localStorage.setItem("isLoggedIn", true) : localStorage.setItem("isLoggedIn", false)
+          localStorage.setItem("userId", user.data);
+          navigate("/");
+        } else {
+          localStorage.setItem("isLoggedIn", false);
+        }
       })
       .catch((error) => console.error("User Check Error: ", error));
   };
@@ -147,6 +159,8 @@ export default function Login() {
                   value={formData.mobilenumber}
                   onChange={handleChange}
                   className=" form-input "
+                  maxLength="11"
+                  minLength="11"
                 />
               </label>
 

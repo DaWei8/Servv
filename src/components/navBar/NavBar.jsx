@@ -9,7 +9,7 @@ import { useAuth } from "../../authentication/context/AuthContext";
 const NavBar = () => {
   const [clickState, setClickState] = useState(true);
 
-  const { isAuthenticated, userName } = useAuth();
+  const { isAuthenticated, userId } = useAuth();
 
   const handleMenuClick = () => {
     return setClickState(false);
@@ -45,7 +45,7 @@ const NavBar = () => {
           </li>
           <li>
             <Link to="/marketplace">
-              <p className=" text-[20px] font-[700] ">Marketplace</p>
+              <p className=" text-[16px] font-[700] ">Marketplace</p>
             </Link>
           </li>
           <li>
@@ -62,9 +62,9 @@ const NavBar = () => {
         <div className="">
           {isAuthenticated ? (
             <Link to="/clientPage/" className="lg:flex hidden ">
-              <button className=" relative bg-primary-button-color-blue rounded-[100px] h-[40px] text-primary-text-color-white flex items-center justify-center w-[40px]  ">
-                <div className="profile__state inactive absolute rounded-[40px] w-[11px] h-[11px] bottom-[0px] right-[3px] bg-default-green "></div>
-                {userName.charAt(0).toUpperCase()}
+              <button className="  bg-primary-button-color-blue rounded-[5px] h-[42px] text-primary-text-color-white flex items-center justify-center  ">
+                {/* <div className="profile__state inactive absolute rounded-[40px] w-[11px] h-[11px] bottom-[0px] right-[3px] bg-default-green "></div> */}
+                Go to dashboard
               </button>
             </Link>
           ) : (
@@ -144,8 +144,8 @@ const NavBar = () => {
               {isAuthenticated ? (
                 <Link to="/clientPage/">
                   <button className=" relative rounded-[5px] h-[50px] bg-primary-button-color-blue text-primary-text-color-white flex items-center justify-center w-full  ">
-                    <div className="profile__state inactive absolute rounded-[40px] w-[40px] h-[20px] bottom-1/2 top-4 right-[3px] bg-default-green "></div>
-                    {userName.charAt(0).toUpperCase()}
+                    <div className="profile__state inactive absolute rounded-[40px] w-[20px] h-[20px] bottom-1/2 top-4 right-[10px] bg-default-green "></div>
+                    Go to dashboard
                   </button>
                 </Link>
               ) : (

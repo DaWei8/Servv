@@ -7,10 +7,10 @@ import chatIcon from "../../assets/icons/messages-3.svg";
 import ClientSearchBar from "./ClientSearchBar";
 import Notifications from "../components/Notifications";
 import { useState } from "react";
-import { useAuth } from "../../authentication/context/AuthContext";
+// import { useAuth } from "../../authentication/context/AuthContext";
 
 const ClientTopbar = () => {
-  const { userName } = useAuth();
+  // const { userName } = useAuth();
   const [notificationShowState, setShowNotificationState] = useState(false);
 
   const showNotifications = () => {
@@ -32,7 +32,7 @@ const ClientTopbar = () => {
           <img
             src={servvLogo}
             alt="servv logo"
-            className="servv-logo h-[60px] "
+            className="servv-logo h-[55px] "
           />
         </Link>
       </div>
@@ -59,15 +59,7 @@ const ClientTopbar = () => {
         >
           <Notifications />
         </div>
-        <Link
-          to="/ClientProfile"
-          className=" bg-primary-button-color-blue rounded-[50%] relative p-[10px] w-[40px] text-center h-[40px] items-center justify-center "
-        >
-          <div className=" absolute w-[10px] h-[10px] rounded-[50%] bg-default-green -bottom-0 right-1 "></div>
-          <p className="text-primary-button-color-white text-[20px] leading-[100%] ">
-            {userName.charAt(0).toUpperCase()}
-          </p>
-        </Link>
+        
       </div>
     </div>
   );

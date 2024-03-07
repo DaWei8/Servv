@@ -8,10 +8,10 @@ const ClientSidebar = () => {
   return (
     <div
       className={
-        " hidden pl-[6px] sticky lg:py-[10px] max-h-[100%] lg:rounded-[10px] bg-primary-bg-color-white shadow-3xl justify-center lg:flex lg:left-[20px] lg:top-[0px] duration-[500ms] "
+        " hidden pl-[6px] sticky lg:py-[10px] max-h-[100%] lg:rounded-[10px] bg-primary-bg-color-white shadow-lg justify-center lg:flex lg:left-[20px] lg:top-[0px] duration-[500ms] "
       }
     >
-      <div className=" justify-between mr-[6px] flex-col flex rounded-[10px] h-full lg:px-0 px-[20px] group  duration-[500ms]  ">
+      <div className=" justify-between mr-[6px] flex-col flex rounded-[10px] h-[90%] lg:px-0 px-[20px] group duration-[500ms]  ">
         <div className=" flex flex-col gap-[10px] ">
           {sidebarContentTopClient.map((content, index) => (
             <ClientSidebarButton
