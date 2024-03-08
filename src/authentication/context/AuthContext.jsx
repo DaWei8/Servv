@@ -18,7 +18,6 @@ const AuthContextProvider = ({ children }) => {
     // Retrieve login state from localStorage or sessionStorage
     const storedLoginState = localStorage.getItem("isLoggedIn");
     const storeUserId = localStorage.getItem("userId");
-    console.log(userId)
     if (storedLoginState === "true" ) {
       setIsAuthenticated(true);
       setUserId(storeUserId);

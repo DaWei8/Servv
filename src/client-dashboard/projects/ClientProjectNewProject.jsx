@@ -18,12 +18,13 @@ import {
 } from "../utils/constants";
 import { useNavigate } from "react-router-dom";
 import { states } from "../../assets/data/locations";
-import { useAuth } from "../../authentication/context/AuthContext";
+// import { useAuth } from "../../authentication/context/AuthContext";
 
 const ClientProjectNewProject = () => {
   const { formData, setFormData, projectRequirements, setProjectRequirements } =
     useProject();
-  const { userId } = useAuth();
+  // const { userId } = useAuth();
+  const userId = localStorage.getItem("userId");
 
   const navigate = useNavigate();
 
@@ -43,11 +44,11 @@ const ClientProjectNewProject = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setFormData({ ...formData, user_id: localStorage.getItem("userId")});
+
+    // console.log("User Id was set before submission: " + userId);
+    // setFormData({ ...formData, user_id: userId });
     validateFormData(formData) === true
-      ? createNewProject({ ...formData }).then(() =>
-          console.log("Form submitted:", formData)
-        )
+      ? createNewProject({ ...formData, user_id: userId })
       : alert("fill in a project title and description");
   };
 
