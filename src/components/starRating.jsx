@@ -9,89 +9,89 @@ export default function StarRating(props) {
       {props.number == 5 ? (
         <>
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
-          />{" "}
+          />
         </>
       ) : props.number == 4 ? (
         <>
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
-          />{" "}
+          />
         </>
       ) : props.number == 3 ? (
         <>
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
-          />{" "}
+          />
         </>
       ) : props.number == 2 ? (
         <>
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
-          />{" "}
+          />
         </>
       ) : props.number <= 1 ? (
         <>
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />
@@ -99,7 +99,7 @@ export default function StarRating(props) {
       ) : (
         <>
           <img
-            className=" w-[20px] h-[20px] "
+            className=" w-[14px] h-[14px] "
             src={starIcon}
             alt=" star icon "
           />

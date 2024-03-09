@@ -18,7 +18,7 @@ const ClientTopbar = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-between w-auto flex-auto lg:rounded-[10px] lg:px-[20px] h-fit lg:shadow-3xl ">
+    <div className=" sticky top-0 flex items-center justify-between w-[100%] flex-auto lg:rounded-[10px] lg:px-[10px] h-fit lg:shadow-3xl ">
       {/* <div className="Client-hamburger-menu">
           <img
             src={menuIcon}
@@ -32,7 +32,7 @@ const ClientTopbar = () => {
           <img
             src={servvLogo}
             alt="servv logo"
-            className="servv-logo h-[55px] "
+            className="servv-logo h-[55px]  "
           />
         </Link>
       </div>

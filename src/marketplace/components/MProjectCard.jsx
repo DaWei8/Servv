@@ -6,31 +6,31 @@ import StarIcon from "../../assets/icons/star.svg";
 // import axios from "axios";
 
 const MProjectCard = (props) => (
-  <div className="flex lg:max-w-[350px] md:min-w-[160px] lg:w-[330px] md:max-w-[200px] max-w-[180px] md:w-auto p-[10px] flex-auto rounded-[10px] shadow-3xl flex-col ">
-    <div className="project-image-and-rating relative flex mb-[6px] ">
-      <div className="project-card-rating absolute bottom-0 text-primary-text-color-white rounded-tr-[3px] flex flex-col gap-[1px] bg-[#1846a3b9] w-[45px] h-[45px] items-center justify-center ">
+  <div className="flex max-w-[170px] md:max-w-[220px] flex-grow md:p-[10px] p-[4px] rounded-[4px] shadow-3xl flex-col ">
+    <div className=" relative  rounded-[4px] flex mb-[6px] overflow-hidden ">
+      <div role="button" className="  group absolute bottom-0 text-primary-text-color-white rounded-tr-[3px] px-[5px] flex flex-row gap-[1px] bg-[#1846a3b9] min-w-[45px] w-fit h-[45px] items-center justify-center ">
         <img src={StarIcon} alt="" className="project-star w-[16px] " />
-        <p className="rating h-[15px] flex items-center text-[8px] ">
+        <div className="rating h-[15px] flex items-center text-[8px] ">
           <span className=" h-[15px] flex items-center text-[12px] tracking-widest font-[500] ">
-            {props.rating}
+            {props.rating || "NaN"}
           </span>
-          /5.0
-        </p>
+          <p className=" group-hover:flex hidden text-[10px] ">/5.0</p>
+        </div>
       </div>
       <img
         src={props.image}
         alt="project card image"
-        className="project-card-image w-full rounded-[8px] "
+        className="project-card-image w-full h-[100px] "
       />
     </div>
     <div className=" flex gap-[10px] ">
       <img
         src={props.profileImage}
-        className=" md:hidden lg:flex flex w-[38px] border-solid border-[4px] border-default-green h-[38px] rounded-[50%] "
+        className=" lg:hidden flex max-w-[38px] max-h-[38px] w-auto h-auto border-solid border-[2px] border-default-green rounded-[50%] "
         alt="profile image"
       />
       <div>
-        <h2 className="project-title text-[16px] font-[600] ">{props.title}</h2>
+        <h2 className="project-title text-[14px] font-[600] ">{props.title}</h2>
         <p className="project-description text-[10px] leading-[150%] mb-[8px] ">
           {props.artisanName}
         </p>
@@ -41,8 +41,8 @@ const MProjectCard = (props) => (
     </p>
     <div className="project-date-and-button flex justify-between items-end ">
       <div className=" flex flex-col">
-        <p className=" text-[12px]">Price</p>
-        <p className="project-date text-[18px] leading-[150%] font-[600] ">
+        <p className=" leading-[120%] text-[10px]">Price</p>
+        <p className="project-date text-[16px]  font-[600] ">
           {props.price}
         </p>
       </div>
@@ -52,7 +52,11 @@ const MProjectCard = (props) => (
         style={{ color: "#0080ff" }}
       >
         <p className=" text-[14px] group-hover:text-[15px] ">View</p>
-        <img src={RightArrow} className=" group-hover:w-[23px] " alt="right arrow" />
+        <img
+          src={RightArrow}
+          className=" group-hover:w-[23px] "
+          alt="right arrow"
+        />
       </Link>
     </div>
   </div>

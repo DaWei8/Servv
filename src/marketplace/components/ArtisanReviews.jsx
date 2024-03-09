@@ -35,14 +35,14 @@ const ReviewCard = (props) => {
           />
 
           <div>
-            <h3 className="font-[600] text-[16px] ">{props.clientName}</h3>
+            <h3 className="font-[600] text-[14px] ">{props.clientName}</h3>
             <p>Client</p>
           </div>
         </div>
 
         <StarRating number={props.rating} />
       </div>
-      <p className=" leading-[200%] text-[16px] ">{props.review}</p>
+      <p className=" leading-[200%] text-[14px] ">{props.review}</p>
     </div>
   );
 };

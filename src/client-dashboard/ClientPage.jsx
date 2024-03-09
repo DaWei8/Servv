@@ -39,7 +39,7 @@ export const ClientPage = () => {
           <img
             src={menuIcon}
             alt="hamburger-menu-icon"
-            className="hamburger-menu-icon  "
+            className="hamburger-menu-icon -scale-100 "
             onClick={handleClick}
           />
         </div>

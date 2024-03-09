@@ -41,14 +41,16 @@ export default function Login() {
     };
     axios
       .post(url, data)
-      .then((user) => {
-        if (user.data) {
-          login({ email: formData.email, user: user.data });
-          userId !== "failed"? localStorage.setItem("isLoggedIn", true) : localStorage.setItem("isLoggedIn", false)
-          localStorage.setItem("userId", user.data);
+      .then( async (user) => {
+        console.log("this is the user", user);
+        if (user.data !== "failed") {
+          login({ email: formData.email, user: user.data._id });
+          localStorage.setItem("isLoggedIn", true);
+          localStorage.setItem("userId", user.data._id);
           navigate("/");
         } else {
-          localStorage.setItem("isLoggedIn", false);
+          localStorage.removeItem("userId");
+          localStorage.removeItem("isLoggedIn");
         }
       })
       .catch((error) => console.error("User Check Error: ", error));

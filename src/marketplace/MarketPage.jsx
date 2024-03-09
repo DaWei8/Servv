@@ -11,7 +11,7 @@ const MarketPage = () => {
     <div className="mx-auto w-screen flex flex-col content-center items-center  ">
       <NavBar />
 
-      <div className=" mb-[80px] w-[100%] ">
+      <div className=" mb-[80px] w-[100%] "> 
         <Routes>
           <Route path="/" Component={MarketHomePage} />
           <Route path="category" Component={CategoryPage} />

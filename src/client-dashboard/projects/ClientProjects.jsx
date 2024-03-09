@@ -13,7 +13,7 @@ const ClientProjects = () => {
         <Routes>
           <Route path="/" Component={ClientProjectHome} />
           <Route path="/newproject" Component={ClientProjectNewProject} />
-          <Route path="/projectinfo" Component={ClientProjectInfo} />
+          <Route path="/projectinfo/*" Component={ClientProjectInfo} />
         </Routes>
       </ProjectContextProvider>
     </div>

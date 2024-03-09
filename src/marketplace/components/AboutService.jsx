@@ -7,16 +7,17 @@ export default function AboutService() {
   return (
     <div className=" flex flex-col gap-[30px] p-[10px] ">
       <div className=" flex flex-col gap-[5px] ">
-        <h2 className=" text-[20px] font-[600] ">Disclaimer</h2>
+        <h2 className=" text-[16px] md:text-[18px] font-[600] ">Disclaimer</h2>
         <p>
           At Mobile Shine, we do not repair cars or service cars. We strictly
           adhere to our packages!
         </p>
       </div>
       <div className=" flex flex-col gap-[10px] ">
-        <h2 className=" text-[20px] font-[600] ">Choose your package</h2>
+        <h2 className=" text-[16px] md:text-[18px] font-[600]">
+          Choose your package
+        </h2>
         <div className=" flex flex-col gap-[10px] ">
-
           <ServicePackage
             onClicked={() => setSelectedOpt(true)}
             selected={selectedOpt}
@@ -50,16 +51,22 @@ const ServicePackage = () => {
       }
     >
       <div className=" flex flex-col gap-[10px] items-start duration-[500] pl-[8px] py-[10px] ">
-        <h3 className=" font-[600] ">Basic Package</h3>
-        <p className=" leading-[200%] ">
+        <div className=" flex w-[100%] justify-between flex-row ">
+          <h3 className=" text-[14px] md:text-[16px] font-[600]  ">
+            Basic Package
+          </h3>
+          <div className=" flex flex-col items-end w-[110px] justify-center px-[10px] bg-transparent-blue-10 ">
+            <p className=" w-full text-[10px] text-right ">Price</p>
+            <p className=" text-[16px] text-right w-full leading-[100%] font-[600] ">
+              N20,000
+            </p>
+          </div>
+        </div>
+        <p className=" text-[12px] md:text-[16px]  ">
           I will do several things this that this that this lorem ipsum dolor
           sit imet. I will do several things this that this that this lorem
           ipsum dolor sit imet.
         </p>
-      </div>
-      <div className=" flex flex-col gap-[10px] items-end w-[110px] justify-center px-[16px] bg-primary-tab-select-color ">
-        <p className=" w-full text-right " >Price</p>
-        <p className=" text-[16px] text-right w-full font-[600] ">N20,000</p>
       </div>
     </div>
   );

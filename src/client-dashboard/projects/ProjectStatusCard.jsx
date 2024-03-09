@@ -9,7 +9,7 @@ export default function ProjectStatusCard (props) {
   const [showRateCard, setShowRateCard] = useState(false);
 
   return (
-    <div className="flex relative lg:max-w-[350px] bg-primary-bg-color-white flex-auto gap-[10px] md:max-w-[180px] max-w-[180px] w-[150px] md:w-auto p-[10px] flex- h-fit rounded-[10px] shadow-3xl flex-col ">
+    <div className="flex relative lg:max-w-[300px] bg-primary-bg-color-white flex-auto gap-[10px] md:max-w-[180px] max-w-[180px] w-[150px] md:w-auto p-[10px] flex- h-fit rounded-[10px] shadow-3xl flex-col ">
       <div className="project-image-and-rating relative flex mb-[6px] ">
         <div className="project-card-rating absolute bottom-0 text-primary-text-color-white rounded-tr-[3px] flex flex-col gap-[1px] bg-[#1846a3b9] w-[45px] h-[45px] items-center justify-center ">
           <img src={starIcon} alt="" className="project-star w-[16px] " />
@@ -32,7 +32,7 @@ export default function ProjectStatusCard (props) {
           {props.date}
         </p>
         <div className=" text-[10px] bg-default-green p-[8px] rounded-[8px] ">
-          Completed
+          {props.status}
         </div>
       </div>
       <button
@@ -45,10 +45,10 @@ export default function ProjectStatusCard (props) {
         <div className=" absolute  bottom-0 z-[100] ">
           <RateProjectStatusCard
             showCard={showRateCard}
-            rating={"4.0"}
+            rating={props.rating}
             image={projectImage}
-            title={"Home Refurbishing"}
-            date={"10 Dec"}
+            title={props.title}
+            date={props.date}
           />
         </div>
       ) : (

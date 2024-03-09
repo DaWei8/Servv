@@ -18,19 +18,24 @@ const AuthContextProvider = ({ children }) => {
     // Retrieve login state from localStorage or sessionStorage
     const storedLoginState = localStorage.getItem("isLoggedIn");
     const storeUserId = localStorage.getItem("userId");
-    if (storedLoginState === "true" ) {
+    if (storedLoginState === "true" && storeUserId !== "failed") {
       setIsAuthenticated(true);
       setUserId(storeUserId);
     }
   }, [userId]);
 
   const login = ({ email: email, user: user }) => {
+    const storedLoginState = localStorage.getItem("isLoggedIn");
+    const storeUserId = localStorage.getItem("userId");
     // console.log("Login auth");
-    setIsAuthenticated(true);
-    setUserName(email);
-    setUserId(user);
+    if (storedLoginState === "true" && storeUserId !== "failed") {
+      setIsAuthenticated(true);
+      setUserId(user);
+    }
 
+    setUserName(email);
   };
+  
   const logout = () => {
     setIsAuthenticated(false);
     localStorage.removeItem("isLoggedIn");

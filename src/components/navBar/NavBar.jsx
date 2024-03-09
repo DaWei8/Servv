@@ -9,7 +9,7 @@ import { useAuth } from "../../authentication/context/AuthContext";
 const NavBar = () => {
   const [clickState, setClickState] = useState(true);
 
-  const { isAuthenticated, userId } = useAuth();
+  const { isAuthenticated} = useAuth();
 
   const handleMenuClick = () => {
     return setClickState(false);

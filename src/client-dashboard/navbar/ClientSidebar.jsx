@@ -8,7 +8,7 @@ const ClientSidebar = () => {
   return (
     <div
       className={
-        " hidden pl-[6px] sticky lg:py-[10px] max-h-[100%] lg:rounded-[10px] bg-primary-bg-color-white shadow-lg justify-center lg:flex lg:left-[20px] lg:top-[0px] duration-[500ms] "
+        " hidden pl-[6px] sticky top-0 lg:py-[10px] max-h-[85dvh] lg:rounded-[10px] bg-primary-bg-color-white shadow-lg justify-center lg:flex lg:left-[20px] lg:top-[0px] duration-[500ms] "
       }
     >
       <div className=" justify-between mr-[6px] flex-col flex rounded-[10px] h-[90%] lg:px-0 px-[20px] group duration-[500ms]  ">

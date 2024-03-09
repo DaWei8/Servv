@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 // import { useAuth } from "../../authentication/context/AuthContext";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Projects = (props) => {
   const userId = localStorage.getItem("userId");
   const [storedProjects, setStoredProjects] = useState([]);
   const url = "http://localhost:5000/api/projects";
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -16,7 +18,7 @@ const Projects = (props) => {
       .catch((error) => console.log(error));
   }, []);
 
-  console.log(userId, storedProjects);
+  // console.log(userId, storedProjects);
 
   return (
     <div className="_projects">
@@ -34,6 +36,13 @@ const Projects = (props) => {
                 title={content.title}
                 description={content.description}
                 date={content.date.slice(0, 10)}
+                navFunction={() =>
+                  navigate(`projectinfo/${content.title}`, {
+                    state: {
+                      data: content,
+                    },
+                  })
+                }
               />
             ))}
           </div>

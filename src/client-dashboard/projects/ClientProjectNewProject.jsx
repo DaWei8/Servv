@@ -85,13 +85,13 @@ const ClientProjectNewProject = () => {
 
   return (
     <ProjectChildPage
-      childLink={"Project Name"}
+      childLink={formData.title || "New Project"}
       childContent={
         // form page
         <form className="flex flex-col flex-auto " onSubmit={handleSubmit}>
           <div className=" flex flex-auto flex-col py-[20px] gap-[20px] ">
             <ClientProjectSubSection
-              title="Project Name"
+              title={ formData.title || "New Project" }
               button={
                 <div
                   onClick={handleSubmit}

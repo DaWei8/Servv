@@ -40,79 +40,87 @@ const MarketHomePage = () => {
     });
 
   return (
-    <div className=" flex flex-col flex-auto w-[100$] ">
+    <div className=" flex flex-col flex-auto w-[100%] items-center  ">
       <MarketPlaceHero />
-      <div className=" flex flex-col pt-[60px] gap-[20px] ">
+      <div className=" flex flex-col pt-[60px] gap-[20px] px-[20px] ">
         <div className=" flex flex-auto mx-auto ">
-          <div className=" flex gap-[50px] items-center ">
+          <div className=" flex gap-[20px] items-center justify-center flex-auto flex-wrap ">
             <div
-              className=" nav-link h-[50px] flex flex-col justify-center items-center "
+              className=" nav-link h-fit justify-start flex flex-col items-center  "
               onClick={homeSelection}
             >
-              <p>Home Services</p>
+              <p className="text-[12px]">Home Services</p>
               {navSelection.homeServices == true ? (
-                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
+                <UnderLine />
               ) : (
                 <div className=" hidden "></div>
               )}
             </div>
             <div
-              className=" nav-link h-[50px] justify-center flex flex-col items-center  "
+              className=" nav-link h-fit justify-start flex flex-col items-center  "
               onClick={localShopsSelection}
             >
-              <p>Local Shops</p>
+              <p className="text-[12px]">Local Shops</p>
               {navSelection.localShops == true ? (
-                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
+                <UnderLine />
               ) : (
                 <div className=" hidden "></div>
               )}
             </div>
             <div
-              className=" nav-link h-[50px] justify-center flex flex-col items-center  "
+              className=" nav-link h-fit justify-start flex flex-col items-center  "
               onClick={localServicesSelection}
             >
-              <p>Local Services</p>
+              <p className="text-[12px]">Local Services</p>
               {navSelection.localServices == true ? (
-                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
+                <UnderLine />
               ) : (
                 <div className=" hidden "></div>
               )}
             </div>
             <div
-              className=" nav-link h-[50px] justify-center flex flex-col items-center  "
+              className=" nav-link h-fit justify-start flex flex-col items-center  "
               onClick={rareServiceSelection}
             >
-              <p>Rare Services</p>
+              <p className="text-[12px]">Rare Services</p>
               {navSelection.rareServices == true ? (
-                <div className=" w-[60px] h-[4px] rounded-[10px] mt-[8px] bg-primary-bg-color-blue " />
+                <UnderLine />
               ) : (
                 <div className=" hidden "></div>
               )}
             </div>
             <Link
-              to="/artisanPage"
-              className=" bg-primary-bg-color-blue px-[20px] h-[50px] rounded-[4px] flex items-center justify-center   "
+              to="/clientPage/clientProjects/newproject"
+              className=" bg-primary-bg-color-blue px-[10px] h-[42px] rounded-[4px] flex items-center justify-center   "
             >
-              <div className=" text-primary-text-color-white ">
+              <div className=" text-[12px] text-primary-text-color-white ">
                 Create job request
               </div>
             </Link>
           </div>
         </div>
-        {navSelection.homeServices == true ? (
-          <SkillServiceSection title="Home Services Category Title" />
-        ) : navSelection.localServices == true ? (
-          <SkillServiceSection title="Local Services Category Title" />
-        ) : navSelection.localShops == true ? (
-          <SkillServiceSection title="Local Shops Category Title" />
-        ) : navSelection.rareServices == true ? (
-          <SkillServiceSection title="Rare Services Category Title" />
-        ) : (
-          <SkillServiceSection />
-        )}
+        <div className=" flex w-[100%] " >
+          {navSelection.homeServices == true ? (
+            <SkillServiceSection title="Home Services" />
+          ) : navSelection.localServices == true ? (
+            <SkillServiceSection title="Local Services" />
+          ) : navSelection.localShops == true ? (
+            <SkillServiceSection title="Local Shops" />
+          ) : navSelection.rareServices == true ? (
+            <SkillServiceSection title="Rare Services" />
+          ) : (
+            <SkillServiceSection />
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
 export default MarketHomePage;
+
+const UnderLine = () => {
+  return (
+    <div className=" w-[30px] h-[3px] rounded-[10px] mt-[4px] bg-primary-bg-color-blue " />
+  );
+};

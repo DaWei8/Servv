@@ -38,29 +38,33 @@ export default function WorkerSkillViewPage() {
   return (
     <div className=" flex flex-col flex-auto w-auto ">
       <MarketPlaceHero2 />
-      <div className=" flex flex-col pt-[40px] gap-[20px] ">
-        <div className=" flex flex-auto justify-center w-full ">
+      <div className=" flex flex-col pt-[40px] gap-[20px] max-w-[1134px] mx-auto ">
+        <div className=" flex flex-auto justify-center w-full px-[20px] ">
           <Breadcrumbs
             heading={"Home services"}
             childLink={"Skill Category Title"}
             grandChildLink={"Worker Skill Page"}
           />
         </div>
-        <div className=" flex flex-row gap-[20px] max-w-[1134px] mx-auto ">
-          <WorkerServiceOverviewCard />
-          <div className=" flex-col gap-[20px] flex flex-auto max-w-[60%] ">
+        <div className=" flex flex-row flex-1 lg:flex-nowrap flex-wrap gap-[20px]  mx-auto  px-[20px]  ">
+          <div className=" flex lg:max-w-[400px] ">
+            <WorkerServiceOverviewCard />
+          </div>
+          <div className=" flex-col gap-[20px] flex flex-auto  ">
             <div className=" flex ">
-              <div className=" flex gap-[50px] items-center h-[50px] bg-pale-blue-grey w-full px-[10px] ">
+              <div className=" rounded-[8px] flex gap-[50px] items-center h-[50px] bg-pale-blue-grey w-full px-[10px] ">
                 <div
                   className=" nav-link h-[50px] flex flex-col justify-center items-center "
                   onClick={aboutServiceSelection}
                 >
                   {navSelection.aboutService == true ? (
-                    <p className=" text-[16px] font-[600] text-primary-button-color-blue ">
+                    <p className=" text-[12px] md:text-[14px] font-[600] text-primary-button-color-blue ">
                       About Service
                     </p>
                   ) : (
-                    <p className=" text-[16px]">About Service</p>
+                    <p className=" text-[12px] md:text-[14px] ">
+                      About Service
+                    </p>
                   )}
                 </div>
                 <div
@@ -68,11 +72,13 @@ export default function WorkerSkillViewPage() {
                   onClick={aboutArtisanSelection}
                 >
                   {navSelection.aboutArtisan == true ? (
-                    <p className=" text-[16px] font-[600] text-primary-button-color-blue ">
+                    <p className=" text-[12px] md:text-[14px] text-primary-button-color-blue ">
                       About Artisan
                     </p>
                   ) : (
-                    <p className=" text-[16px]">About Artisan</p>
+                    <p className=" text-[12px] md:text-[14px] ">
+                      About Artisan
+                    </p>
                   )}
                 </div>
                 <div
@@ -80,41 +86,45 @@ export default function WorkerSkillViewPage() {
                   onClick={artisanReviewSelection}
                 >
                   {navSelection.artisanReview == true ? (
-                    <p className=" text-[16px] font-[600] text-primary-button-color-blue ">
+                    <p className=" text-[12px] md:text-[14px] text-primary-button-color-blue ">
                       Review
                     </p>
                   ) : (
-                    <p className=" text-[16px]">Review</p>
+                    <p className="text-[12px] md:text-[14px] ">Review</p>
                   )}
                 </div>
               </div>
             </div>
-            {navSelection.aboutService == true ? (
-              <AboutService />
-            ) : navSelection.aboutArtisan == true ? (
-              <AboutArtisan />
-            ) : navSelection.artisanReview == true ? (
-              <ArtisanReviews />
-            ) : (
-              <AboutService />
-            )}
+            <div className=" flex flex-auto ">
+              {navSelection.aboutService == true ? (
+                <AboutService />
+              ) : navSelection.aboutArtisan == true ? (
+                <AboutArtisan />
+              ) : navSelection.artisanReview == true ? (
+                <ArtisanReviews />
+              ) : (
+                <AboutService />
+              )}
+            </div>
           </div>
         </div>
-        <MarketPageProjectSection2
-          categoryTitle={"Recent Works"}
-          projectList={serviceContent.map((content, index) => (
-            <MProjectCard
-              key={index}
-              rating={content.rating}
-              description={content.description}
-              title={content.title}
-              image={content.displayImage}
-              artisanName={content.artisanName}
-              profileImage={content.profileImage}
-              price={content.price}
-            />
-          ))}
-        />
+        <div className=" px-[20px] ">
+          <MarketPageProjectSection2
+            categoryTitle={"Recent Works"}
+            projectList={serviceContent.map((content, index) => (
+              <MProjectCard
+                key={index}
+                rating={content.rating}
+                description={content.description}
+                title={content.title}
+                image={content.displayImage}
+                artisanName={content.artisanName}
+                profileImage={content.profileImage}
+                price={content.price}
+              />
+            ))}
+          />
+        </div>
       </div>
     </div>
   );

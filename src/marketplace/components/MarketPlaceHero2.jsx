@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar"
 
 const MarketPlaceHero2 = () => {
   return (
-    <div className="flex relative flex-col bg-primary-bg-color-blue pt-[40px] justify-center items-center pb-[40px] gap-[50px] text-primary-text-color-white overflow-hidden ">
+    <div className="flex relative flex-col bg-primary-bg-color-blue pt-[40px] justify-center items-center pb-[40px] gap-[50px] text-primary-text-color-white overflow-hidden px-[20px] ">
       <div className=" absolute -z-1 ">
         <img
           className="flex self-center justify-self w-[1800px] -rotate-[30deg]"
@@ -11,7 +11,7 @@ const MarketPlaceHero2 = () => {
           alt="background image"
         />
       </div>
-      <div className=" text-primary-text-color-black flex w-full items-center justify-center ">
+      <div className=" text-primary-text-color-black flex w-full items-center justify-center relative z-1  ">
         <SearchBar />
       </div>
     </div>

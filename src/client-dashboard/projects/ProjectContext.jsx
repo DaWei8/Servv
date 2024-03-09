@@ -20,6 +20,7 @@ const ProjectContextProvider = ({ children }) => {
     displayImage: null,
     images: [null],
     requirements: projectRequirements,
+    isApproved: false,
   });
   return (
     <ProjectContext.Provider
